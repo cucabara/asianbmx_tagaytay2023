@@ -23523,3 +23523,16 @@ button,
   right: 80px;
   bottom: -20px;
 }
+
+/* PALIITIN ANG LOGO SA STICKY HEADER */
+.rts-header1 .logo-sticky img {
+  width: 120px;
+  height: auto;
+}
+
+/* AYUSIN ANG SPACING/PADDING NG NAVBAR */
+.rts-header1 .navbar-part {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  min-height: auto !important;
+}

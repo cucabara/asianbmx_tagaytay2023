@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asian BMX Championship | Tagaytay 2023</title>
+    <title>Asian Track Championships | Tagaytay 2026</title>
     <!--================= Favicon =================-->
     <link rel="apple-touch-icon" href="assets/images/fav.png">
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/fav.png">
@@ -36,14 +36,15 @@
 
     <style>
         :root {
-	--hue: 223;
-	--bg: hsl(var(--hue),90%,90%);
-	--fg: hsl(var(--hue),90%,10%);
-	--primary: hsl(var(--hue),90%,50%);
-	--trans-dur: 0.3s;
-	font-size: calc(16px + (32 - 16) * (100vw - 320px) / (2560 - 320));
-}
-/* body {
+            --hue: 223;
+            --bg: hsl(var(--hue), 90%, 90%);
+            --fg: hsl(var(--hue), 90%, 10%);
+            --primary: hsl(var(--hue), 90%, 50%);
+            --trans-dur: 0.3s;
+            font-size: calc(16px + (32 - 16) * (100vw - 320px) / (2560 - 320));
+        }
+
+        /* body {
 	background-color: var(--bg);
 	color: var(--fg);
 	display: flex;
@@ -53,143 +54,210 @@
 		background-color var(--trans-dur),
 		color var(--trans-dur);
 } */
-.bike {
-	display: block;
-	margin: auto;
-	width: 30em;
-	height: auto;
-}
-.bike__body,
-.bike__front,
-.bike__handlebars,
-.bike__pedals,
-.bike__pedals-spin,
-.bike__seat,
-.bike__spokes,
-.bike__spokes-spin,
-.bike__tire {
-	animation: bikeBody 3s ease-in-out infinite;
-	stroke: var(--primary);
-	transition: stroke var(--trans-dur);
-}
-.bike__front {
-	animation-name: bikeFront;
-}
-.bike__handlebars {
-	animation-name: bikeHandlebars;
-}
-.bike__pedals {
-	animation-name: bikePedals;
-}
-.bike__pedals-spin {
-	animation-name: bikePedalsSpin;
-}
-.bike__seat {
-	animation-name: bikeSeat;
-}
-.bike__spokes,
-.bike__tire {
-	stroke: currentColor;
-}
-.bike__spokes {
-	animation-name: bikeSpokes;
-}
-.bike__spokes-spin {
-	animation-name: bikeSpokesSpin;
-}
-.bike__tire {
-	animation-name: bikeTire;
-}
+        .bike {
+            display: block;
+            margin: auto;
+            width: 30em;
+            height: auto;
+        }
 
-/* Dark theme */
-@media (prefers-color-scheme: dark) {
-	:root {
-		--bg: hsl(var(--hue),90%,10%);
-		--fg: hsl(var(--hue),90%,90%);
-	}
-}
+        .bike__body,
+        .bike__front,
+        .bike__handlebars,
+        .bike__pedals,
+        .bike__pedals-spin,
+        .bike__seat,
+        .bike__spokes,
+        .bike__spokes-spin,
+        .bike__tire {
+            animation: bikeBody 3s ease-in-out infinite;
+            stroke: var(--primary);
+            transition: stroke var(--trans-dur);
+        }
 
-/* Animations */
-@keyframes bikeBody {
-	from { stroke-dashoffset: 79; }
-	33%,
-	67% { stroke-dashoffset: 0; }
-	to { stroke-dashoffset: -79; }
-}
-@keyframes bikeFront {
-	from { stroke-dashoffset: 19; }
-	33%,
-	67% { stroke-dashoffset: 0; }
-	to { stroke-dashoffset: -19; }
-}
-@keyframes bikeHandlebars {
-	from { stroke-dashoffset: 10; }
-	33%,
-	67% { stroke-dashoffset: 0; }
-	to { stroke-dashoffset: -10; }
-}
-@keyframes bikePedals {
-	from {
-		animation-timing-function: ease-in;
-		stroke-dashoffset: -25.133;
-	}
-	33%,
-	67% {
-		animation-timing-function: ease-out;
-		stroke-dashoffset: -21.991;
-	}
-	to {
-		stroke-dashoffset: -25.133;
-	}
-}
-@keyframes bikePedalsSpin {
-	from { transform: rotate(0.1875turn); }
-	to { transform: rotate(3.1875turn); }
-}
-@keyframes bikeSeat {
-	from { stroke-dashoffset: 5; }
-	33%,
-	67% { stroke-dashoffset: 0; }
-	to { stroke-dashoffset: -5; }
-}
-@keyframes bikeSpokes {
-	from {
-		animation-timing-function: ease-in;
-		stroke-dashoffset: -31.416;
-	}
-	33%,
-	67% {
-		animation-timing-function: ease-out;
-		stroke-dashoffset: -23.562;
-	}
-	to {
-		stroke-dashoffset: -31.416;
-	}
-}
-@keyframes bikeSpokesSpin {
-	from { transform: rotate(0); }
-	to { transform: rotate(3turn); }
-}
-@keyframes bikeTire {
-	from {
-		animation-timing-function: ease-in;
-		stroke-dashoffset: 56.549;
-		transform: rotate(0);
-	}
-	33% {
-		stroke-dashoffset: 0;
-		transform: rotate(0.33turn);
-	}
-	67% {
-		animation-timing-function: ease-out;
-		stroke-dashoffset: 0;
-		transform: rotate(0.67turn);
-	}
-	to {
-		stroke-dashoffset: -56.549;
-		transform: rotate(1turn);
-	}
-}
+        .bike__front {
+            animation-name: bikeFront;
+        }
+
+        .bike__handlebars {
+            animation-name: bikeHandlebars;
+        }
+
+        .bike__pedals {
+            animation-name: bikePedals;
+        }
+
+        .bike__pedals-spin {
+            animation-name: bikePedalsSpin;
+        }
+
+        .bike__seat {
+            animation-name: bikeSeat;
+        }
+
+        .bike__spokes,
+        .bike__tire {
+            stroke: currentColor;
+        }
+
+        .bike__spokes {
+            animation-name: bikeSpokes;
+        }
+
+        .bike__spokes-spin {
+            animation-name: bikeSpokesSpin;
+        }
+
+        .bike__tire {
+            animation-name: bikeTire;
+        }
+
+        /* Dark theme */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: hsl(var(--hue), 90%, 10%);
+                --fg: hsl(var(--hue), 90%, 90%);
+            }
+        }
+
+        /* Animations */
+        @keyframes bikeBody {
+            from {
+                stroke-dashoffset: 79;
+            }
+
+            33%,
+            67% {
+                stroke-dashoffset: 0;
+            }
+
+            to {
+                stroke-dashoffset: -79;
+            }
+        }
+
+        @keyframes bikeFront {
+            from {
+                stroke-dashoffset: 19;
+            }
+
+            33%,
+            67% {
+                stroke-dashoffset: 0;
+            }
+
+            to {
+                stroke-dashoffset: -19;
+            }
+        }
+
+        @keyframes bikeHandlebars {
+            from {
+                stroke-dashoffset: 10;
+            }
+
+            33%,
+            67% {
+                stroke-dashoffset: 0;
+            }
+
+            to {
+                stroke-dashoffset: -10;
+            }
+        }
+
+        @keyframes bikePedals {
+            from {
+                animation-timing-function: ease-in;
+                stroke-dashoffset: -25.133;
+            }
+
+            33%,
+            67% {
+                animation-timing-function: ease-out;
+                stroke-dashoffset: -21.991;
+            }
+
+            to {
+                stroke-dashoffset: -25.133;
+            }
+        }
+
+        @keyframes bikePedalsSpin {
+            from {
+                transform: rotate(0.1875turn);
+            }
+
+            to {
+                transform: rotate(3.1875turn);
+            }
+        }
+
+        @keyframes bikeSeat {
+            from {
+                stroke-dashoffset: 5;
+            }
+
+            33%,
+            67% {
+                stroke-dashoffset: 0;
+            }
+
+            to {
+                stroke-dashoffset: -5;
+            }
+        }
+
+        @keyframes bikeSpokes {
+            from {
+                animation-timing-function: ease-in;
+                stroke-dashoffset: -31.416;
+            }
+
+            33%,
+            67% {
+                animation-timing-function: ease-out;
+                stroke-dashoffset: -23.562;
+            }
+
+            to {
+                stroke-dashoffset: -31.416;
+            }
+        }
+
+        @keyframes bikeSpokesSpin {
+            from {
+                transform: rotate(0);
+            }
+
+            to {
+                transform: rotate(3turn);
+            }
+        }
+
+        @keyframes bikeTire {
+            from {
+                animation-timing-function: ease-in;
+                stroke-dashoffset: 56.549;
+                transform: rotate(0);
+            }
+
+            33% {
+                stroke-dashoffset: 0;
+                transform: rotate(0.33turn);
+            }
+
+            67% {
+                animation-timing-function: ease-out;
+                stroke-dashoffset: 0;
+                transform: rotate(0.67turn);
+            }
+
+            to {
+                stroke-dashoffset: -56.549;
+                transform: rotate(1turn);
+            }
+        }
     </style>
 
 </head>
@@ -201,34 +269,39 @@
             <div class="loader">
                 <svg viewBox="0 0 866 866" xmlns="http://www.w3.org/2000/svg">
                     <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164.83 151.5">
-                     <svg class="bike" viewBox="0 0 75 30" width="250px" height="160px">
-                         <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1">
-                             <g transform="translate(9.5,19)">
-                                 <circle class="bike__tire" r="9" stroke-dasharray="56.549 56.549" />
-                                 <g class="bike__spokes-spin" stroke-dasharray="31.416 31.416" stroke-dashoffset="-23.562">
-                                     <circle class="bike__spokes" r="5" />
-                                     <circle class="bike__spokes" r="5" transform="rotate(180,0,0)" />
-                                 </g>
-                             </g>
-                             <g transform="translate(24,19)">
-                                 <g class="bike__pedals-spin" stroke-dasharray="25.133 25.133" stroke-dashoffset="-21.991" transform="rotate(67.5,0,0)">
-                                     <circle class="bike__pedals" r="4" />
-                                     <circle class="bike__pedals" r="4" transform="rotate(180,0,0)" />
-                                 </g>
-                             </g>
-                             <g transform="translate(38.5,19)">
-                                 <circle class="bike__tire" r="9" stroke-dasharray="56.549 56.549" />
-                                 <g class="bike__spokes-spin" stroke-dasharray="31.416 31.416" stroke-dashoffset="-23.562">
-                                     <circle class="bike__spokes" r="5" />
-                                     <circle class="bike__spokes" r="5" transform="rotate(180,0,0)" />
-                                 </g>
-                             </g>
-                             <polyline class="bike__seat" points="14 3,18 3" stroke-dasharray="5 5" />
-                             <polyline class="bike__body" points="16 3,24 19,9.5 19,18 8,34 7,24 19" stroke-dasharray="79 79" />
-                             <path class="bike__handlebars" d="m30,2h6s1,0,1,1-1,1-1,1" stroke-dasharray="10 10" />
-                             <polyline class="bike__front" points="32.5 2,38.5 19" stroke-dasharray="19 19" />
-                         </g>
-                     </svg>
+                        <svg class="bike" viewBox="0 0 75 30" width="250px" height="160px">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1">
+                                <g transform="translate(9.5,19)">
+                                    <circle class="bike__tire" r="9" stroke-dasharray="56.549 56.549" />
+                                    <g class="bike__spokes-spin" stroke-dasharray="31.416 31.416"
+                                        stroke-dashoffset="-23.562">
+                                        <circle class="bike__spokes" r="5" />
+                                        <circle class="bike__spokes" r="5" transform="rotate(180,0,0)" />
+                                    </g>
+                                </g>
+                                <g transform="translate(24,19)">
+                                    <g class="bike__pedals-spin" stroke-dasharray="25.133 25.133"
+                                        stroke-dashoffset="-21.991" transform="rotate(67.5,0,0)">
+                                        <circle class="bike__pedals" r="4" />
+                                        <circle class="bike__pedals" r="4" transform="rotate(180,0,0)" />
+                                    </g>
+                                </g>
+                                <g transform="translate(38.5,19)">
+                                    <circle class="bike__tire" r="9" stroke-dasharray="56.549 56.549" />
+                                    <g class="bike__spokes-spin" stroke-dasharray="31.416 31.416"
+                                        stroke-dashoffset="-23.562">
+                                        <circle class="bike__spokes" r="5" />
+                                        <circle class="bike__spokes" r="5" transform="rotate(180,0,0)" />
+                                    </g>
+                                </g>
+                                <polyline class="bike__seat" points="14 3,18 3" stroke-dasharray="5 5" />
+                                <polyline class="bike__body" points="16 3,24 19,9.5 19,18 8,34 7,24 19"
+                                    stroke-dasharray="79 79" />
+                                <path class="bike__handlebars" d="m30,2h6s1,0,1,1-1,1-1,1" stroke-dasharray="10 10" />
+                                <polyline class="bike__front" points="32.5 2,38.5 19" stroke-dasharray="19 19" />
+                            </g>
+                        </svg>
                     </svg>
                 </svg>
 
@@ -278,14 +351,15 @@
             <div class="navbar-part navbar-part1">
                 <div class="container">
                     <div class="navbar-inner">
-                        <a href="index.html" class="logo"><img src="assets/images/2023_ACC_BMX_Letterhead_1.png" alt="sportius-logo"></a>
+                        <a href="index.html" class="logo"><img src="assets/images/2023_ACC_BMX_Letterhead_1.png"
+                                alt="sportius-logo"></a>
                         <a href="index.html" class="logo-sticky"><img src="assets/images/2023_ACC_BMX_Letterhead_1.png"
                                 alt="kester-logo"></a>
                         <div class="rts-menu">
                             <nav class="menus menu-toggle">
                                 <ul class="nav__menu">
                                     <li class="has-dropdown"><a class="menu-item" href="index.html">Home</a>
-                                    <!-- <ul class="dropdown-ul">
+                                        <!-- <ul class="dropdown-ul">
                                             <li class=""><a class="dropdown-link active" href="index.html">Homepage
                                                     1</a>
                                             </li>
@@ -301,16 +375,16 @@
                                         <ul class="dropdown-ul mega-dropdown">
                                             <li class="mega-dropdown-li">
                                                 <ul class="mega-dropdown-ul">
+                                                    <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                                            href="match-schedule.html">Schedule</a>
+                                                    </li> -->
                                                     <li class="dropdown-li"><a class="dropdown-link"
-                                                        href="match-schedule.html">Schedule</a>
+                                                            href="team.html">Competition Format</a>
                                                     </li>
-                                                    <li class="dropdown-li"><a class="dropdown-link"
-                                                        href="team.html">Competition Format</a>
-                                                    </li>
-                                                    <li class="dropdown-li"><a class="dropdown-link"
-                                                        href="league-standings.html">Awarding</a>
-                                                    </li>
-                                                <!--<li class="dropdown-li"><a class="dropdown-link"
+                                                   <!--  <li class="dropdown-li"><a class="dropdown-link"
+                                                            href="league-standings.html">Awarding</a>
+                                                    </li> -->
+                                                    <!--<li class="dropdown-li"><a class="dropdown-link"
                                                     href="league-standings.html">Standings</a>
                                                 </li>
                                                     </li>
@@ -336,7 +410,7 @@
                                                     <li class="dropdown-li"><a class="dropdown-link"
                                                             href="error.html">Error</a>
                                                     </li>-->
-                                                </ul> 
+                                                </ul>
                                             </li>
                                             <li class="mega-dropdown-li">
                                                 <ul class="mega-dropdown-ul">
@@ -370,8 +444,8 @@
                                                     you</a></li>
                                         </ul>
                                     </li> -->
-                                    <li class="has-dropdown"><a class="menu-item" href="gallery.html">Gallery</a>
-                                        <ul class="dropdown-ul">
+                                   <!--  <li class="has-dropdown"><a class="menu-item" href="gallery.html">Gallery</a>
+                                        <ul class="dropdown-ul"> -->
                                             <!-- <li class="dropdown-li"><a class="dropdown-link" href="blog.html">News</a>
                                             </li>
                                             <li class="dropdown-li"><a class="dropdown-link"
@@ -379,7 +453,7 @@
                                                     Details</a></li> -->
                                         </ul>
                                     </li>
-                                    <li><a class="menu-item" href="contact.html">Contact</a></li>
+                                    <!-- <li><a class="menu-item" href="contact.html">Contact</a></li> -->
                                 </ul>
                             </nav>
                         </div>
@@ -389,7 +463,7 @@
                                 <div class="search-input-area">
                                     <div class="container">
                                         <div class="search-input-inner">
-                                                 <!-- <select class="custom-select select-hidden">
+                                            <!-- <select class="custom-select select-hidden">
                                                 <option value="hide">All</option>
                                                 <option value="all">All</option>
                                                 <option value="league">League</option>
@@ -554,8 +628,9 @@
                         <ul class="sub-menu mega-dropdown-mobile">
                             <li class="mega-dropdown-li">
                                 <ul class="mega-dropdown-ul mm-show">
-                                    <li class="dropdown-li"><a class="dropdown-link" href="match-schedule.html">Schedule</a>
-                                    </li>
+                                   <!--  <li class="dropdown-li"><a class="dropdown-link"
+                                            href="match-schedule.html">Schedule</a>
+                                    </li> -->
                                     <!-- <li class="dropdown-li"><a class="dropdown-link" href="team-details.html">Player
                                             Details</a>
                                     </li>
@@ -567,7 +642,8 @@
                             </li>
                             <li class="mega-dropdown-li">
                                 <ul class="mega-dropdown-ul mm-show">
-                                    <li class="dropdown-li"><a class="dropdown-link" href="team.html">Competition Format</a>
+                                    <li class="dropdown-li"><a class="dropdown-link" href="team.html">Competition
+                                            Format</a>
                                     </li>
                                     <!-- <li class="dropdown-li"><a class="dropdown-link" href="event.html">Event</a>
                                     </li>
@@ -580,8 +656,9 @@
                             </li>
                             <li class="mega-dropdown-li">
                                 <ul class="mega-dropdown-ul mm-show">
-                                    <li class="dropdown-li"><a class="dropdown-link" href="league-standings.html">Awarding</a>
-                                    </li>
+                                   <!--  <li class="dropdown-li"><a class="dropdown-link"
+                                            href="league-standings.html">Awarding</a>
+                                    </li> -->
                                     <!-- <li class="dropdown-li"><a class="dropdown-link" href="match-result.html">Match
                                             Result</a>
                                     </li>
@@ -602,20 +679,21 @@
                             <li><a href="thank-you.html">Thank You</a></li>
                         </ul>
                     </li> -->
-                   <!--<li class="has-dropdown firstlvl">
+                    <!--<li class="has-dropdown firstlvl">
                         <a class="mm-link" href="gallery.html">Gallery <i class="rt-angle-down"> </i></a>
                         <ul class="sub-menu">
                             <li><a href="blog.html">G</a></li>
                             <li><a href="blog-details.html">News Details</a></li>
                         </ul> 
                     </li>-->
-                    <li><a class="mm-link" href="gallery.html">Gallery</a></li>
-                    <li><a class="mm-link" href="contact.html">Contact</a></li>
+                 <!--    <li><a class="mm-link" href="gallery.html">Gallery</a></li>
+                    <li><a class="mm-link" href="contact.html">Contact</a></li> -->
                 </ul>
             </nav>
             <!-- side-mobile-menu end -->
             <div class="side-bar-social-links">
-                <a href="https://www.facebook.com/profile.php?id=100094321766590" class="platform"><i class="fab fa-facebook-f"></i></a>
+                <!-- <a href="https://www.facebook.com/profile.php?id=100094321766590" class="platform"><i
+                        class="fab fa-facebook-f"></i></a> -->
                 <!-- <a href="#0" class="platform"><i class="fab fa-twitter"></i></a>
                 <a href="#0" class="platform"><i class="fab fa-behance"></i></a>
                 <a href="#0" class="platform"><i class="fab fa-youtube"></i></a> -->
@@ -657,9 +735,16 @@
                     <div class="col-lg-7 col-12">
                         <div class="contents">
                             <div class="section-title-area section-title-area1 text-start">
-                                <h1 class="section-title"><span>ABOUT THE</span> <br> ASIAN BMX CHAMPIONSHIP 2023</h1>
-                                <p>The Tagaytay City BMX Park and the newly renovated, multipurpose Tagaytay City Combat Center will host the 2023 Asian Cycling Confederation (ACC) BMX Racing and Freestyle Championships on July 15–16.</p><br>
-                                <p>The president of the Philippine Olympic Committee (POC) and national federation PhilCyling, Tagaytay City Mayor Abraham "Bambol" Tolentino, extended a hearty greeting to the competitors, coaches, and officials for the ACC BMX Championships.</p>
+                                <h1 class="section-title"><span>ABOUT THE</span> <br> ASIAN TRACK CHAMPIONSHIPS 2026
+                                </h1>
+                                <p>Get ready for speed and adrenaline! The Tagaytay City Velodrome is set to host the
+                                    prestigious Asian Track Championships from March 25 to 31, 2026. This premier event
+                                    gathers the fastest cyclists from across the continent to compete for glory and
+                                    Olympic qualification points.</p><br>
+                                <p>Witness world-class athletes showcase their power and precision on the track.
+                                    Organized by the Asian Cycling Confederation (ACC) and PhilCycling, this
+                                    championship marks a significant milestone for Philippine sports, bringing the
+                                    thrill of velodrome racing to the heart of Tagaytay.</p>
                             </div>
                             <!-- <ul>
                                 <li class="player">
@@ -684,7 +769,7 @@
     </div>
     <!--================= About Section End Here =================-->
 
-    
+
     <!--================= Counter Up Section Start Here =================-->
     <!-- <section class="rts-counter-up-section">
         <div class="container">
@@ -728,50 +813,55 @@
             </div>
             <div class="champion-details filterd-items">
                 <div class="contents">
-                    <h1 class="details-title">Asian BMX championships set this weekend in Tagaytay City</h1>
+                    <h1 class="details-title">Asian Track Championships set for March 2026 in Tagaytay City</h1>
                     <p class="p0">
-                        TAGAYTAY City rolls out the red carpet for athletes and officials from eight countries who are seeing action in 
-                        the 2023 Asian Cycling Confederation (ACC) BMX Racing and Freestyle Championships set this Saturday 
-                        and Sunday at the Tagaytay City BMX Park and the newly-refurbished and multi-purpose Tagaytay City Combat Center.
+                        TAGAYTAY City rolls out the red carpet for athletes and officials from across the continent who
+                        are seeing action in the 2026 Asian Track Championships set from March 25 to 31 at the Tagaytay
+                        City Velodrome.
                     </p><br>
                     <p class="p4">
-                        “Our warmest welcome to the athletes, coaches and officials for the ACC BMX Championships,” said Tagaytay City Mayor and Philippine Olympic Committee 
-                        (POC) president Rep. Abraham “Bambol” Tolentino, who also heads the host national federation PhilCycling.
+                        “Our warmest welcome to the athletes, coaches and officials for the Asian Track Championships,”
+                        said Tagaytay City Mayor and Philippine Olympic Committee (POC) president Rep. Abraham “Bambol”
+                        Tolentino, who also heads the host national federation PhilCycling.
                     </p><br>
                     <p class="p-0">
-                        Riders from Indonesia, Japan, South Korea, Singapore, China, Hongkong, Thailand and Malaysia poise a challenge to 
-                        Filipino riders led by London Olympian Daniel Caluag, the lone 
-                        Filipino gold medalist in the Incheon 2014 Asian Games, and former Asian Juniors champion Patrick Coo.
+                        Riders from powerhouse countries like Japan, South Korea, China, Hongkong, Thailand, Malaysia,
+                        and Indonesia are poised to challenge elite Filipino track cyclists in this prestigious
+                        UCI-sanctioned event.
                     </p><br>
-                    <p class="p1">The freestyle competitions in flatland and park will be staged Saturday with national coach and athlete Renz 
-                        Viaje leading the campaign in the championships primarily supported by the Philippine Sports Commission, POC, 
-                        City Government of Tagaytay and Council, First District of Cavite, Province of Cavite and with support from Smart/MVP Sports 
-                        Foundation, Vans and partner hotels Summit Ridge, Tagaytay Quest Hotel and Tagaytay Hotel Dominique.</p>
+                    <p class="p1">The competition highlights speed, power, and precision inside the velodrome. The
+                        championships are primarily supported by the Philippine Sports Commission, POC, City Government
+                        of Tagaytay and Council, First District of Cavite, Province of Cavite and with support from
+                        Smart/MVP Sports Foundation.</p>
                     <p class="p2">
-                        The Asian championships are the second major international competition that Tolentino is hosting in Tagaytay City 
-                        after the Philippine 30th Southeast Asian Games in December 2019.
+                        The Asian Track Championships are another major international competition that Tolentino is
+                        hosting in Tagaytay City, continuing the legacy of the 30th Southeast Asian Games in December
+                        2019.
                     </p><br>
                     <p class="p1">
-                        The event—calendared by the International Cycling Union and the ACC—will be held at the UCI-standard racing facility, 
-                        the only BMX park in Asia that has a roof.
+                        The event—calendared by the International Cycling Union (UCI) and the ACC—will be held at the
+                        Tagaytay City Velodrome, the country's premier venue for track cycling.
                     </p><br>
                     <p class="p2">
-                        The motos for the BMX racing events are set Saturday and early Sunday with the finals scheduled for Sunday afternoon, 
-                        according to PhilCycling secretary-general Atty. Billy Sumagui.
+                        The races are scheduled from March 25 to 31, 2026, where the best Asian cyclists will compete
+                        for supremacy and Olympic qualification points on the track.
                     </p><br>
-                    <p class="p1">
-                        A total of 38 athletes are entered in freestyle—14 men and seven women in park and 10 men and seven women in flatland. For racing, 
-                        53 riders are entered in the championships and 35 in the challenge event. <span><i> -(BusinessMirror)</i></span>
-                    </p><br>
+                    <!-- <p class="p1">
+                        A total of 38 athletes are entered in freestyle—14 men and seven women in park and 10 men and
+                        seven women in flatland. For racing,
+                        53 riders are entered in the championships and 35 in the challenge event. <span><i>
+                                -(BusinessMirror)</i></span>
+                    </p> --><br>
                 </div>
-                <div class="details-video">
-                    <div class="video-thumb"><img src="assets/images/about/2023_ACC_BMX_logo_FINAL.JPEG" alt="video-thumb">
+               <!--  <div class="details-video">
+                    <div class="video-thumb"><img src="assets/images/about/2023_ACC_BMX_logo_FINAL.JPEG"
+                            alt="video-thumb">
                         <div class="play-btn play-video"><a class="popup-video"
                                 href="https://www.youtube.com/watch?v=7A-miKrk7J4" data-effect="mfp-move-horizontal"><i
                                     class="fas fa-play"></i></a>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <!-- <div class="champion-details filterd-items yr20 hide">
                 <div class="contents">
@@ -861,9 +951,9 @@
                 </div>
             </div>-->
         </div>
-    </div> 
+    </div>
     <!--================= Champions Section End Here =================-->
-    
+
 
 
     <!--================= Sponsors Section Start Here =================-->
@@ -872,7 +962,10 @@
             <div class="section-title-area section-title-area1 text-center mb--50">
                 <span class="pretitle">ORGANIZING COMMITTEE</span>
                 <h1 class="section-title">ORGANIZING COMMITTEE (PhilCycling)</h1>
-                <p>The Integrated Cycling Federation of the Philippines (PhilCycling) is the national governing body for cycling as a sport in the Philippines. It is duly recognised by the Philippine Sports Commission and the Philippine Olympic Committee and the International Cycling Union (Union Cycliste Internationale a.k.a. UCI).</p>
+                <p>The Integrated Cycling Federation of the Philippines (PhilCycling) is the national governing body for
+                    cycling as a sport in the Philippines. It is duly recognised by the Philippine Sports Commission and
+                    the Philippine Olympic Committee and the International Cycling Union (Union Cycliste Internationale
+                    a.k.a. UCI).</p>
             </div>
             <div class="sponsors-section-inner">
                 <div class="swiper rts-brandSlider">
@@ -946,12 +1039,15 @@
                 <div class="row">
                     <div class="col-xl-3 col-md-6">
                         <div class="footer-widget">
-                            <div class="footer-logo"><img src="assets/images/2023_ACC_BMX_Letterhead_1.png" alt="footer-logo">
+                            <div class="footer-logo"><img src="assets/images/2023_ACC_BMX_Letterhead_1.png"
+                                    alt="footer-logo">
                             </div>
-                            <p class="footer-text">Unleash the Thrill: Riding the Wave of Asian BMX Excellence in 2023!</p>
+                            <p class="footer-text">Experience the Speed: Witness the Pinnacle of Asian Track Cycling
+                            Excellence in 2026!
+                            </p>
                             <div class="social-links">
-                                <a href="https://www.facebook.com/profile.php?id=100094321766590" class="platform"><i
-                                        class="fab fa-facebook-f"></i></a>
+                               <!--  <a href="https://www.facebook.com/profile.php?id=100094321766590" class="platform"><i
+                                        class="fab fa-facebook-f"></i></a> -->
                                 <!-- <a href="#0" class="platform"><i
                                         class="fab fa-twitter"></i></a>
                                 <a href="#0" class="platform"><i
@@ -966,11 +1062,11 @@
                             <h3 class="footer-widget-title"><span class="decorator"></span> ESSENTIAL LINKS</h3>
                             <ul class="widget-items cata-widget">
                                 <li class="widget-list-item"><a href="about.html">ABOUT US</a></li>
-                                <li class="widget-list-item"><a href="match-schedule.html">SCHEDULE</a></li>
+                                <!-- <li class="widget-list-item"><a href="match-schedule.html">SCHEDULE</a></li> -->
                                 <li class="widget-list-item"><a href="team.html">COMPETITION FORMAT</a></li>
-                                <li class="widget-list-item"><a href="league-standings.html">AWARDING</a></li>
+                               <!--  <li class="widget-list-item"><a href="league-standings.html">AWARDING</a></li>
                                 <li class="widget-list-item"><a href="gallery.html">GALLERY</a></li>
-                                <li class="widget-list-item"><a href="contact.html">CONTACT</a></li>
+                                <li class="widget-list-item"><a href="contact.html">CONTACT</a></li> -->
                                 <!-- <li class="widget-list-item"><a href="price-table.html">PRICE TABLE</a></li> -->
                                 <!-- <li class="widget-list-item"><a href="shop.html">SHOP</a></li> -->
                                 <!-- <li class="widget-list-item"><a href="our-players.html">OUR PLAYERS</a></li> -->
@@ -987,13 +1083,15 @@
                             <h3 class="footer-widget-title"><span class="decorator"></span> GET IN TOUCH</h3>
                             <ul>
                                 <li class="widget-list-item"><i class="fas fa-envelope-open"></i><a
-                                        href="mailto:philcycling.offroad@gmail.com">philcycling.offroad@gmail.com</a></li>
+                                        href="mailto:philcycling.offroad@gmail.com">philcycling.offroad@gmail.com</a>
+                                </li>
                                 <!-- <li class="widget-list-item"><i class="fas fa-phone"></i><a href="tel:09877788890">098
                                         777
                                         888 90</a></li> -->
-                                <li class="widget-list-item"><i class="fas fa-map-marker-alt"></i> <span>TAGAYTAY BMX TRACK, CITY
-                                    SPORTS FACILITIES <br>
-                                    TAGAYTAY CITY</span></li>
+                                <li class="widget-list-item"><i class="fas fa-map-marker-alt"></i> <span>TAGAYTAY BMX
+                                        TRACK, CITY
+                                        SPORTS FACILITIES <br>
+                                        TAGAYTAY CITY</span></li>
                             </ul>
                         </div>
                     </div>
@@ -1042,7 +1140,7 @@
         <div class="footer-bottom-area">
             <div class="container">
                 <div class="bottom-area-inner">
-                    <span class="copyright">COPYRIGHT - 2023</span>
+                    <span class="copyright">COPYRIGHT - 2026</span>
                     <!-- <div class="footer-bottom-links">
                         <a href="#">TERMS & CONDITONS</a>
                         <a href="faq.html">FAQ</a>

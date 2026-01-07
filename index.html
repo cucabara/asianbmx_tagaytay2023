@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asian BMX Championship | Tagaytay 2023</title>
+    <title>Asian Track Championships | Tagaytay 2026</title>
     <!--================= Favicon =================-->
     <link rel="apple-touch-icon" href="assets/images/fav.png">
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/fav.png">
@@ -36,14 +36,15 @@
 
     <style>
         :root {
-	--hue: 223;
-	--bg: hsl(var(--hue),90%,90%);
-	--fg: hsl(var(--hue),90%,10%);
-	--primary: hsl(var(--hue),90%,50%);
-	--trans-dur: 0.3s;
-	font-size: calc(16px + (32 - 16) * (100vw - 320px) / (2560 - 320));
-}
-/* body {
+            --hue: 223;
+            --bg: hsl(var(--hue), 90%, 90%);
+            --fg: hsl(var(--hue), 90%, 10%);
+            --primary: hsl(var(--hue), 90%, 50%);
+            --trans-dur: 0.3s;
+            font-size: calc(16px + (32 - 16) * (100vw - 320px) / (2560 - 320));
+        }
+
+        /* body {
 	background-color: var(--bg);
 	color: var(--fg);
 	display: flex;
@@ -53,144 +54,212 @@
 		background-color var(--trans-dur),
 		color var(--trans-dur);
 } */
-.bike {
-	display: block;
-	margin: auto;
-	width: 30em;
-	height: auto;
-}
-.bike__body,
-.bike__front,
-.bike__handlebars,
-.bike__pedals,
-.bike__pedals-spin,
-.bike__seat,
-.bike__spokes,
-.bike__spokes-spin,
-.bike__tire {
-	animation: bikeBody 3s ease-in-out infinite;
-	stroke: var(--primary);
-	transition: stroke var(--trans-dur);
-}
-.bike__front {
-	animation-name: bikeFront;
-}
-.bike__handlebars {
-	animation-name: bikeHandlebars;
-}
-.bike__pedals {
-	animation-name: bikePedals;
-}
-.bike__pedals-spin {
-	animation-name: bikePedalsSpin;
-}
-.bike__seat {
-	animation-name: bikeSeat;
-}
-.bike__spokes,
-.bike__tire {
-	stroke: currentColor;
-}
-.bike__spokes {
-	animation-name: bikeSpokes;
-}
-.bike__spokes-spin {
-	animation-name: bikeSpokesSpin;
-}
-.bike__tire {
-	animation-name: bikeTire;
-}
+        .bike {
+            display: block;
+            margin: auto;
+            width: 30em;
+            height: auto;
+        }
 
-/* Dark theme */
-@media (prefers-color-scheme: dark) {
-	:root {
-		--bg: hsl(var(--hue),90%,10%);
-		--fg: hsl(var(--hue),90%,90%);
-	}
-}
+        .bike__body,
+        .bike__front,
+        .bike__handlebars,
+        .bike__pedals,
+        .bike__pedals-spin,
+        .bike__seat,
+        .bike__spokes,
+        .bike__spokes-spin,
+        .bike__tire {
+            animation: bikeBody 3s ease-in-out infinite;
+            stroke: var(--primary);
+            transition: stroke var(--trans-dur);
+        }
 
-/* Animations */
-@keyframes bikeBody {
-	from { stroke-dashoffset: 79; }
-	33%,
-	67% { stroke-dashoffset: 0; }
-	to { stroke-dashoffset: -79; }
-}
-@keyframes bikeFront {
-	from { stroke-dashoffset: 19; }
-	33%,
-	67% { stroke-dashoffset: 0; }
-	to { stroke-dashoffset: -19; }
-}
-@keyframes bikeHandlebars {
-	from { stroke-dashoffset: 10; }
-	33%,
-	67% { stroke-dashoffset: 0; }
-	to { stroke-dashoffset: -10; }
-}
-@keyframes bikePedals {
-	from {
-		animation-timing-function: ease-in;
-		stroke-dashoffset: -25.133;
-	}
-	33%,
-	67% {
-		animation-timing-function: ease-out;
-		stroke-dashoffset: -21.991;
-	}
-	to {
-		stroke-dashoffset: -25.133;
-	}
-}
-@keyframes bikePedalsSpin {
-	from { transform: rotate(0.1875turn); }
-	to { transform: rotate(3.1875turn); }
-}
-@keyframes bikeSeat {
-	from { stroke-dashoffset: 5; }
-	33%,
-	67% { stroke-dashoffset: 0; }
-	to { stroke-dashoffset: -5; }
-}
-@keyframes bikeSpokes {
-	from {
-		animation-timing-function: ease-in;
-		stroke-dashoffset: -31.416;
-	}
-	33%,
-	67% {
-		animation-timing-function: ease-out;
-		stroke-dashoffset: -23.562;
-	}
-	to {
-		stroke-dashoffset: -31.416;
-	}
-}
-@keyframes bikeSpokesSpin {
-	from { transform: rotate(0); }
-	to { transform: rotate(3turn); }
-}
-@keyframes bikeTire {
-	from {
-		animation-timing-function: ease-in;
-		stroke-dashoffset: 56.549;
-		transform: rotate(0);
-	}
-	33% {
-		stroke-dashoffset: 0;
-		transform: rotate(0.33turn);
-	}
-	67% {
-		animation-timing-function: ease-out;
-		stroke-dashoffset: 0;
-		transform: rotate(0.67turn);
-	}
-	to {
-		stroke-dashoffset: -56.549;
-		transform: rotate(1turn);
-	}
-}
+        .bike__front {
+            animation-name: bikeFront;
+        }
+
+        .bike__handlebars {
+            animation-name: bikeHandlebars;
+        }
+
+        .bike__pedals {
+            animation-name: bikePedals;
+        }
+
+        .bike__pedals-spin {
+            animation-name: bikePedalsSpin;
+        }
+
+        .bike__seat {
+            animation-name: bikeSeat;
+        }
+
+        .bike__spokes,
+        .bike__tire {
+            stroke: currentColor;
+        }
+
+        .bike__spokes {
+            animation-name: bikeSpokes;
+        }
+
+        .bike__spokes-spin {
+            animation-name: bikeSpokesSpin;
+        }
+
+        .bike__tire {
+            animation-name: bikeTire;
+        }
+
+        /* Dark theme */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: hsl(var(--hue), 90%, 10%);
+                --fg: hsl(var(--hue), 90%, 90%);
+            }
+        }
+
+        /* Animations */
+        @keyframes bikeBody {
+            from {
+                stroke-dashoffset: 79;
+            }
+
+            33%,
+            67% {
+                stroke-dashoffset: 0;
+            }
+
+            to {
+                stroke-dashoffset: -79;
+            }
+        }
+
+        @keyframes bikeFront {
+            from {
+                stroke-dashoffset: 19;
+            }
+
+            33%,
+            67% {
+                stroke-dashoffset: 0;
+            }
+
+            to {
+                stroke-dashoffset: -19;
+            }
+        }
+
+        @keyframes bikeHandlebars {
+            from {
+                stroke-dashoffset: 10;
+            }
+
+            33%,
+            67% {
+                stroke-dashoffset: 0;
+            }
+
+            to {
+                stroke-dashoffset: -10;
+            }
+        }
+
+        @keyframes bikePedals {
+            from {
+                animation-timing-function: ease-in;
+                stroke-dashoffset: -25.133;
+            }
+
+            33%,
+            67% {
+                animation-timing-function: ease-out;
+                stroke-dashoffset: -21.991;
+            }
+
+            to {
+                stroke-dashoffset: -25.133;
+            }
+        }
+
+        @keyframes bikePedalsSpin {
+            from {
+                transform: rotate(0.1875turn);
+            }
+
+            to {
+                transform: rotate(3.1875turn);
+            }
+        }
+
+        @keyframes bikeSeat {
+            from {
+                stroke-dashoffset: 5;
+            }
+
+            33%,
+            67% {
+                stroke-dashoffset: 0;
+            }
+
+            to {
+                stroke-dashoffset: -5;
+            }
+        }
+
+        @keyframes bikeSpokes {
+            from {
+                animation-timing-function: ease-in;
+                stroke-dashoffset: -31.416;
+            }
+
+            33%,
+            67% {
+                animation-timing-function: ease-out;
+                stroke-dashoffset: -23.562;
+            }
+
+            to {
+                stroke-dashoffset: -31.416;
+            }
+        }
+
+        @keyframes bikeSpokesSpin {
+            from {
+                transform: rotate(0);
+            }
+
+            to {
+                transform: rotate(3turn);
+            }
+        }
+
+        @keyframes bikeTire {
+            from {
+                animation-timing-function: ease-in;
+                stroke-dashoffset: 56.549;
+                transform: rotate(0);
+            }
+
+            33% {
+                stroke-dashoffset: 0;
+                transform: rotate(0.33turn);
+            }
+
+            67% {
+                animation-timing-function: ease-out;
+                stroke-dashoffset: 0;
+                transform: rotate(0.67turn);
+            }
+
+            to {
+                stroke-dashoffset: -56.549;
+                transform: rotate(1turn);
+            }
+        }
     </style>
+
 </head>
 
 <body>
@@ -200,34 +269,39 @@
             <div class="loader">
                 <svg viewBox="0 0 866 866" xmlns="http://www.w3.org/2000/svg">
                     <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164.83 151.5">
-                     <svg class="bike" viewBox="0 0 75 30" width="250px" height="160px">
-                         <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1">
-                             <g transform="translate(9.5,19)">
-                                 <circle class="bike__tire" r="9" stroke-dasharray="56.549 56.549" />
-                                 <g class="bike__spokes-spin" stroke-dasharray="31.416 31.416" stroke-dashoffset="-23.562">
-                                     <circle class="bike__spokes" r="5" />
-                                     <circle class="bike__spokes" r="5" transform="rotate(180,0,0)" />
-                                 </g>
-                             </g>
-                             <g transform="translate(24,19)">
-                                 <g class="bike__pedals-spin" stroke-dasharray="25.133 25.133" stroke-dashoffset="-21.991" transform="rotate(67.5,0,0)">
-                                     <circle class="bike__pedals" r="4" />
-                                     <circle class="bike__pedals" r="4" transform="rotate(180,0,0)" />
-                                 </g>
-                             </g>
-                             <g transform="translate(38.5,19)">
-                                 <circle class="bike__tire" r="9" stroke-dasharray="56.549 56.549" />
-                                 <g class="bike__spokes-spin" stroke-dasharray="31.416 31.416" stroke-dashoffset="-23.562">
-                                     <circle class="bike__spokes" r="5" />
-                                     <circle class="bike__spokes" r="5" transform="rotate(180,0,0)" />
-                                 </g>
-                             </g>
-                             <polyline class="bike__seat" points="14 3,18 3" stroke-dasharray="5 5" />
-                             <polyline class="bike__body" points="16 3,24 19,9.5 19,18 8,34 7,24 19" stroke-dasharray="79 79" />
-                             <path class="bike__handlebars" d="m30,2h6s1,0,1,1-1,1-1,1" stroke-dasharray="10 10" />
-                             <polyline class="bike__front" points="32.5 2,38.5 19" stroke-dasharray="19 19" />
-                         </g>
-                     </svg>
+                        <svg class="bike" viewBox="0 0 75 30" width="250px" height="160px">
+                            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="1">
+                                <g transform="translate(9.5,19)">
+                                    <circle class="bike__tire" r="9" stroke-dasharray="56.549 56.549" />
+                                    <g class="bike__spokes-spin" stroke-dasharray="31.416 31.416"
+                                        stroke-dashoffset="-23.562">
+                                        <circle class="bike__spokes" r="5" />
+                                        <circle class="bike__spokes" r="5" transform="rotate(180,0,0)" />
+                                    </g>
+                                </g>
+                                <g transform="translate(24,19)">
+                                    <g class="bike__pedals-spin" stroke-dasharray="25.133 25.133"
+                                        stroke-dashoffset="-21.991" transform="rotate(67.5,0,0)">
+                                        <circle class="bike__pedals" r="4" />
+                                        <circle class="bike__pedals" r="4" transform="rotate(180,0,0)" />
+                                    </g>
+                                </g>
+                                <g transform="translate(38.5,19)">
+                                    <circle class="bike__tire" r="9" stroke-dasharray="56.549 56.549" />
+                                    <g class="bike__spokes-spin" stroke-dasharray="31.416 31.416"
+                                        stroke-dashoffset="-23.562">
+                                        <circle class="bike__spokes" r="5" />
+                                        <circle class="bike__spokes" r="5" transform="rotate(180,0,0)" />
+                                    </g>
+                                </g>
+                                <polyline class="bike__seat" points="14 3,18 3" stroke-dasharray="5 5" />
+                                <polyline class="bike__body" points="16 3,24 19,9.5 19,18 8,34 7,24 19"
+                                    stroke-dasharray="79 79" />
+                                <path class="bike__handlebars" d="m30,2h6s1,0,1,1-1,1-1,1" stroke-dasharray="10 10" />
+                                <polyline class="bike__front" points="32.5 2,38.5 19" stroke-dasharray="19 19" />
+                            </g>
+                        </svg>
                     </svg>
                 </svg>
 
@@ -277,7 +351,8 @@
             <div class="navbar-part navbar-part1">
                 <div class="container">
                     <div class="navbar-inner">
-                        <a href="index.html" class="logo"><img src="assets/images/2023_ACC_BMX_Letterhead_1.png" alt="sportius-logo"></a>
+                        <a href="index.html" class="logo"><img src="assets/images/2023_ACC_BMX_Letterhead_1.png"
+                                alt="sportius-logo"></a>
                         <a href="index.html" class="logo-sticky"><img src="assets/images/2023_ACC_BMX_Letterhead_1.png"
                                 alt="kester-logo"></a>
                         <div class="rts-menu">
@@ -300,15 +375,15 @@
                                         <ul class="dropdown-ul mega-dropdown">
                                             <li class="mega-dropdown-li">
                                                 <ul class="mega-dropdown-ul">
-                                                    <li class="dropdown-li"><a class="dropdown-link"
+                                                   <!--  <li class="dropdown-li"><a class="dropdown-link"
                                                             href="match-schedule.html">Schedule</a>
-                                                    </li>
+                                                    </li> -->
                                                     <li class="dropdown-li"><a class="dropdown-link"
                                                             href="team.html">Competition Format</a>
                                                     </li>
-                                                    <li class="dropdown-li"><a class="dropdown-link"
-                                                        href="league-standings.html">Awarding</a>
-                                                    </li>
+                                                   <!--  <li class="dropdown-li"><a class="dropdown-link"
+                                                            href="league-standings.html">Awarding</a>
+                                                    </li> -->
                                                     <!--<li class="dropdown-li"><a class="dropdown-link"
                                                         href="league-standings.html">Standings</a>
                                                     </li>
@@ -336,7 +411,7 @@
                                                     </li>
                                                 </ul> 
                                             </li>-->
-                                           <!--  <li class="mega-dropdown-li">
+                                            <!--  <li class="mega-dropdown-li">
                                                 <ul class="mega-dropdown-ul">
                                                     <li class="dropdown-li"><a class="dropdown-link"
                                                             href="match-schedule.html">Competition Schedule</a>
@@ -368,16 +443,16 @@
                                                     you</a></li>
                                         </ul>
                                     </li> -->
-                                    <li class="has-dropdown"><a class="menu-item" href="gallery.html">Gallery</a>
-                                        <ul class="dropdown-ul">
+                                    <!-- <li class="has-dropdown"><a class="menu-item" href="gallery.html">Gallery</a>
+                                        <ul class="dropdown-ul"> -->
                                             <!-- <li class="dropdown-li"><a class="dropdown-link" href="blog.html">News</a>
                                             </li>
                                             <li class="dropdown-li"><a class="dropdown-link"
                                                     href="blog-details.html">News
                                                     Details</a></li> -->
-                                        </ul>
-                                    </li>
-                                    <li><a class="menu-item" href="contact.html">Contact</a></li>
+                                    <!--     </ul>
+                                    </li> -->
+                                   <!--  <li><a class="menu-item" href="contact.html">Contact</a></li> -->
                                 </ul>
                             </nav>
                         </div>
@@ -397,11 +472,11 @@
                                                 <option value="match">Match</option>
                                                 <option value="score">Score</option> 
                                             </select>-->
-                                            <div class="input-div">
+                                            <!-- <div class="input-div">
                                                 <div class="search-input-icon"><i class="rt-search mr--10"></i></div>
                                                 <input id="searchInput1" class="search-input" type="text"
                                                     placeholder="Search by keyword or #">
-                                            </div>
+                                            </div> -->
                                             <div class="search-close-icon"><i class="rt-xmark"></i></div>
                                         </div>
                                     </div>
@@ -538,7 +613,7 @@
             <!-- side-mobile-menu start -->
             <nav class="side-mobile-menu side-mobile-menu1">
                 <ul id="mobile-menu-active">
-                   <!-- <li class="has-dropdown firstlvl">
+                    <!-- <li class="has-dropdown firstlvl">
                         <a class="mm-link" href="index.html">Home<i class="rt-angle-down"></i></a>
                          <ul class="sub-menu">
                             <li><a href="index.html">Home Style 1</a></li>
@@ -553,8 +628,9 @@
                         <ul class="sub-menu mega-dropdown-mobile">
                             <li class="mega-dropdown-li">
                                 <ul class="mega-dropdown-ul mm-show">
-                                    <li class="dropdown-li"><a class="dropdown-link" href="match-schedule.html">Schedule</a>
-                                    </li>
+                                    <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                            href="match-schedule.html">Schedule</a>
+                                    </li> -->
                                     <!-- <li class="dropdown-li"><a class="dropdown-link" href="team-details.html">Player
                                             Details</a>
                                     </li>
@@ -566,7 +642,8 @@
                             </li>
                             <li class="mega-dropdown-li">
                                 <ul class="mega-dropdown-ul mm-show">
-                                    <li class="dropdown-li"><a class="dropdown-link" href="team.html">Competition Format</a>
+                                    <li class="dropdown-li"><a class="dropdown-link" href="team.html">Competition
+                                            Format</a>
                                     </li>
                                     <!-- <li class="dropdown-li"><a class="dropdown-link" href="event.html">Event</a>
                                     </li>
@@ -579,8 +656,9 @@
                             </li>
                             <li class="mega-dropdown-li">
                                 <ul class="mega-dropdown-ul mm-show">
-                                    <li class="dropdown-li"><a class="dropdown-link" href="league-standings.html">Awarding</a>
-                                    </li>
+                                    <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                            href="league-standings.html">Awarding</a>
+                                    </li> -->
                                     <!-- <li class="dropdown-li"><a class="dropdown-link" href="match-result.html">Match
                                             Result</a>
                                     </li>
@@ -601,20 +679,21 @@
                             <li><a href="thank-you.html">Thank You</a></li>
                         </ul>
                     </li> -->
-                   <!-- <li class="has-dropdown firstlvl">
+                    <!-- <li class="has-dropdown firstlvl">
                         <a class="mm-link" href="gallery.html">Gallery <i class="rt-angle-down"></i></a>
                             <ul class="sub-menu">
                             <li><a href="blog.html">G</a></li>
                             <li><a href="blog-details.html">News Details</a></li>
                         </ul>
                     </li> -->
-                    <li><a class="mm-link" href="gallery.html">Gallery</a></li>
-                    <li><a class="mm-link" href="contact.html">Contact</a></li>
+                <!--     <li><a class="mm-link" href="gallery.html">Gallery</a></li>
+                    <li><a class="mm-link" href="contact.html">Contact</a></li> -->
                 </ul>
             </nav>
             <!-- side-mobile-menu end -->
             <div class="side-bar-social-links">
-                <a href="https://www.facebook.com/profile.php?id=100094321766590" class="platform"><i class="fab fa-facebook-f"></i></a>
+                <!-- <a href="https://www.facebook.com/profile.php?id=100094321766590" class="platform"><i
+                        class="fab fa-facebook-f"></i></a> -->
                 <!-- <a href="#0" class="platform"><i class="fab fa-twitter"></i></a>
                 <a href="#0" class="platform"><i class="fab fa-behance"></i></a>
                 <a href="#0" class="platform"><i class="fab fa-youtube"></i></a> -->
@@ -630,13 +709,13 @@
                         <div class="banner-single banner-single-1 banner-bg">
                             <div class="container">
                                 <div class="banner-content">
-                                    <span class="pretitle">WELCOME TO ASIAN BMX CHAMPIONHIPS 2023</span>
-                                    <h1 class="banner-heading">BMX RACING</h1>
+                                    <span class="pretitle">WELCOME TO ASIAN TRACK CHAMPIONSHIPS 2026 </span>
+                                    <h1 class="banner-heading">TRACK CYCLING</h1>
                                     <div class="banner-btn-area">
                                         <a href="team.html" class="team-btn banner-btn">COMPETITION FORMAT<i
                                                 class="far fa-long-arrow-right ml--5"></i></a>
-                                        <a href="league-standings.html" class="nxt-match-btn banner-btn">AWARDING<i
-                                                class="far fa-long-arrow-right ml--5"></i></a>
+                                       <!--  <a href="league-standings.html" class="nxt-match-btn banner-btn">AWARDING<i
+                                                class="far fa-long-arrow-right ml--5"></i></a> -->
                                     </div>
                                 </div>
                             </div>
@@ -646,8 +725,8 @@
                         <div class="banner-single banner-single-1_2 banner-bg">
                             <div class="container">
                                 <div class="banner-content">
-                                    <span class="pretitle">WELCOME TO ASIAN BMX CHAMPIONHIPS 2023</span>
-                                    <h1 class="banner-heading">BMX FREESTYLE</h1>
+                                    <span class="pretitle">NO BRAKES, NO LIMITS</span>
+                                    <h1 class="banner-heading">UNLEASH THE VELOCITY</h1>
                                     <div class="banner-btn-area">
                                         <a href="team.html" class="team-btn banner-btn">COMPETITION FORMAT <i
                                                 class="far fa-long-arrow-right ml--5"></i></a>
@@ -658,7 +737,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- <div class="swiper-slide">
                         <div class="banner-single banner-single-3 banner-bg">
                             <div class="container">
@@ -689,7 +768,41 @@
         <!--================= Banner Section End Here =================-->
     </header>
     <!--================= Header Section End Here =================-->
+    <div class="countdown-area" style="background: #0b0b1b; padding: 40px 0; border-bottom: 2px solid #0056b3;">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-12 text-center text-lg-start mb-3 mb-lg-0">
+                    <h3 style="color: #fff; margin: 0; text-transform: uppercase;">OFFICIAL COUNTDOWN</h3>
+                    <p style="color: #bbb; margin: 0; font-size: 14px;">March 25-31 @ Tagaytay City Velodrome</p>
+                </div>
 
+                <div class="col-lg-7 col-md-12">
+                    <div style="display: flex; gap: 20px; justify-content: center; justify-content: lg-end;">
+                        <div style="text-align: center;">
+                            <span id="days"
+                                style="font-size: 2.5rem; font-weight: bold; color: #007bff; display: block; line-height: 1;">00</span>
+                            <span style="color: #fff; font-size: 10px; letter-spacing: 1px;">DAYS</span>
+                        </div>
+                        <div style="text-align: center;">
+                            <span id="hours"
+                                style="font-size: 2.5rem; font-weight: bold; color: #007bff; display: block; line-height: 1;">00</span>
+                            <span style="color: #fff; font-size: 10px; letter-spacing: 1px;">HOURS</span>
+                        </div>
+                        <div style="text-align: center;">
+                            <span id="minutes"
+                                style="font-size: 2.5rem; font-weight: bold; color: #007bff; display: block; line-height: 1;">00</span>
+                            <span style="color: #fff; font-size: 10px; letter-spacing: 1px;">MINS</span>
+                        </div>
+                        <div style="text-align: center;">
+                            <span id="seconds"
+                                style="font-size: 2.5rem; font-weight: bold; color: #fff; display: block; line-height: 1;">00</span>
+                            <span style="color: #fff; font-size: 10px; letter-spacing: 1px;">SECS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!--================= Latest Match Start Here =================-->
     <!-- <div class="rts-latest-match">
         <div class="container">
@@ -735,6 +848,246 @@
     </div> -->
     <!--================= Latest Match End Here =================-->
 
+    <!--================= OFFICIAL RACE EVENTS Start Here =================-->
+    <div class="rts-service-area" style="background: #0b0b1b; padding: 80px 0; border-top: 1px solid #222;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p style="color: #007bff; font-weight: bold; letter-spacing: 2px;">THE COMPETITION</p>
+                    <h2 class="title" style="color: #fff; margin-bottom: 50px; text-transform: uppercase;">Official Race
+                        Events</h2>
+                </div>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div
+                        style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #007bff; height: 100%;">
+                        <h5 style="color: #fff; margin: 0; text-transform: uppercase;">Sprint</h5>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div
+                        style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #dc3545; height: 100%;">
+                        <h5 style="color: #fff; margin: 0; text-transform: uppercase;">Keirin</h5>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div
+                        style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #ffc107; height: 100%;">
+                        <h5 style="color: #fff; margin: 0; text-transform: uppercase;">1km Time Trial</h5>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div
+                        style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #28a745; height: 100%;">
+                        <h5 style="color: #fff; margin: 0; text-transform: uppercase;">Team Sprint</h5>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div
+                        style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #17a2b8; height: 100%;">
+                        <h5 style="color: #fff; margin: 0; text-transform: uppercase;">Indiv. Pursuit</h5>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div
+                        style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #6610f2; height: 100%;">
+                        <h5 style="color: #fff; margin: 0; text-transform: uppercase;">Team Pursuit</h5>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div
+                        style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #e83e8c; height: 100%;">
+                        <h5 style="color: #fff; margin: 0; text-transform: uppercase;">Points Race</h5>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div
+                        style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #fd7e14; height: 100%;">
+                        <h5 style="color: #fff; margin: 0; text-transform: uppercase;">Scratch Race</h5>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div
+                        style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #20c997; height: 100%;">
+                        <h5 style="color: #fff; margin: 0; text-transform: uppercase;">Omnium</h5>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div
+                        style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #6c757d; height: 100%;">
+                        <h5 style="color: #fff; margin: 0; text-transform: uppercase;">Madison</h5>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div
+                        style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #dc3545; height: 100%;">
+                        <h5 style="color: #fff; margin: 0; text-transform: uppercase;">Elimination</h5>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div
+                        style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #fff; height: 100%;">
+                        <h5 style="color: #fff; margin: 0; text-transform: uppercase;">Tandem Sprint</h5>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--================= START OF PARTICIPATING NATIONS=================-->
+    <div class="rts-team-area" style="background: #0b0b1b; padding: 100px 0; border-top: 1px solid #1f1f2e;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p
+                        style="color: #007bff; font-weight: bold; letter-spacing: 2px; margin-bottom: 10px; font-size: 14px;">
+                        WHO WILL REIGN SUPREME?</p>
+                    <h2 class="title"
+                        style="color: #fff; margin-bottom: 60px; text-transform: uppercase; font-size: 36px; font-weight: 800;">
+                        Participating Nations</h2>
+                </div>
+            </div>
+
+            <div class="row g-3 justify-content-center">
+
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div
+                        style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
+                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">JPN
+                        </h4>
+                        <span
+                            style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block;">Japan</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div
+                        style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
+                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">KOR
+                        </h4>
+                        <span
+                            style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block;">Korea</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div
+                        style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
+                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">CHN
+                        </h4>
+                        <span
+                            style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block;">China</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div
+                        style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
+                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">MAS
+                        </h4>
+                        <span
+                            style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block;">Malaysia</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div
+                        style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
+                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">THA
+                        </h4>
+                        <span
+                            style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block;">Thailand</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div
+                        style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
+                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">INA
+                        </h4>
+                        <span
+                            style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block;">Indonesia</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div
+                        style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
+                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">HKG
+                        </h4>
+                        <span
+                            style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block;">Hong
+                            Kong</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div
+                        style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
+                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">TPE
+                        </h4>
+                        <span
+                            style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block;">Chinese
+                            Taipei</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div
+                        style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
+                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">KAZ
+                        </h4>
+                        <span
+                            style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block;">Kazakhstan</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div
+                        style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
+                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">UZB
+                        </h4>
+                        <span
+                            style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block;">Uzbekistan</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div
+                        style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
+                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">IRI
+                        </h4>
+                        <span
+                            style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block;">Iran</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div
+                        style="background: #151525; padding: 20px 10px; border: 1px solid #007bff; text-align: center; border-radius: 6px; box-shadow: 0 0 15px rgba(0,123,255,0.3);">
+                        <h4 style="color: #007bff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">
+                            PHI</h4>
+                        <span
+                            style="color: #fff; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block; font-weight: bold;">Philippines</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
     <!--================= Gallery Start Here =================-->
     <!-- <div class="rts-gallery-section">
         <div class="container">
@@ -800,19 +1153,24 @@
         <div class="container">
             <div class="section-title-area section-title-area1 text-center mb--50">
                 <span class="pretitle">GAMES</span>
-                <h1 class="section-title">ASIAN BMX CHAMPIONSHIP TAGAYTAY CITY 2023 </h1>
+                <h1 class="section-title">ASIAN TRACK CHAMPIONSHIPS 2026 </h1>
                 <!-- <p>CONTINENTAL CHAMPIONSHIPS</p> -->
             </div>
-           <ul class="table-area table-full">
+            <ul class="table-area table-full">
                 <li class="table-inner">
                     <div class="team-name">
-                        <p class="mode">All is set for the staging of the 2023 Asian Cycling Confederation (ACC) BMX Racing and Freestyle Championships at the Tagaytay City BMX Park and the newly-refurbished and multi-purpose Tagaytay City Combat Center on July 15-16.</p>
+                        <p class="mode">The 2026 Asian Track Cycling Championships will be held in Tagaytay City, Philippines, at the new Tagaytay City
+                        Velodrome from March 25 to 31, 2026, marking the Philippines' return to hosting this major continental event after 31
+                        years, with the venue being the nation's first UCI-standard indoor velodrome.</p>
 
-                         <p class="mode">“Our warmest welcome to the athletes, coaches and officials for the ACC BMX Championships,” said Tagaytay City Mayor Abraham "Bambol" Tolentino, who is the president of the Philippine Olympic Committee (POC) and national federation PhilCyling. -By Jean Malanum (pna.gov.ph)</p>
+                        <!-- <p class="mode">“Our warmest welcome to the athletes, coaches and officials for the ACC BMX
+                            Championships,” said Tagaytay City Mayor Abraham "Bambol" Tolentino, who is the president of
+                            the Philippine Olympic Committee (POC) and national federation PhilCyling. -By Jean Malanum
+                            (pna.gov.ph)</p> -->
                         <!-- <h3 class="name">Lusail Ico. Stadium, Dubai</h3>
                         <p class="time">December 25, 2022 4:00 PM</p> -->
                     </div>
-                      <!--<div class="team-logo-area">
+                    <!--<div class="team-logo-area">
                         <a href="#" class="text-center">
                             <img src="assets/images/team/logo-01.png" alt="">
                             <p class="team">Kester F.C</p>
@@ -872,7 +1230,7 @@
                         <a href="#" class="btn-2">Watch Stream</a>
                     </div>-->
                 </li>
-            </ul> 
+            </ul>
         </div>
     </div>
     <!--================= Next Match Section End Here =================-->
@@ -931,7 +1289,10 @@
             <div class="section-title-area section-title-area1 text-center mb--50">
                 <span class="pretitle">ORGANIZING COMMITTEE</span>
                 <h1 class="section-title">ORGANIZING COMMITTEE (PhilCycling)</h1>
-                <p>The Integrated Cycling Federation of the Philippines (PhilCycling) is the national governing body for cycling as a sport in the Philippines. It is duly recognised by the Philippine Sports Commission and the Philippine Olympic Committee and the International Cycling Union (Union Cycliste Internationale a.k.a. UCI).</p>
+                <p>The Integrated Cycling Federation of the Philippines (PhilCycling) is the national governing body for
+                    cycling as a sport in the Philippines. It is duly recognised by the Philippine Sports Commission and
+                    the Philippine Olympic Committee and the International Cycling Union (Union Cycliste Internationale
+                    a.k.a. UCI).</p>
             </div>
             <div class="sponsors-section-inner">
                 <div class="swiper rts-brandSlider">
@@ -1282,16 +1643,11 @@
                         </div>
                         <div class="share-social">
                             <span>Share:</span>
-                            <a class="platform" href="#0"><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a class="platform" href="#0"><i
-                                    class="fab fa-twitter"></i></a>
-                            <a class="platform" href="#0"><i
-                                    class="fab fa-behance"></i></a>
-                            <a class="platform" href="#0"><i
-                                    class="fab fa-youtube"></i></a>
-                            <a class="platform" href="#0"><i
-                                    class="fab fa-linkedin"></i></a>
+                            <a class="platform" href="#0"><i class="fab fa-facebook-f"></i></a>
+                            <a class="platform" href="#0"><i class="fab fa-twitter"></i></a>
+                            <a class="platform" href="#0"><i class="fab fa-behance"></i></a>
+                            <a class="platform" href="#0"><i class="fab fa-youtube"></i></a>
+                            <a class="platform" href="#0"><i class="fab fa-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1308,12 +1664,14 @@
                 <div class="row">
                     <div class="col-xl-3 col-md-6">
                         <div class="footer-widget">
-                            <div class="footer-logo"><img src="assets/images/2023_ACC_BMX_Letterhead_1.png" alt="footer-logo">
+                            <div class="footer-logo"><img src="assets/images/2023_ACC_BMX_Letterhead_1.png"
+                                    alt="footer-logo">
                             </div>
-                            <p class="footer-text">Unleash the Thrill: Riding the Wave of Asian BMX Excellence in 2023!</p>
+                            <p class="footer-text">Experience the Speed: Witness the Pinnacle of Asian Track Cycling
+                                Excellence in 2026!</p>
                             <div class="social-links">
-                                <a href="https://www.facebook.com/profile.php?id=100094321766590" class="platform"><i
-                                        class="fab fa-facebook-f"></i></a>
+                                <!-- <a href="https://www.facebook.com/profile.php?id=100094321766590" class="platform"><i
+                                        class="fab fa-facebook-f"></i></a> -->
                                 <!-- <a href="#0" class="platform"><i
                                         class="fab fa-twitter"></i></a>
                                 <a href="#0" class="platform"><i
@@ -1328,11 +1686,11 @@
                             <h3 class="footer-widget-title"><span class="decorator"></span> ESSENTIAL LINKS</h3>
                             <ul class="widget-items cata-widget">
                                 <li class="widget-list-item"><a href="about.html">ABOUT US</a></li>
-                                <li class="widget-list-item"><a href="match-schedule.html">SCHEDULE</a></li>
+                              <!--   <li class="widget-list-item"><a href="match-schedule.html">SCHEDULE</a></li> -->
                                 <li class="widget-list-item"><a href="team.html">COMPETITION FORMAT</a></li>
-                                <li class="widget-list-item"><a href="league-standings.html">AWARDING</a></li>
+                               <!--  <li class="widget-list-item"><a href="league-standings.html">AWARDING</a></li>
                                 <li class="widget-list-item"><a href="gallery.html">GALLERY</a></li>
-                                <li class="widget-list-item"><a href="contact.html">CONTACT</a></li>
+                                <li class="widget-list-item"><a href="contact.html">CONTACT</a></li> -->
                                 <!-- <li class="widget-list-item"><a href="our-players.html">OUR PLAYERS</a></li> -->
                                 <!-- <li class="widget-list-item"><a href="arena.html">ARENA</a></li> -->
                                 <!-- <li class="widget-list-item"><a href="team-details.html">TEAM DETAILS</a></li> -->
@@ -1347,13 +1705,13 @@
                             <h3 class="footer-widget-title"><span class="decorator"></span> GET IN TOUCH</h3>
                             <ul>
                                 <li class="widget-list-item"><i class="fas fa-envelope-open"></i><a
-                                        href="mailto:philcycling.offroad@gmail.com">philcycling.offroad@gmail.com</a></li>
+                                        href="mailto:philcycling.offroad@gmail.com">philcycling.track@gmail.com</a></li>
                                 <!-- <li class="widget-list-item"><i class="fas fa-phone"></i><a href="tel:09877788890">098
                                         777
                                         888 90</a></li> -->
-                                <li class="widget-list-item"><i class="fas fa-map-marker-alt"></i> <span>TAGAYTAY BMX TRACK, CITY
-                                    SPORTS FACILITIES <br>
-                                    TAGAYTAY CITY</span></li>
+                                <li class="widget-list-item"><i class="fas fa-map-marker-alt"></i> <span>TAGAYTAY CITY
+                                        VELODROME, <br> CITY SPORTS COMPLEX,<br>
+                                        TAGAYTAY CITY</span></li>
                             </ul>
                         </div>
                     </div>
@@ -1446,6 +1804,28 @@
     <script src="assets/js/vendors/jquery.magnific-popup.min.js"></script>
     <!--================= Main Script =================-->
     <script src="assets/js/main.js"></script>
+
+    <script>
+        // Set the date: March 25, 2026
+        var countDownDate = new Date("March 25, 2026 08:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+        }, 1000);
+    </script>
+
 </body>
 
 </html>
