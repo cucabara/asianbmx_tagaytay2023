@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 
     <style>
-        :root {
+         :root {
             --hue: 223;
             --bg: hsl(var(--hue), 90%, 90%);
             --fg: hsl(var(--hue), 90%, 10%);
@@ -43,7 +43,6 @@
             --trans-dur: 0.3s;
             font-size: calc(16px + (32 - 16) * (100vw - 320px) / (2560 - 320));
         }
-
         /* body {
 	background-color: var(--bg);
 	color: var(--fg);
@@ -54,13 +53,14 @@
 		background-color var(--trans-dur),
 		color var(--trans-dur);
 } */
+        
         .bike {
             display: block;
             margin: auto;
             width: 30em;
             height: auto;
         }
-
+        
         .bike__body,
         .bike__front,
         .bike__handlebars,
@@ -74,189 +74,203 @@
             stroke: var(--primary);
             transition: stroke var(--trans-dur);
         }
-
+        
         .bike__front {
             animation-name: bikeFront;
         }
-
+        
         .bike__handlebars {
             animation-name: bikeHandlebars;
         }
-
+        
         .bike__pedals {
             animation-name: bikePedals;
         }
-
+        
         .bike__pedals-spin {
             animation-name: bikePedalsSpin;
         }
-
+        
         .bike__seat {
             animation-name: bikeSeat;
         }
-
+        
         .bike__spokes,
         .bike__tire {
             stroke: currentColor;
         }
-
+        
         .bike__spokes {
             animation-name: bikeSpokes;
         }
-
+        
         .bike__spokes-spin {
             animation-name: bikeSpokesSpin;
         }
-
+        
         .bike__tire {
             animation-name: bikeTire;
         }
-
         /* Dark theme */
+        
         @media (prefers-color-scheme: dark) {
-            :root {
+             :root {
                 --bg: hsl(var(--hue), 90%, 10%);
                 --fg: hsl(var(--hue), 90%, 90%);
             }
         }
-
         /* Animations */
+        
         @keyframes bikeBody {
             from {
                 stroke-dashoffset: 79;
             }
-
             33%,
             67% {
                 stroke-dashoffset: 0;
             }
-
             to {
                 stroke-dashoffset: -79;
             }
         }
-
+        
         @keyframes bikeFront {
             from {
                 stroke-dashoffset: 19;
             }
-
             33%,
             67% {
                 stroke-dashoffset: 0;
             }
-
             to {
                 stroke-dashoffset: -19;
             }
         }
-
+        
         @keyframes bikeHandlebars {
             from {
                 stroke-dashoffset: 10;
             }
-
             33%,
             67% {
                 stroke-dashoffset: 0;
             }
-
             to {
                 stroke-dashoffset: -10;
             }
         }
-
+        
         @keyframes bikePedals {
             from {
                 animation-timing-function: ease-in;
                 stroke-dashoffset: -25.133;
             }
-
             33%,
             67% {
                 animation-timing-function: ease-out;
                 stroke-dashoffset: -21.991;
             }
-
             to {
                 stroke-dashoffset: -25.133;
             }
         }
-
+        
         @keyframes bikePedalsSpin {
             from {
                 transform: rotate(0.1875turn);
             }
-
             to {
                 transform: rotate(3.1875turn);
             }
         }
-
+        
         @keyframes bikeSeat {
             from {
                 stroke-dashoffset: 5;
             }
-
             33%,
             67% {
                 stroke-dashoffset: 0;
             }
-
             to {
                 stroke-dashoffset: -5;
             }
         }
-
+        
         @keyframes bikeSpokes {
             from {
                 animation-timing-function: ease-in;
                 stroke-dashoffset: -31.416;
             }
-
             33%,
             67% {
                 animation-timing-function: ease-out;
                 stroke-dashoffset: -23.562;
             }
-
             to {
                 stroke-dashoffset: -31.416;
             }
         }
-
+        
         @keyframes bikeSpokesSpin {
             from {
                 transform: rotate(0);
             }
-
             to {
                 transform: rotate(3turn);
             }
         }
-
+        
         @keyframes bikeTire {
             from {
                 animation-timing-function: ease-in;
                 stroke-dashoffset: 56.549;
                 transform: rotate(0);
             }
-
             33% {
                 stroke-dashoffset: 0;
                 transform: rotate(0.33turn);
             }
-
             67% {
                 animation-timing-function: ease-out;
                 stroke-dashoffset: 0;
                 transform: rotate(0.67turn);
             }
-
             to {
                 stroke-dashoffset: -56.549;
                 transform: rotate(1turn);
             }
+        }
+    </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- NEON EFFECTS CURSOR -->
+    <style>
+        /* 1. Para sa Participating Nations (Flags) */
+        
+        .rts-team-area .col-lg-2>div {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .rts-team-area .col-lg-2>div:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px #007bff;
+            /* Blue Glow */
+            border-color: #007bff !important;
+        }
+        /* 2. Para sa Events Cards (Race Info) */
+        
+        .rts-service-area .col-lg-3>div {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .rts-service-area .col-lg-3>div:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px rgba(0, 132, 255, 0.6);
+            /* White Glow */
+            z-index: 10;
         }
     </style>
 
@@ -302,7 +316,7 @@
                                 <polyline class="bike__front" points="32.5 2,38.5 19" stroke-dasharray="19 19" />
                             </g>
                         </svg>
-                    </svg>
+                </svg>
                 </svg>
 
 
@@ -351,10 +365,8 @@
             <div class="navbar-part navbar-part1">
                 <div class="container">
                     <div class="navbar-inner">
-                        <a href="index.html" class="logo"><img src="assets/images/2023_ACC_BMX_Letterhead_1.png"
-                                alt="sportius-logo" width="110" height="150"></a>
-                        <a href="index.html" class="logo-sticky"><img src="assets/images/2023_ACC_BMX_Letterhead_1.png"
-                                alt="kester-logo"></a>
+                        <a href="index.html" class="logo"><img src="assets/images/2023_ACC_BMX_Letterhead_1.png" alt="sportius-logo" width="110" height="150"></a>
+                        <a href="index.html" class="logo-sticky"><img src="assets/images/2023_ACC_BMX_Letterhead_1.png" alt="kester-logo"></a>
                         <div class="rts-menu">
                             <nav class="menus menu-toggle">
                                 <ul class="nav__menu">
@@ -370,18 +382,31 @@
                                                     href="index-three.html">Homepage 3</a></li> 
                                         </ul> -->
                                     </li>
-                                    <li><a class="menu-item" href="about.html">About</a></li>
-                                    <li class="has-dropdown"><a class="menu-item" href="#">Pages</a>
+                                    <li class="has-dropdown">
+                                        <a class="menu-item" href="about.html">About</a>
+                                        <ul class="dropdown-ul">
+                                            <li class="dropdown-li"><a class="dropdown-link" href="#">About the City</a></li>
+                                            <li class="dropdown-li"><a class="dropdown-link" href="#">About the Competition</a></li>
+                                            <li class="dropdown-li"><a class="dropdown-link" href="#">About the Organizer</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-dropdown"><a class="menu-item" href="#">Competition Guide</a>
                                         <ul class="dropdown-ul mega-dropdown">
                                             <li class="mega-dropdown-li">
                                                 <ul class="mega-dropdown-ul">
-                                                   <!--  <li class="dropdown-li"><a class="dropdown-link"
+                                                    <!--  <li class="dropdown-li"><a class="dropdown-link"
                                                             href="match-schedule.html">Schedule</a>
                                                     </li> -->
-                                                    <li class="dropdown-li"><a class="dropdown-link"
-                                                            href="team.html">Competition Format</a>
+                                                    <li class="dropdown-li"><a class="dropdown-link" href="team.html">Technical HandBook</a>
                                                     </li>
-                                                   <!--  <li class="dropdown-li"><a class="dropdown-link"
+
+                                                    <li class="dropdown-li"><a class="dropdown-link" href="venue.html">Vicinity Map of Velodrome</a>
+                                                    </li>
+                                                    <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                                            href="team.html">Vicinity Map of Velodrome</a>
+                                                    </li> -->
+
+                                                    <!--  <li class="dropdown-li"><a class="dropdown-link"
                                                             href="league-standings.html">Awarding</a>
                                                     </li> -->
                                                     <!--<li class="dropdown-li"><a class="dropdown-link"
@@ -427,6 +452,13 @@
                                             </li> -->
                                         </ul>
                                     </li>
+
+                                    <li class="has-dropdown"><a class="menu-item" href="#">Race Info</a>
+                                        <ul class="dropdown-ul">
+                                            <li class="dropdown-li"><a class="dropdown-link" href="start-list.html">Start Lists & Results</a></li>
+                                        </ul>
+                                    </li>
+
                                     <!-- <li class="has-dropdown"><a class="menu-item" href="#">Shop</a>
                                         <ul class="dropdown-ul">
                                             <li class="dropdown-li"><a class="dropdown-link" href="shop.html">Shop</a>
@@ -445,14 +477,14 @@
                                     </li> -->
                                     <!-- <li class="has-dropdown"><a class="menu-item" href="gallery.html">Gallery</a>
                                         <ul class="dropdown-ul"> -->
-                                            <!-- <li class="dropdown-li"><a class="dropdown-link" href="blog.html">News</a>
+                                    <!-- <li class="dropdown-li"><a class="dropdown-link" href="blog.html">News</a>
                                             </li>
                                             <li class="dropdown-li"><a class="dropdown-link"
                                                     href="blog-details.html">News
                                                     Details</a></li> -->
                                     <!--     </ul>
                                     </li> -->
-                                   <!--  <li><a class="menu-item" href="contact.html">Contact</a></li> -->
+                                    <!--  <li><a class="menu-item" href="contact.html">Contact</a></li> -->
                                 </ul>
                             </nav>
                         </div>
@@ -624,7 +656,7 @@
                     <li><a class="mm-link" href="index.html">Home</a></li>
                     <li><a class="mm-link" href="about.html">About</a></li>
                     <li class="has-dropdown firstlvl">
-                        <a class="mm-link" href="index.html">Pages <i class="rt-angle-down"></i></a>
+                        <a class="mm-link" href="index.html">Technical Handbook <i class="rt-angle-down"></i></a>
                         <ul class="sub-menu mega-dropdown-mobile">
                             <li class="mega-dropdown-li">
                                 <ul class="mega-dropdown-ul mm-show">
@@ -642,8 +674,7 @@
                             </li>
                             <li class="mega-dropdown-li">
                                 <ul class="mega-dropdown-ul mm-show">
-                                    <li class="dropdown-li"><a class="dropdown-link" href="team.html">Competition
-                                            Format</a>
+                                    <li class="dropdown-li"><a class="dropdown-link" href="team.html">Technical Handbook</a>
                                     </li>
                                     <!-- <li class="dropdown-li"><a class="dropdown-link" href="event.html">Event</a>
                                     </li>
@@ -686,7 +717,7 @@
                             <li><a href="blog-details.html">News Details</a></li>
                         </ul>
                     </li> -->
-                <!--     <li><a class="mm-link" href="gallery.html">Gallery</a></li>
+                    <!--     <li><a class="mm-link" href="gallery.html">Gallery</a></li>
                     <li><a class="mm-link" href="contact.html">Contact</a></li> -->
                 </ul>
             </nav>
@@ -702,6 +733,7 @@
         <!--================= Slide Bar Start Here =================-->
 
         <!--================= Banner Section Start Here =================-->
+
         <div class="banner banner1">
             <div class="swiper bannerSlide">
                 <div class="swiper-wrapper">
@@ -709,12 +741,14 @@
                         <div class="banner-single banner-single-1 banner-bg">
                             <div class="container">
                                 <div class="banner-content">
+
                                     <span class="pretitle">WELCOME TO ASIAN TRACK CHAMPIONSHIPS 2026 </span>
+
                                     <h1 class="banner-heading">TRACK CYCLING</h1>
                                     <div class="banner-btn-area">
-                                        <a href="team.html" class="team-btn banner-btn">COMPETITION FORMAT<i
+                                        <a href="team.html" class="team-btn banner-btn">Technical Handbook<i
                                                 class="far fa-long-arrow-right ml--5"></i></a>
-                                       <!--  <a href="league-standings.html" class="nxt-match-btn banner-btn">AWARDING<i
+                                        <!--  <a href="league-standings.html" class="nxt-match-btn banner-btn">AWARDING<i
                                                 class="far fa-long-arrow-right ml--5"></i></a> -->
                                     </div>
                                 </div>
@@ -726,9 +760,10 @@
                             <div class="container">
                                 <div class="banner-content">
                                     <span class="pretitle">NO BRAKES, NO LIMITS</span>
+
                                     <h1 class="banner-heading">UNLEASH THE VELOCITY</h1>
                                     <div class="banner-btn-area">
-                                        <a href="team.html" class="team-btn banner-btn">COMPETITION FORMAT <i
+                                        <a href="team.html" class="team-btn banner-btn">Technical Handbook <i
                                                 class="far fa-long-arrow-right ml--5"></i></a>
                                         <!-- <a href="league-standings.html" class="nxt-match-btn banner-btn">AWARDING<i
                                                 class="far fa-long-arrow-right ml--5"></i></a> -->
@@ -767,8 +802,13 @@
         </div>
         <!--================= Banner Section End Here =================-->
     </header>
+
+
     <!--================= Header Section End Here =================-->
-    <div class="countdown-area" style="background: #0b0b1b; padding: 40px 0; border-bottom: 2px solid #0056b3;">
+
+    <!--================= countdown section start here =================-->
+
+    <div class="countdown-area" data-aos="fade-up" style="background: #0b0b1b; padding: 40px 0; border-bottom: 2px solid #0056b3;">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5 col-md-12 text-center text-lg-start mb-3 mb-lg-0">
@@ -779,23 +819,19 @@
                 <div class="col-lg-7 col-md-12">
                     <div style="display: flex; gap: 20px; justify-content: center; justify-content: lg-end;">
                         <div style="text-align: center;">
-                            <span id="days"
-                                style="font-size: 2.5rem; font-weight: bold; color: #007bff; display: block; line-height: 1;">00</span>
+                            <span id="days" style="font-size: 2.5rem; font-weight: bold; color: #007bff; display: block; line-height: 1;">00</span>
                             <span style="color: #fff; font-size: 10px; letter-spacing: 1px;">DAYS</span>
                         </div>
                         <div style="text-align: center;">
-                            <span id="hours"
-                                style="font-size: 2.5rem; font-weight: bold; color: #007bff; display: block; line-height: 1;">00</span>
+                            <span id="hours" style="font-size: 2.5rem; font-weight: bold; color: #007bff; display: block; line-height: 1;">00</span>
                             <span style="color: #fff; font-size: 10px; letter-spacing: 1px;">HOURS</span>
                         </div>
                         <div style="text-align: center;">
-                            <span id="minutes"
-                                style="font-size: 2.5rem; font-weight: bold; color: #007bff; display: block; line-height: 1;">00</span>
+                            <span id="minutes" style="font-size: 2.5rem; font-weight: bold; color: #007bff; display: block; line-height: 1;">00</span>
                             <span style="color: #fff; font-size: 10px; letter-spacing: 1px;">MINS</span>
                         </div>
                         <div style="text-align: center;">
-                            <span id="seconds"
-                                style="font-size: 2.5rem; font-weight: bold; color: #fff; display: block; line-height: 1;">00</span>
+                            <span id="seconds" style="font-size: 2.5rem; font-weight: bold; color: #fff; display: block; line-height: 1;">00</span>
                             <span style="color: #fff; font-size: 10px; letter-spacing: 1px;">SECS</span>
                         </div>
                     </div>
@@ -803,6 +839,8 @@
             </div>
         </div>
     </div>
+    <!--================= countdown sentiom end here =================-->
+
     <!--================= Latest Match Start Here =================-->
     <!-- <div class="rts-latest-match">
         <div class="container">
@@ -854,92 +892,79 @@
             <div class="row">
                 <div class="col-12 text-center">
                     <p style="color: #007bff; font-weight: bold; letter-spacing: 2px;">THE COMPETITION</p>
-                    <h2 class="title" style="color: #fff; margin-bottom: 50px; text-transform: uppercase;">Official Race
-                        Events</h2>
+                    <h2 class="title" style="color: #fff; margin-bottom: 50px; text-transform: uppercase;"> Events </h2>
                 </div>
             </div>
 
             <div class="row g-3">
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div
-                        style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #007bff; height: 100%;">
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="flip-left" data-aos-delay="100">
+                    <div style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #007bff; height: 100%;">
                         <h5 style="color: #fff; margin: 0; text-transform: uppercase;">Sprint</h5>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div
-                        style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #dc3545; height: 100%;">
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="flip-left" data-aos-delay="200">
+                    <div style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #dc3545; height: 100%;">
                         <h5 style="color: #fff; margin: 0; text-transform: uppercase;">Keirin</h5>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div
-                        style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #ffc107; height: 100%;">
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="flip-left" data-aos-delay="300">
+                    <div style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #ffc107; height: 100%;">
                         <h5 style="color: #fff; margin: 0; text-transform: uppercase;">1km Time Trial</h5>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div
-                        style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #28a745; height: 100%;">
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="flip-left" data-aos-delay="400">
+                    <div style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #28a745; height: 100%;">
                         <h5 style="color: #fff; margin: 0; text-transform: uppercase;">Team Sprint</h5>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div
-                        style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #17a2b8; height: 100%;">
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="flip-left" data-aos-delay="500">
+                    <div style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #17a2b8; height: 100%;">
                         <h5 style="color: #fff; margin: 0; text-transform: uppercase;">Indiv. Pursuit</h5>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div
-                        style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #6610f2; height: 100%;">
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="flip-left" data-aos-delay="600">
+                    <div style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #6610f2; height: 100%;">
                         <h5 style="color: #fff; margin: 0; text-transform: uppercase;">Team Pursuit</h5>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div
-                        style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #e83e8c; height: 100%;">
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="flip-left" data-aos-delay="700">
+                    <div style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #e83e8c; height: 100%;">
                         <h5 style="color: #fff; margin: 0; text-transform: uppercase;">Points Race</h5>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div
-                        style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #fd7e14; height: 100%;">
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="flip-left" data-aos-delay="800">
+                    <div style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #fd7e14; height: 100%;">
                         <h5 style="color: #fff; margin: 0; text-transform: uppercase;">Scratch Race</h5>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div
-                        style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #20c997; height: 100%;">
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="flip-left" data-aos-delay="900">
+                    <div style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #20c997; height: 100%;">
                         <h5 style="color: #fff; margin: 0; text-transform: uppercase;">Omnium</h5>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div
-                        style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #6c757d; height: 100%;">
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="flip-left" data-aos-delay="1000">
+                    <div style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #6c757d; height: 100%;">
                         <h5 style="color: #fff; margin: 0; text-transform: uppercase;">Madison</h5>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div
-                        style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #dc3545; height: 100%;">
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="flip-left" data-aos-delay="1100">
+                    <div style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #dc3545; height: 100%;">
                         <h5 style="color: #fff; margin: 0; text-transform: uppercase;">Elimination</h5>
                     </div>
                 </div>
 
-                <div class="col-lg-3 col-md-4 col-sm-6">
-                    <div
-                        style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #fff; height: 100%;">
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="flip-left" data-aos-delay="1200">
+                    <div style="background: #151525; padding: 25px; border: 1px solid #333; border-left: 4px solid #fff; height: 100%;">
                         <h5 style="color: #fff; margin: 0; text-transform: uppercase;">Tandem Sprint</h5>
                     </div>
                 </div>
@@ -947,141 +972,110 @@
             </div>
         </div>
     </div>
+
+
     <!--================= START OF PARTICIPATING NATIONS=================-->
-    <div class="rts-team-area" style="background: #0b0b1b; padding: 100px 0; border-top: 1px solid #1f1f2e;">
+    <div class="rts-team-area" data-aos="fade-up" style="background: #0b0b1b; padding: 100px 0; border-top: 1px solid #1f1f2e;">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <p
-                        style="color: #007bff; font-weight: bold; letter-spacing: 2px; margin-bottom: 10px; font-size: 14px;">
+                    <p style="color: #007bff; font-weight: bold; letter-spacing: 2px; margin-bottom: 10px; font-size: 14px;">
                         WHO WILL REIGN SUPREME?</p>
-                    <h2 class="title"
-                        style="color: #fff; margin-bottom: 60px; text-transform: uppercase; font-size: 36px; font-weight: 800;">
+                    <h2 class="title" style="color: #fff; margin-bottom: 60px; text-transform: uppercase; font-size: 36px; font-weight: 800;">
                         Participating Nations</h2>
                 </div>
             </div>
 
             <div class="row g-3 justify-content-center">
 
-                <div class="col-lg-2 col-md-3 col-4">
-                    <div
-                        style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
-                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">JPN
-                        </h4>
-                        <span
-                            style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block;">Japan</span>
+                <div class="col-lg-2 col-md-3 col-4" data-aos="zoom-in">
+                    <div style="background: #151525; padding: 20px 10px; border: 1px solid #007bff; text-align: center; border-radius: 6px; box-shadow: 0 0 15px rgba(0,123,255,0.3);">
+                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">PHI</h4>
+                        <span style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block; font-weight: bold;">PHILIPPINES</span>
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-md-3 col-4">
-                    <div
-                        style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
-                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">KOR
-                        </h4>
-                        <span
-                            style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block;">Korea</span>
+                <div class="col-lg-2 col-md-3 col-4" data-aos="zoom-in">
+                    <div style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
+                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">TPE</h4>
+                        <span style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block;">CHINESE TAIPEI</span>
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-md-3 col-4">
-                    <div
-                        style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
-                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">CHN
-                        </h4>
-                        <span
-                            style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block;">China</span>
+                <div class="col-lg-2 col-md-3 col-4" data-aos="zoom-in">
+                    <div style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
+                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">KAZ</h4>
+                        <span style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block;">KAZAKHSTAN</span>
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-md-3 col-4">
-                    <div
-                        style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
-                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">MAS
-                        </h4>
-                        <span
-                            style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block;">Malaysia</span>
+                <div class="col-lg-2 col-md-3 col-4" data-aos="zoom-in">
+                    <div style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
+                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">JPN</h4>
+                        <span style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block;">JAPAN</span>
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-md-3 col-4">
-                    <div
-                        style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
-                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">THA
-                        </h4>
-                        <span
-                            style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block;">Thailand</span>
+                <div class="col-lg-2 col-md-3 col-4" data-aos="zoom-in">
+                    <div style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
+                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">HKG</h4>
+                        <span style="color: #888; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block;">HONG KONG, CHINA</span>
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-md-3 col-4">
-                    <div
-                        style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
-                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">INA
-                        </h4>
-                        <span
-                            style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block;">Indonesia</span>
+                <div class="col-lg-2 col-md-3 col-4" data-aos="zoom-in">
+                    <div style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
+                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">KOR</h4>
+                        <span style="color: #888; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block;">REPUBLIC OF KOREA</span>
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-md-3 col-4">
-                    <div
-                        style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
-                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">HKG
-                        </h4>
-                        <span
-                            style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block;">Hong
-                            Kong</span>
+                <div class="col-lg-2 col-md-3 col-4" data-aos="zoom-in">
+                    <div style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
+                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">INA</h4>
+                        <span style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block;">INDONESIA</span>
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-md-3 col-4">
-                    <div
-                        style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
-                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">TPE
-                        </h4>
-                        <span
-                            style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block;">Chinese
-                            Taipei</span>
+                <div class="col-lg-2 col-md-3 col-4" data-aos="zoom-in">
+                    <div style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
+                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">KSA</h4>
+                        <span style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block;">SAUDI ARABIA</span>
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-md-3 col-4">
-                    <div
-                        style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
-                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">KAZ
-                        </h4>
-                        <span
-                            style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block;">Kazakhstan</span>
+                <div class="col-lg-2 col-md-3 col-4" data-aos="zoom-in">
+                    <div style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
+                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">SIN</h4>
+                        <span style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block;">SINGAPORE</span>
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-md-3 col-4">
-                    <div
-                        style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
-                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">UZB
-                        </h4>
-                        <span
-                            style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block;">Uzbekistan</span>
+                <div class="col-lg-2 col-md-3 col-4" data-aos="zoom-in">
+                    <div style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
+                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">MAC</h4>
+                        <span style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block;">MACAO, CHINA</span>
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-md-3 col-4">
-                    <div
-                        style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
-                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">IRI
-                        </h4>
-                        <span
-                            style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block;">Iran</span>
+                <div class="col-lg-2 col-md-3 col-4" data-aos="zoom-in">
+                    <div style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
+                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">IND</h4>
+                        <span style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block;">INDIA</span>
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-md-3 col-4">
-                    <div
-                        style="background: #151525; padding: 20px 10px; border: 1px solid #007bff; text-align: center; border-radius: 6px; box-shadow: 0 0 15px rgba(0,123,255,0.3);">
-                        <h4 style="color: #007bff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">
-                            PHI</h4>
-                        <span
-                            style="color: #fff; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block; font-weight: bold;">Philippines</span>
+                <div class="col-lg-2 col-md-3 col-4" data-aos="zoom-in">
+                    <div style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
+                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">THA</h4>
+                        <span style="color: #888; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block;">THAILAND</span>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-3 col-4" data-aos="zoom-in">
+                    <div style="background: #151525; padding: 20px 10px; border: 1px solid #333; text-align: center; border-radius: 6px;">
+                        <h4 style="color: #fff; margin: 0; font-size: 24px; font-weight: 900; letter-spacing: 1px;">CHN</h4>
+                        <span style="color: #888; font-size: 9px; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px; display: block; line-height: 1.2;">PEOPLE'S REPUBLIC OF CHINA</span>
                     </div>
                 </div>
 
@@ -1159,9 +1153,8 @@
             <ul class="table-area table-full">
                 <li class="table-inner">
                     <div class="team-name">
-                        <p class="mode">The 2026 Asian Track Cycling Championships will be held in Tagaytay City, Philippines, at the new Tagaytay City
-                        Velodrome from March 25 to 31, 2026, marking the Philippines' return to hosting this major continental event after 31
-                        years, with the venue being the nation's first UCI-standard indoor velodrome.</p>
+                        <p class="mode">The 2026 Asian Track Cycling Championships will be held in Tagaytay City, Philippines, at the new Tagaytay City Velodrome from March 25 to 31, 2026, marking the Philippines' return to hosting this major continental event after
+                            31 years, with the venue being the nation's first UCI-standard indoor velodrome.</p>
 
                         <!-- <p class="mode">“Our warmest welcome to the athletes, coaches and officials for the ACC BMX
                             Championships,” said Tagaytay City Mayor Abraham "Bambol" Tolentino, who is the president of
@@ -1289,22 +1282,25 @@
             <div class="section-title-area section-title-area1 text-center mb--50">
                 <span class="pretitle">ORGANIZING COMMITTEE</span>
                 <h1 class="section-title">ORGANIZING COMMITTEE (PhilCycling)</h1>
-                <p>The Integrated Cycling Federation of the Philippines (PhilCycling) is the national governing body for
-                    cycling as a sport in the Philippines. It is duly recognised by the Philippine Sports Commission and
-                    the Philippine Olympic Committee and the International Cycling Union (Union Cycliste Internationale
-                    a.k.a. UCI).</p>
+                <p>The Integrated Cycling Federation of the Philippines (PhilCycling) is the national governing body for cycling as a sport in the Philippines. It is duly recognised by the Philippine Sports Commission and the Philippine Olympic Committee
+                    and the International Cycling Union (Union Cycliste Internationale a.k.a. UCI).</p>
             </div>
             <div class="sponsors-section-inner">
                 <div class="swiper rts-brandSlider">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                        <!-- <div class="swiper-slide">
                             <a href="#0" class="sponsor-single">
                                 <div class="sponsors-logo"><img src="assets/images/brands/1.png" alt="sponsor"></div>
+                            </a>
+                        </div> -->
+                        <div class="swiper-slide">
+                            <a href="#0" class="sponsor-single">
+                                <div class="sponsors-logo"><img src="assets/images/brands/2.png" alt="sponsor" style="max-height: 142px; width: auto;"></div>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="#0" class="sponsor-single">
-                                <div class="sponsors-logo"><img src="assets/images/brands/2.png" alt="sponsor"></div>
+                                <div class="sponsors-logo"><img src="assets/images/brands/7.png" alt="sponsor" style="max-height: 125px; width: auto;"></div>
                             </a>
                         </div>
                         <div class="swiper-slide">
@@ -1579,30 +1575,21 @@
                 <div class="details-product-area">
                     <div class="product-thumb-area">
                         <div class="product-thumb-filter-group">
-                            <div class="thumb-filter filter-btn active" data-show=".one"><img
-                                    src="assets/images/products/gloves.png" alt="product-thumb-filter"></div>
-                            <div class="thumb-filter filter-btn" data-show=".two"><img
-                                    src="assets/images/products/product1.png" alt="product-thumb-filter"></div>
-                            <div class="thumb-filter filter-btn" data-show=".three"><img
-                                    src="assets/images/products/product2.png" alt="product-thumb-filter"></div>
+                            <div class="thumb-filter filter-btn active" data-show=".one"><img src="assets/images/products/gloves.png" alt="product-thumb-filter"></div>
+                            <div class="thumb-filter filter-btn" data-show=".two"><img src="assets/images/products/product1.png" alt="product-thumb-filter"></div>
+                            <div class="thumb-filter filter-btn" data-show=".three"><img src="assets/images/products/product2.png" alt="product-thumb-filter"></div>
                         </div>
                         <div class="cursor"></div>
                         <div class="thumb-wrapper one filterd-items figure">
-                            <div class="product-thumb zoom" onmousemove="zoom(event)"
-                                style="background-image: url(assets/images/products/prod.jpg)"><img
-                                    src="assets/images/products/prod.jpg" alt="product-thumb">
+                            <div class="product-thumb zoom" onmousemove="zoom(event)" style="background-image: url(assets/images/products/prod.jpg)"><img src="assets/images/products/prod.jpg" alt="product-thumb">
                             </div>
                         </div>
                         <div class="thumb-wrapper two filterd-items hide">
-                            <div class="product-thumb zoom" onmousemove="zoom(event)"
-                                style="background-image: url(assets/images/products/prod.jpg)"><img
-                                    src="assets/images/products/prod.jpg" alt="product-thumb">
+                            <div class="product-thumb zoom" onmousemove="zoom(event)" style="background-image: url(assets/images/products/prod.jpg)"><img src="assets/images/products/prod.jpg" alt="product-thumb">
                             </div>
                         </div>
                         <div class="thumb-wrapper three filterd-items hide">
-                            <div class="product-thumb zoom" onmousemove="zoom(event)"
-                                style="background-image: url(assets/images/products/prod.jpg)"><img
-                                    src="assets/images/products/prod.jpg" alt="product-thumb">
+                            <div class="product-thumb zoom" onmousemove="zoom(event)" style="background-image: url(assets/images/products/prod.jpg)"><img src="assets/images/products/prod.jpg" alt="product-thumb">
                             </div>
                         </div>
                     </div>
@@ -1619,9 +1606,7 @@
                         <h2 class="product-title">Wide Cotton Tunic Dress <span class="stock">In Stock</span></h2>
                         <span class="product-price"><span class="old-price">$9.35</span> $7.25</span>
                         <p>
-                            Priyoshop has brought to you the Hijab 3 Pieces Combo Pack PS23. It is a
-                            completely modern design and you feel comfortable to put on this hijab.
-                            Buy it at the best price.
+                            Priyoshop has brought to you the Hijab 3 Pieces Combo Pack PS23. It is a completely modern design and you feel comfortable to put on this hijab. Buy it at the best price.
                         </p>
                         <div class="product-bottom-action">
                             <div class="cart-edit">
@@ -1664,11 +1649,9 @@
                 <div class="row">
                     <div class="col-xl-3 col-md-6">
                         <div class="footer-widget">
-                            <div class="footer-logo"><img src="assets/images/2023_ACC_BMX_Letterhead_1.png"
-                                    alt="footer-logo">
+                            <div class="footer-logo"><img src="assets/images/2023_ACC_BMX_Letterhead_1.png" alt="footer-logo">
                             </div>
-                            <p class="footer-text">Experience the Speed: Witness the Pinnacle of Asian Track Cycling
-                                Excellence in 2026!</p>
+                            <p class="footer-text">Experience the Speed: Witness the Pinnacle of Asian Track Cycling Excellence in 2026!</p>
                             <div class="social-links">
                                 <!-- <a href="https://www.facebook.com/profile.php?id=100094321766590" class="platform"><i
                                         class="fab fa-facebook-f"></i></a> -->
@@ -1686,9 +1669,9 @@
                             <h3 class="footer-widget-title"><span class="decorator"></span> ESSENTIAL LINKS</h3>
                             <ul class="widget-items cata-widget">
                                 <li class="widget-list-item"><a href="about.html">ABOUT US</a></li>
-                              <!--   <li class="widget-list-item"><a href="match-schedule.html">SCHEDULE</a></li> -->
-                                <li class="widget-list-item"><a href="team.html">COMPETITION FORMAT</a></li>
-                               <!--  <li class="widget-list-item"><a href="league-standings.html">AWARDING</a></li>
+                                <!--   <li class="widget-list-item"><a href="match-schedule.html">SCHEDULE</a></li> -->
+                                <li class="widget-list-item"><a href="team.html">Technical Handbook</a></li>
+                                <!--  <li class="widget-list-item"><a href="league-standings.html">AWARDING</a></li>
                                 <li class="widget-list-item"><a href="gallery.html">GALLERY</a></li>
                                 <li class="widget-list-item"><a href="contact.html">CONTACT</a></li> -->
                                 <!-- <li class="widget-list-item"><a href="our-players.html">OUR PLAYERS</a></li> -->
@@ -1704,8 +1687,7 @@
                         <div class="footer-widget address-widget">
                             <h3 class="footer-widget-title"><span class="decorator"></span> GET IN TOUCH</h3>
                             <ul>
-                                <li class="widget-list-item"><i class="fas fa-envelope-open"></i><a
-                                        href="mailto:philcycling.offroad@gmail.com">philcycling@gmail.com</a></li>
+                                <li class="widget-list-item"><i class="fas fa-envelope-open"></i><a href="mailto:philcycling.offroad@gmail.com">philcycling@gmail.com</a></li>
                                 <!-- <li class="widget-list-item"><i class="fas fa-phone"></i><a href="tel:09877788890">098
                                         777
                                         888 90</a></li> -->
@@ -1774,8 +1756,7 @@
 
 
     <!--================= Scroll to Top Start =================-->
-    <div class="scroll-top-btn scroll-top-btn1"><i class="fas fa-angle-up arrow-up"></i><i
-            class="fas fa-circle-notch"></i></div>
+    <div class="scroll-top-btn scroll-top-btn1"><i class="fas fa-angle-up arrow-up"></i><i class="fas fa-circle-notch"></i></div>
     <!--================= Scroll to Top End =================-->
 
     <!--================= Jquery latest version =================-->
@@ -1810,7 +1791,7 @@
         var countDownDate = new Date("March 25, 2026 08:00:00").getTime();
 
         // Update the count down every 1 second
-        var x = setInterval(function () {
+        var x = setInterval(function() {
             var now = new Date().getTime();
             var distance = countDownDate - now;
 
@@ -1825,6 +1806,15 @@
             document.getElementById("seconds").innerHTML = seconds;
         }, 1000);
     </script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // 1 second animation speed
+            once: true, // Isang beses lang gagalaw
+        });
+    </script>
+
 
 </body>
 

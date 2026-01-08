@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asian BMX Championship | Tagaytay 2023</title>
+    <title>Asian Track Championships | Tagaytay 2026</title>
     <!--================= Favicon =================-->
     <link rel="apple-touch-icon" href="assets/images/fav.png">
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/fav.png">
@@ -35,7 +35,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 
     <style>
-        :root {
+         :root {
             --hue: 223;
             --bg: hsl(var(--hue), 90%, 90%);
             --fg: hsl(var(--hue), 90%, 10%);
@@ -43,7 +43,6 @@
             --trans-dur: 0.3s;
             font-size: calc(16px + (32 - 16) * (100vw - 320px) / (2560 - 320));
         }
-
         /* body {
 	background-color: var(--bg);
 	color: var(--fg);
@@ -54,13 +53,14 @@
 		background-color var(--trans-dur),
 		color var(--trans-dur);
 } */
+        
         .bike {
             display: block;
             margin: auto;
             width: 30em;
             height: auto;
         }
-
+        
         .bike__body,
         .bike__front,
         .bike__handlebars,
@@ -74,185 +74,168 @@
             stroke: var(--primary);
             transition: stroke var(--trans-dur);
         }
-
+        
         .bike__front {
             animation-name: bikeFront;
         }
-
+        
         .bike__handlebars {
             animation-name: bikeHandlebars;
         }
-
+        
         .bike__pedals {
             animation-name: bikePedals;
         }
-
+        
         .bike__pedals-spin {
             animation-name: bikePedalsSpin;
         }
-
+        
         .bike__seat {
             animation-name: bikeSeat;
         }
-
+        
         .bike__spokes,
         .bike__tire {
             stroke: currentColor;
         }
-
+        
         .bike__spokes {
             animation-name: bikeSpokes;
         }
-
+        
         .bike__spokes-spin {
             animation-name: bikeSpokesSpin;
         }
-
+        
         .bike__tire {
             animation-name: bikeTire;
         }
-
         /* Dark theme */
+        
         @media (prefers-color-scheme: dark) {
-            :root {
+             :root {
                 --bg: hsl(var(--hue), 90%, 10%);
                 --fg: hsl(var(--hue), 90%, 90%);
             }
         }
-
         /* Animations */
+        
         @keyframes bikeBody {
             from {
                 stroke-dashoffset: 79;
             }
-
             33%,
             67% {
                 stroke-dashoffset: 0;
             }
-
             to {
                 stroke-dashoffset: -79;
             }
         }
-
+        
         @keyframes bikeFront {
             from {
                 stroke-dashoffset: 19;
             }
-
             33%,
             67% {
                 stroke-dashoffset: 0;
             }
-
             to {
                 stroke-dashoffset: -19;
             }
         }
-
+        
         @keyframes bikeHandlebars {
             from {
                 stroke-dashoffset: 10;
             }
-
             33%,
             67% {
                 stroke-dashoffset: 0;
             }
-
             to {
                 stroke-dashoffset: -10;
             }
         }
-
+        
         @keyframes bikePedals {
             from {
                 animation-timing-function: ease-in;
                 stroke-dashoffset: -25.133;
             }
-
             33%,
             67% {
                 animation-timing-function: ease-out;
                 stroke-dashoffset: -21.991;
             }
-
             to {
                 stroke-dashoffset: -25.133;
             }
         }
-
+        
         @keyframes bikePedalsSpin {
             from {
                 transform: rotate(0.1875turn);
             }
-
             to {
                 transform: rotate(3.1875turn);
             }
         }
-
+        
         @keyframes bikeSeat {
             from {
                 stroke-dashoffset: 5;
             }
-
             33%,
             67% {
                 stroke-dashoffset: 0;
             }
-
             to {
                 stroke-dashoffset: -5;
             }
         }
-
+        
         @keyframes bikeSpokes {
             from {
                 animation-timing-function: ease-in;
                 stroke-dashoffset: -31.416;
             }
-
             33%,
             67% {
                 animation-timing-function: ease-out;
                 stroke-dashoffset: -23.562;
             }
-
             to {
                 stroke-dashoffset: -31.416;
             }
         }
-
+        
         @keyframes bikeSpokesSpin {
             from {
                 transform: rotate(0);
             }
-
             to {
                 transform: rotate(3turn);
             }
         }
-
+        
         @keyframes bikeTire {
             from {
                 animation-timing-function: ease-in;
                 stroke-dashoffset: 56.549;
                 transform: rotate(0);
             }
-
             33% {
                 stroke-dashoffset: 0;
                 transform: rotate(0.33turn);
             }
-
             67% {
                 animation-timing-function: ease-out;
                 stroke-dashoffset: 0;
                 transform: rotate(0.67turn);
             }
-
             to {
                 stroke-dashoffset: -56.549;
                 transform: rotate(1turn);
@@ -301,7 +284,7 @@
                                 <polyline class="bike__front" points="32.5 2,38.5 19" stroke-dasharray="19 19" />
                             </g>
                         </svg>
-                    </svg>
+                </svg>
                 </svg>
 
 
@@ -347,10 +330,8 @@
             <div class="navbar-part navbar-part1">
                 <div class="container">
                     <div class="navbar-inner">
-                        <a href="index.html" class="logo"><img src="assets/images/2023_ACC_BMX_Letterhead_1.png"
-                                alt="sportius-logo" width="110" height="150"></a>
-                        <a href="index.html" class="logo-sticky"><img src="assets/images/2023_ACC_BMX_Letterhead_1.png"
-                                alt="kester-logo"></a>
+                        <a href="index.html" class="logo"><img src="assets/images/2023_ACC_BMX_Letterhead_1.png" alt="sportius-logo" width="110" height="150"></a>
+                        <a href="index.html" class="logo-sticky"><img src="assets/images/2023_ACC_BMX_Letterhead_1.png" alt="kester-logo"></a>
                         <div class="rts-menu">
                             <nav class="menus menu-toggle">
                                 <ul class="nav__menu">
@@ -367,17 +348,20 @@
                                         </ul> -->
                                     </li>
                                     <li><a class="menu-item" href="about.html">About</a></li>
-                                    <li class="has-dropdown"><a class="menu-item" href="#">Pages</a>
+                                    <li class="has-dropdown"><a class="menu-item" href="#">Competition Guide</a>
                                         <ul class="dropdown-ul mega-dropdown">
                                             <li class="mega-dropdown-li">
                                                 <ul class="mega-dropdown-ul">
                                                     <!-- <li class="dropdown-li"><a class="dropdown-link"
                                                             href="match-schedule.html">Schedule</a>
                                                     </li> -->
-                                                    <li class="dropdown-li"><a class="dropdown-link"
-                                                            href="team.html">Competition Format</a>
+                                                    <li class="dropdown-li"><a class="dropdown-link" href="team.html">Technical Guide</a>
                                                     </li>
-                                                   <!--  <li class="dropdown-li"><a class="dropdown-link"
+
+                                                    <li class="dropdown-li"><a class="dropdown-link" href="venue.html">Vicinity Map of Velodrome</a>
+                                                    </li>
+
+                                                    <!--  <li class="dropdown-li"><a class="dropdown-link"
                                                             href="league-standings.html">Awarding</a>
                                                     </li> -->
                                                     <!-- <li class="dropdown-li"><a class="dropdown-link"
@@ -442,16 +426,24 @@
                                                     you</a></li>
                                         </ul>
                                     </li> -->
-                                   <!--  <li class="has-dropdown"><a class="menu-item" href="gallery.html">Gallery</a> -->
-                                        <ul class="dropdown-ul">
-                                            <!-- <li class="dropdown-li"><a class="dropdown-link" href="blog.html">News</a>
+                                    <!--  <li class="has-dropdown"><a class="menu-item" href="gallery.html">Gallery</a> -->
+                                    <ul class="dropdown-ul">
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link" href="blog.html">News</a>
                                             </li>
                                             <li class="dropdown-li"><a class="dropdown-link"
                                                     href="blog-details.html">News
                                                     Details</a></li> -->
+                                    </ul>
+                                    </li>
+
+                                    <li class="has-dropdown"><a class="menu-item" href="#">Race Info</a>
+                                        <ul class="dropdown-ul">
+                                            <li class="dropdown-li"><a class="dropdown-link" href="start-list.html">Start Lists & Results</a></li>
                                         </ul>
                                     </li>
-                                   <!--  <li><a class="menu-item" href="contact.html">Contact</a></li> -->
+
+
+                                    <!--  <li><a class="menu-item" href="contact.html">Contact</a></li> -->
                                 </ul>
                             </nav>
                         </div>
@@ -473,8 +465,7 @@
                                             </select>-->
                                             <div class="input-div">
                                                 <div class="search-input-icon"><i class="rt-search mr--10"></i></div>
-                                                <input id="searchInput1" class="search-input" type="text"
-                                                    placeholder="Search by keyword or #">
+                                                <input id="searchInput1" class="search-input" type="text" placeholder="Search by keyword or #">
                                             </div>
                                             <div class="search-close-icon"><i class="rt-xmark"></i></div>
                                         </div>
@@ -513,7 +504,7 @@
                             <span class="product-name">Parachute Jacket</span>
                             <div class="item-wrapper">
                                 <span class="product-variation"><span class="color">Green /</span>
-                                    <span class="size">XL</span></span>
+                                <span class="size">XL</span></span>
                             </div>
                             <div class="item-wrapper">
                                 <span class="product-qnty">3 ×</span>
@@ -541,7 +532,7 @@
                             <span class="product-name">Narrow Trouser</span>
                             <div class="item-wrapper">
                                 <span class="product-variation"><span class="color">Green /</span>
-                                    <span class="size">XL</span></span>
+                                <span class="size">XL</span></span>
                             </div>
                             <div class="item-wrapper">
                                 <span class="product-qnty">2 ×</span>
@@ -569,7 +560,7 @@
                             <span class="product-name">Bellyless Hoodie</span>
                             <div class="item-wrapper">
                                 <span class="product-variation"><span class="color">Green /</span>
-                                    <span class="size">XL</span></span>
+                                <span class="size">XL</span></span>
                             </div>
                             <div class="item-wrapper">
                                 <span class="product-qnty">1 ×</span>
@@ -591,8 +582,7 @@
                 </div>
             </div>
             <div class="cart-bottom-area">
-                <span class="spend-shipping"><i class="fal fa-truck"></i> SPENT <span class="amount">$199.00</span> MORE
-                    FOR FREE SHIPPING</span>
+                <span class="spend-shipping"><i class="fal fa-truck"></i> SPENT <span class="amount">$199.00</span> MORE FOR FREE SHIPPING</span>
                 <span class="total-price">TOTAL: <span class="price">$556</span></span>
                 <a href="checkout.html" class="checkout-btn cart-btn">PROCEED TO CHECKOUT</a>
                 <a href="cart.html" class="view-btn cart-btn">VIEW CART</a>
@@ -622,11 +612,11 @@
                     <li><a class="mm-link" href="index.html">Home</a></li>
                     <li><a class="mm-link" href="about.html">About</a></li>
                     <li class="has-dropdown firstlvl">
-                        <a class="mm-link" href="index.html">Pages <i class="rt-angle-down"></i></a>
+                        <a class="mm-link" href="index.html">Competition Guide <i class="rt-angle-down"></i></a>
                         <ul class="sub-menu mega-dropdown-mobile">
                             <li class="mega-dropdown-li">
                                 <ul class="mega-dropdown-ul mm-show">
-                                   <!--  <li class="dropdown-li"><a class="dropdown-link"
+                                    <!--  <li class="dropdown-li"><a class="dropdown-link"
                                             href="match-schedule.html">Schedule</a>
                                     </li> -->
                                     <!-- <li class="dropdown-li"><a class="dropdown-link" href="team-details.html">Player
@@ -640,8 +630,7 @@
                             </li>
                             <li class="mega-dropdown-li">
                                 <ul class="mega-dropdown-ul mm-show">
-                                    <li class="dropdown-li"><a class="dropdown-link" href="team.html">Competition
-                                            Format</a>
+                                    <li class="dropdown-li"><a class="dropdown-link" href="team.html">Technical Guide</a>
                                     </li>
                                     <!-- <li class="dropdown-li"><a class="dropdown-link" href="event.html">Event</a>
                                     </li>
@@ -654,7 +643,8 @@
                             </li>
                             <li class="mega-dropdown-li">
                                 <ul class="mega-dropdown-ul mm-show">
-                                    <li class="dropdown-li"><!-- <a class="dropdown-link"
+                                    <li class="dropdown-li">
+                                        <!-- <a class="dropdown-link"
                                             href="league-standings.html">Awarding</a> -->
                                     </li>
                                     <!-- <li class="dropdown-li"><a class="dropdown-link" href="match-result.html">Competition
@@ -684,13 +674,13 @@
                             <li><a href="blog-details.html">News Details</a></li>
                         </ul> 
                     </li> -->
-                 <!--    <li><a class="mm-link" href="gallery.html">Gallery</a></li>
+                    <!--    <li><a class="mm-link" href="gallery.html">Gallery</a></li>
                     <li><a class="mm-link" href="contact.html">Contact</a></li> -->
                 </ul>
             </nav>
             <!-- side-mobile-menu end -->
             <div class="side-bar-social-links">
-              <!--   <a href="https://www.facebook.com/profile.php?id=100094321766590" class="platform"><i
+                <!--   <a href="https://www.facebook.com/profile.php?id=100094321766590" class="platform"><i
                         class="fab fa-facebook-f"></i></a> -->
                 <!-- <a href="#0" class="platform"><i class="fab fa-twitter"></i></a>
                 <a href="#0" class="platform"><i class="fab fa-behance"></i></a>
@@ -705,11 +695,11 @@
                     <div class="banner-content">
                         <div class="page-path">
                             <ul>
-                                <li><a class="home-page-link" href="index.html">Home</a></li>
-                                <li><a class="current-page" href="#">Competition Format</a></li>
+                                <li><a class="home-page-link" href="index.html">Competition Guide</a></li>
+                                <li><a class="current-page" href="#">Technical Guide</a></li>
                             </ul>
                         </div>
-                        <h1 class="banner-heading">COMPETITION FORMAT</h1>
+                        <h1 class="banner-heading">Technical Guide</h1>
                     </div>
                 </div>
             </div>
@@ -886,14 +876,16 @@
 
                             <div class="row justify-content-center" style="margin-top: 50px; margin-bottom: 50px;">
                                 <div class="col-12 text-center">
-                                    <a href="assets/downloads/tech-guide.pdf" download="ACC_Track_2026_Technical_Guide"
-                                        class="rts-btn btn-primary"
-                                        style="padding: 15px 40px; font-size: 18px; border-radius: 5px; text-transform: uppercase; letter-spacing: 1px;">
-                                        <i class="fas fa-file-pdf" style="margin-right: 10px;"></i> Download Technical
-                                        Guide
+                                    <a href="assets/downloads/tech-guide.pdf" download="ACC_Track_2026_Technical_Guide" class="rts-btn btn-primary" style="padding: 15px 40px; font-size: 18px; border-radius: 5px; text-transform: uppercase; letter-spacing: 1px;">
+                                        <i class="fas fa-file-pdf" style="margin-right: 10px;"></i> Download Technical Handbook
                                     </a>
-                                    <p style="color: #999; font-size: 13px; margin-top: 15px;">Official V1.2 (PDF
-                                        Format)</p>
+
+                                    <a href="assets/downloads/vicinity-map.pdf" target="_blank" class="rts-btn btn-primary" style="margin-left: 20px; padding: 15px 40px; font-size: 18px; border-radius: 5px; text-transform: uppercase; letter-spacing: 1px; background-color: #28a745; border-color: #28a745;">
+                                        <i class="fas fa-map" style="margin-right: 10px;"></i> DOWNLOAD VICINITY MAP
+                                    </a>
+
+                                    <!-- <p style="color: #999; font-size: 13px; margin-top: 15px;">Official V1.2 (PDF
+                                        Format)</p> -->
                                 </div>
                             </div>
 
@@ -903,8 +895,7 @@
                                         <div style="background: #111; padding: 30px; border-left: 4px solid #007bff;">
                                             <h4 style="color: #fff;">SPRINT & KEIRIN</h4>
                                             <p style="color: #bbb; font-size: 14px;">
-                                                Explosive power meets tactics. Riders reach speeds of 70kph+ in a battle
-                                                of cat and mouse.
+                                                Explosive power meets tactics. Riders reach speeds of 70kph+ in a battle of cat and mouse.
                                             </p>
                                         </div>
                                     </div>
@@ -912,8 +903,7 @@
                                         <div style="background: #111; padding: 30px; border-left: 4px solid #dc3545;">
                                             <h4 style="color: #fff;">PURSUIT & OMNIUM</h4>
                                             <p style="color: #bbb; font-size: 14px;">
-                                                The ultimate test of stamina. Includes the 4-event Omnium and the
-                                                precision-based Team Pursuit.
+                                                The ultimate test of stamina. Includes the 4-event Omnium and the precision-based Team Pursuit.
                                             </p>
                                         </div>
                                     </div>
@@ -943,8 +933,8 @@
                 <div class="row align-items-center">
                     <div class="col-lg-5 col-12">
                         <div class="about-thumb"> -->
-                            <!--<div class="img1"><img src="assets/images/gallery/park2.jpg" alt="about-thumb"></div>-->
-                            <!-- <div class="img2"><img src="assets/images/gallery/park.png" alt="about-thumb"></div>
+    <!--<div class="img1"><img src="assets/images/gallery/park2.jpg" alt="about-thumb"></div>-->
+    <!-- <div class="img2"><img src="assets/images/gallery/park.png" alt="about-thumb"></div>
                         </div>
                     </div>
                     <div class="col-lg-7 col-12">
@@ -991,8 +981,8 @@
                 <div class="row align-items-center">
                     <div class="col-lg-5 col-12">
                         <div class="about-thumb"> -->
-                            <!--<div class="img1"><img src="assets/images/gallery/flatland1.webp" alt="about-thumb"></div>-->
-                            <!-- <div class="img2"><img src="assets/images/gallery/flatland2.jpg" alt="about-thumb"></div>
+    <!--<div class="img1"><img src="assets/images/gallery/flatland1.webp" alt="about-thumb"></div>-->
+    <!-- <div class="img2"><img src="assets/images/gallery/flatland2.jpg" alt="about-thumb"></div>
                         </div>
                     </div>
                     <div class="col-lg-7 col-12">
@@ -1186,11 +1176,9 @@
                 <div class="row">
                     <div class="col-xl-3 col-md-6">
                         <div class="footer-widget">
-                            <div class="footer-logo"><img src="assets/images/2023_ACC_BMX_Letterhead_1.png"
-                                    alt="footer-logo">
+                            <div class="footer-logo"><img src="assets/images/2023_ACC_BMX_Letterhead_1.png" alt="footer-logo">
                             </div>
-                            <p class="footer-text">Experience the Speed: Witness the Pinnacle of Asian Track Cycling
-                            Excellence in 2026!
+                            <p class="footer-text">Experience the Speed: Witness the Pinnacle of Asian Track Cycling Excellence in 2026!
                             </p>
                             <div class="social-links">
                                 <!-- <a href="https://www.facebook.com/profile.php?id=100094321766590" class="platform"><i
@@ -1209,9 +1197,9 @@
                             <h3 class="footer-widget-title"><span class="decorator"></span> ESSENTIAL LINKS</h3>
                             <ul class="widget-items cata-widget">
                                 <li class="widget-list-item"><a href="about.html">ABOUT US</a></li>
-                               <!--  <li class="widget-list-item"><a href="match-schedule.html">SCHEDULE</a></li> -->
-                                <li class="widget-list-item"><a href="team.html">COMPETITION FORMAT</a></li>
-                             <!--    <li class="widget-list-item"><a href="league-standings.html">AWARDING</a></li>
+                                <!--  <li class="widget-list-item"><a href="match-schedule.html">SCHEDULE</a></li> -->
+                                <li class="widget-list-item"><a href="team.html">Technical Guide</a></li>
+                                <!--    <li class="widget-list-item"><a href="league-standings.html">AWARDING</a></li>
                                 <li class="widget-list-item"><a href="gallery.html">GALLERY</a></li>
                                 <li class="widget-list-item"><a href="contact.html">CONTACT</a></li> -->
                                 <!-- <li class="widget-list-item"><a href="price-table.html">PRICE TABLE</a></li> -->
@@ -1229,8 +1217,7 @@
                         <div class="footer-widget address-widget">
                             <h3 class="footer-widget-title"><span class="decorator"></span> GET IN TOUCH</h3>
                             <ul>
-                                <li class="widget-list-item"><i class="fas fa-envelope-open"></i><a
-                                        href="mailto:philcycling.offroad@gmail.com">philcycling@gmail.com</a>
+                                <li class="widget-list-item"><i class="fas fa-envelope-open"></i><a href="mailto:philcycling.offroad@gmail.com">philcycling@gmail.com</a>
                                 </li>
                                 <!-- <li class="widget-list-item"><i class="fas fa-phone"></i><a href="tel:09877788890">098
                                         777
@@ -1300,8 +1287,7 @@
 
 
     <!--================= Scroll to Top Start =================-->
-    <div class="scroll-top-btn scroll-top-btn1"><i class="fas fa-angle-up arrow-up"></i><i
-            class="fas fa-circle-notch"></i></div>
+    <div class="scroll-top-btn scroll-top-btn1"><i class="fas fa-angle-up arrow-up"></i><i class="fas fa-circle-notch"></i></div>
     <!--================= Scroll to Top End =================-->
 
     <!--================= Jquery latest version =================-->
