@@ -53,7 +53,35 @@
 		background-color var(--trans-dur),
 		color var(--trans-dur);
 } */
-        
+         .letterhead {
+            /* background: #f6f7e3; */
+            /* background: rgba(255, 255, 255, 0.95); */
+            /* border-bottom: 1px solid #e5e5e5; */
+        }
+
+        .letterhead-inner {
+            display: flex;
+            justify-content: center; /* centers horizontally */
+            align-items: center;     /* centers vertically */
+            padding: 10px 20px;
+        }
+
+        .letterhead-logo {
+            max-width: 40%;
+            height: auto;
+        }
+
+        .letterhead-logo {
+            max-width: 750px;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .letterhead-logo {
+                max-width: 90%;
+            }
+        }
+
         .bike {
             display: block;
             margin: auto;
@@ -347,8 +375,13 @@
             <div class="navbar-part navbar-part1">
                 <div class="container">
                     <div class="navbar-inner">
-                        <a href="index.html" class="logo"><img src="assets/images/2023_ACC_BMX_Letterhead_1.png" alt="sportius-logo" width="110" height="150"></a>
-                        <a href="index.html" class="logo-sticky"><img src="assets/images/2023_ACC_BMX_Letterhead_1.png" alt="kester-logo"></a>
+                        <div class="letterhead">
+                            <div class="letterhead-inner">
+                                <img src="assets/images/banner/acc2026-lh.png" alt="ACC Letterhead" class="letterhead-logo">
+                            </div>
+                        </div>
+                        <!-- <a href="index.html" class="logo"><img src="assets/images/2023_ACC_BMX_Letterhead_1.png" alt="sportius-logo" width="110" height="150"></a>
+                        <a href="index.html" class="logo-sticky"><img src="assets/images/2023_ACC_BMX_Letterhead_1.png" alt="kester-logo"></a> -->
                         <div class="rts-menu">
                             <nav class="menus menu-toggle">
                                 <ul class="nav__menu">
