@@ -53,35 +53,38 @@
 		background-color var(--trans-dur),
 		color var(--trans-dur);
 } */
-         .letterhead {
+        
+        .letterhead {
             /* background: #f6f7e3; */
             /* background: rgba(255, 255, 255, 0.95); */
             /* border-bottom: 1px solid #e5e5e5; */
         }
-
+        
         .letterhead-inner {
             display: flex;
-            justify-content: center; /* centers horizontally */
-            align-items: center;     /* centers vertically */
+            justify-content: center;
+            /* centers horizontally */
+            align-items: center;
+            /* centers vertically */
             padding: 10px 20px;
         }
-
+        
         .letterhead-logo {
             max-width: 40%;
             height: auto;
         }
-
+        
         .letterhead-logo {
             max-width: 750px;
             width: 100%;
         }
-
+        
         @media (max-width: 768px) {
             .letterhead-logo {
                 max-width: 90%;
             }
         }
-
+        
         .bike {
             display: block;
             margin: auto;
@@ -270,6 +273,23 @@
             }
         }
     </style>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+    <style>
+        /* Custom style para maging mas dramatic at dark-theme friendly */
+        
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+            cursor: pointer;
+            /* Para alam ng user na pwedeng i-click */
+        }
+    </style>
 </head>
 
 <body>
@@ -357,7 +377,6 @@
         <div class="navbar-sticky">
             <div class="navbar-part navbar-part1">
                 <div class="container">
-   
                     <div class="navbar-inner">
                         <div class="letterhead">
                             <div class="letterhead-inner">
@@ -481,7 +500,6 @@
                                             <li class="dropdown-li"><a class="dropdown-link" href="#">Emergency Contact</a></li>
                                         </ul>
                                     </li>
-
 
                                     <!--  <li><a class="menu-item" href="contact.html">Contact</a></li> -->
                                 </ul>
@@ -669,164 +687,164 @@
                             </li>
                             <li class="mega-dropdown-li">
                                 <ul class="mega-dropdown-ul mm-show">
-                                         <li class="dropdown-li"><a class="dropdown-link" href="about-organizer.html">About the City</a>
-                                            <li class="dropdown-li"><a class="dropdown-link" href="about-organizer.html">About the Competition</a>
-                                            <li class="dropdown-li"><a class="dropdown-link" href="about-organizer.html">About the organizer</a>
-                                    </li>
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link" href="event-details.html">Event
+                                    <li class="dropdown-li"><a class="dropdown-link" href="about-city.html">About the City</a>
+                                        <li class="dropdown-li"><a class="dropdown-link" href="about-competition.html">About the Competition</a>
+                                            <li class="dropdown-li"><a class="dropdown-link" href="about-organizer.html">About the Organizer</a>
+                                            </li>
+                                            <!-- <li class="dropdown-li"><a class="dropdown-link" href="event-details.html">Event
                                                                                         Details</a>
                                                                                 </li>
                                                                                 <li class="dropdown-li"><a class="dropdown-link" href="error.html">Error</a>
                                                                                 </li> -->
                                 </ul>
-                            </li>
-                            <li class="mega-dropdown-li">
-                                <ul class="mega-dropdown-ul mm-show">
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                </li>
+                                <li class="mega-dropdown-li">
+                                    <ul class="mega-dropdown-ul mm-show">
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link"
                                                                                         href="league-standings.html">Awarding</a>
                                                                                 </li> -->
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link" href="match-result.html">Match
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link" href="match-result.html">Match
                                                                                         Result</a>
                                                                                 </li>
                                                                                 <li class="dropdown-li"><a class="dropdown-link" href="league-standings.html">Point Table</a>
                                                                                 </li> -->
-                                </ul>
-                            </li>
+                                    </ul>
+                                </li>
                         </ul>
-                    </li>
-                    <li class="has-dropdown firstlvl">
-                        <a class="mm-link" href="index.html">Competition Guide <i class="rt-angle-down"></i></a>
-                        <ul class="sub-menu mega-dropdown-mobile">
-                            <li class="mega-dropdown-li">
-                                <ul class="mega-dropdown-ul mm-show">
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link"
+                        </li>
+                        <li class="has-dropdown firstlvl">
+                            <a class="mm-link" href="index.html">Competition Guide <i class="rt-angle-down"></i></a>
+                            <ul class="sub-menu mega-dropdown-mobile">
+                                <li class="mega-dropdown-li">
+                                    <ul class="mega-dropdown-ul mm-show">
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link"
                                                                 href="match-schedule.html">Schedule</a>
                                                         </li> -->
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link" href="team-details.html">Player
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link" href="team-details.html">Player
                                                                 Details</a>
                                                         </li>
                                                         <li class="dropdown-li"><a class="dropdown-link" href="history.html">History</a>
                                                         </li>
                                                         <li class="dropdown-li"><a class="dropdown-link" href="faq.html">FAQ</a>
                                                         </li> -->
-                                </ul>
-                            </li>
-                            <li class="mega-dropdown-li">
-                                <ul class="mega-dropdown-ul mm-show">
-                                    <li class="dropdown-li"><a class="dropdown-link" href="team.html">Technical Handbook</a>
-                                    </li>
-                                    <li class="dropdown-li"><a class="dropdown-link" href="venue.html">Vicinity Map of Velodrome</a>
-                                    </li>
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link" href="event-details.html">Event
+                                    </ul>
+                                </li>
+                                <li class="mega-dropdown-li">
+                                    <ul class="mega-dropdown-ul mm-show">
+                                        <li class="dropdown-li"><a class="dropdown-link" href="team.html">Technical Handbook</a>
+                                        </li>
+                                        <li class="dropdown-li"><a class="dropdown-link" href="venue.html">Vicinity Map of Velodrome</a>
+                                        </li>
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link" href="event-details.html">Event
                                                                 Details</a>
                                                         </li>
                                                         <li class="dropdown-li"><a class="dropdown-link" href="error.html">Error</a>
                                                         </li> -->
-                                </ul>
-                            </li>
-                            <li class="mega-dropdown-li">
-                                <ul class="mega-dropdown-ul mm-show">
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                    </ul>
+                                </li>
+                                <li class="mega-dropdown-li">
+                                    <ul class="mega-dropdown-ul mm-show">
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link"
                                                                 href="league-standings.html">Awarding</a>
                                                         </li> -->
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link" href="match-result.html">Match
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link" href="match-result.html">Match
                                                                 Result</a>
                                                         </li>
                                                         <li class="dropdown-li"><a class="dropdown-link" href="league-standings.html">Point Table</a>
                                                         </li> -->
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="has-dropdown firstlvl">
-                        <a class="mm-link" href="#">Race Info <i class="rt-angle-down"></i></a>
-                        <ul class="sub-menu mega-dropdown-mobile">
-                            <li class="mega-dropdown-li">
-                                <ul class="mega-dropdown-ul mm-show">
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown firstlvl">
+                            <a class="mm-link" href="#">Race Info <i class="rt-angle-down"></i></a>
+                            <ul class="sub-menu mega-dropdown-mobile">
+                                <li class="mega-dropdown-li">
+                                    <ul class="mega-dropdown-ul mm-show">
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link"
                                                                                                             href="match-schedule.html">Schedule</a>
                                                                                                     </li> -->
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link" href="team-details.html">Player
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link" href="team-details.html">Player
                                                                                                             Details</a>
                                                                                                     </li>
                                                                                                     <li class="dropdown-li"><a class="dropdown-link" href="history.html">History</a>
                                                                                                     </li>
                                                                                                     <li class="dropdown-li"><a class="dropdown-link" href="faq.html">FAQ</a>
                                                                                                     </li> -->
-                                </ul>
-                            </li>
-                            <li class="mega-dropdown-li">
-                                <ul class="mega-dropdown-ul mm-show">
-                                    <li class="dropdown-li"><a class="dropdown-link" href="start-list.html">Start Lists and Results</a>
-                                    </li>
-                    
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link" href="event-details.html">Event
+                                    </ul>
+                                </li>
+                                <li class="mega-dropdown-li">
+                                    <ul class="mega-dropdown-ul mm-show">
+                                        <li class="dropdown-li"><a class="dropdown-link" href="start-list.html">Start Lists and Results</a>
+                                        </li>
+
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link" href="event-details.html">Event
                                                                                                             Details</a>
                                                                                                     </li>
                                                                                                     <li class="dropdown-li"><a class="dropdown-link" href="error.html">Error</a>
                                                                                                     </li> -->
-                                </ul>
-                            </li>
-                            <li class="mega-dropdown-li">
-                                <ul class="mega-dropdown-ul mm-show">
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                    </ul>
+                                </li>
+                                <li class="mega-dropdown-li">
+                                    <ul class="mega-dropdown-ul mm-show">
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link"
                                                                                                             href="league-standings.html">Awarding</a>
                                                                                                     </li> -->
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link" href="match-result.html">Match
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link" href="match-result.html">Match
                                                                                                             Result</a>
                                                                                                     </li>
                                                                                                     <li class="dropdown-li"><a class="dropdown-link" href="league-standings.html">Point Table</a>
                                                                                                     </li> -->
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="has-dropdown firstlvl">
-                        <a class="mm-link" href="#">Contact Us<i class="rt-angle-down"></i></a>
-                        <ul class="sub-menu mega-dropdown-mobile">
-                            <li class="mega-dropdown-li">
-                                <ul class="mega-dropdown-ul mm-show">
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown firstlvl">
+                            <a class="mm-link" href="#">Contact Us<i class="rt-angle-down"></i></a>
+                            <ul class="sub-menu mega-dropdown-mobile">
+                                <li class="mega-dropdown-li">
+                                    <ul class="mega-dropdown-ul mm-show">
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link"
                                                                                                                                 href="match-schedule.html">Schedule</a>
                                                                                                                         </li> -->
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link" href="team-details.html">Player
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link" href="team-details.html">Player
                                                                                                                                 Details</a>
                                                                                                                         </li>
                                                                                                                         <li class="dropdown-li"><a class="dropdown-link" href="history.html">History</a>
                                                                                                                         </li>
                                                                                                                         <li class="dropdown-li"><a class="dropdown-link" href="faq.html">FAQ</a>
                                                                                                                         </li> -->
-                                </ul>
-                            </li>
-                            <li class="mega-dropdown-li">
-                                <ul class="mega-dropdown-ul mm-show">
-                                    <li class="dropdown-li"><a class="dropdown-link" href="#">Organization</a>
-                                    </li>
-                                    <li class="dropdown-li"><a class="dropdown-link" href="#">Emergency Contact</a>
-                                    </li>
-                    
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link" href="event-details.html">Event
+                                    </ul>
+                                </li>
+                                <li class="mega-dropdown-li">
+                                    <ul class="mega-dropdown-ul mm-show">
+                                        <li class="dropdown-li"><a class="dropdown-link" href="#">Organization</a>
+                                        </li>
+                                        <li class="dropdown-li"><a class="dropdown-link" href="#">Emergency Contact</a>
+                                        </li>
+
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link" href="event-details.html">Event
                                                                                                                                 Details</a>
                                                                                                                         </li>
                                                                                                                         <li class="dropdown-li"><a class="dropdown-link" href="error.html">Error</a>
                                                                                                                         </li> -->
-                                </ul>
-                            </li>
-                            <li class="mega-dropdown-li">
-                                <ul class="mega-dropdown-ul mm-show">
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                    </ul>
+                                </li>
+                                <li class="mega-dropdown-li">
+                                    <ul class="mega-dropdown-ul mm-show">
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link"
                                                                                                                                 href="league-standings.html">Awarding</a>
                                                                                                                         </li> -->
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link" href="match-result.html">Match
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link" href="match-result.html">Match
                                                                                                                                 Result</a>
                                                                                                                         </li>
                                                                                                                         <li class="dropdown-li"><a class="dropdown-link" href="league-standings.html">Point Table</a>
                                                                                                                         </li> -->
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- <li class="has-dropdown firstlvl">
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- <li class="has-dropdown firstlvl">
                         <a class="mm-link" href="index.html">Shop <i class="rt-angle-down"></i></a>
                         <ul class="sub-menu">
                             <li><a href="shop.html">Shop</a></li>
@@ -837,14 +855,14 @@
                             <li><a href="thank-you.html">Thank You</a></li>
                         </ul>
                     </li> -->
-                    <!-- <li class="has-dropdown firstlvl">
+                        <!-- <li class="has-dropdown firstlvl">
                         <a class="mm-link" href="gallery.html">Gallery <i class="rt-angle-down"> </i></a>
                         <ul class="sub-menu">
                             <li><a href="blog.html">G</a></li>
                             <li><a href="blog-details.html">News Details</a></li>
                         </ul> 
                     </li> -->
-                    <!--    <li><a class="mm-link" href="gallery.html">Gallery</a></li>
+                        <!--    <li><a class="mm-link" href="gallery.html">Gallery</a></li>
                     <li><a class="mm-link" href="contact.html">Contact</a></li> -->
                 </ul>
             </nav>
@@ -865,11 +883,12 @@
                     <div class="banner-content">
                         <div class="page-path">
                             <ul>
-                                <li><a class="home-page-link" href="index.html">Competition Guide</a></li>
-                                <li><a class="current-page" href="#">Technical Guide</a></li>
+                                <li class="dropdown-li"><a class="dropdown-link" href="about-organizer.html">About</a>
+                                    <li class="dropdown-li"><a class="dropdown-link" href="about-competition.html">About THE City</a>
+                                    </li>
                             </ul>
                         </div>
-                        <h1 class="banner-heading">Technical Guide</h1>
+                        <h1 class="banner-heading">ABOUT THE CITY</h1>
                     </div>
                 </div>
             </div>
@@ -880,352 +899,252 @@
 
 
     <!--================= Team Section Start Here =================-->
-    <!--<div class="rts-team-section inner section-gap">
-    <div class="container">
-        <div class="team-section-inner inner">
-            <!--<div class="row">
-                <div class="col-xl-3 col-md-4 col-sm-6">
-                    <div class="team-wraper">
-                        <div class="player-card">
-                            <a class="image" href="team-details.html"><img src="assets/images/team/team01.png" alt=""></a>
-                            <div class="number">11</div>
-                            <ul class="social-area">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="profile">
-                            <p class="position">FORWARD</p>
-                            <a href="#" class="name">MAXIELS DAVID</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-4 col-sm-6">
-                    <div class="team-wraper">
-                        <div class="player-card">
-                            <a class="image" href="team-details.html"><img src="assets/images/team/team02.png" alt=""></a>
-                            <div class="number">7</div>
-                            <ul class="social-area">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="profile">
-                            <p class="position">WINGER</p>
-                            <a href="#" class="name">VEN DIESEL</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-4 col-sm-6">
-                    <div class="team-wraper">
-                        <div class="player-card">
-                            <a class="image" href="team-details.html"><img src="assets/images/team/team03.png" alt=""></a>
-                            <div class="number">9</div>
-                            <ul class="social-area">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="profile">
-                            <p class="position">WINGER</p>
-                            <a href="#" class="name">NED STARK</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-4 col-sm-6">
-                    <div class="team-wraper">
-                        <div class="player-card">
-                            <a class="image" href="team-details.html"><img src="assets/images/team/team04.png" alt=""></a>
-                            <div class="number">10</div>
-                            <ul class="social-area">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="profile">
-                            <p class="position">MID-FIELDER</p>
-                            <a href="team-details.html" class="name">JOHN WICK</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-4 col-sm-6">
-                    <div class="team-wraper">
-                        <div class="player-card">
-                            <a class="image" href="team-details.html"><img src="assets/images/team/team05.png" alt=""></a>
-                            <div class="number">9</div>
-                            <ul class="social-area">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="profile">
-                            <p class="position">WINGER</p>
-                            <a href="team-details.html" class="name">TYRION LENNISTER</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-4 col-sm-6">
-                    <div class="team-wraper">
-                        <div class="player-card">
-                            <a class="image" href="team-details.html"><img src="assets/images/team/team06.png" alt=""></a>
-                            <div class="number">10</div>
-                            <ul class="social-area">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="profile">
-                            <p class="position">MID-FIELDER</p>
-                            <a href="team-details.html" class="name">SAMWELL TARLY</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-4 col-sm-6">
-                    <div class="team-wraper">
-                        <div class="player-card">
-                            <a class="image" href="team-details.html"><img src="assets/images/team/team07.png" alt=""></a>
-                            <div class="number">7</div>
-                            <ul class="social-area">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="profile">
-                            <p class="position">WINGER</p>
-                            <a href="team-details.html" class="name">EURON GREYJOY</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-4 col-sm-6">
-                    <div class="team-wraper">
-                        <div class="player-card">
-                            <a class="image" href="team-details.html"><img src="assets/images/team/team08.png" alt=""></a>
-                            <div class="number">11</div>
-                            <ul class="social-area">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="profile">
-                            <p class="position">FORWARD</p>
-                            <a href="team-details.html" class="name">JOHN SNOW</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>-->
+
     <!--================= Team Section End Here =================-->
 
     <!--================= Additional 1 Section Start Here =================-->
-    <div class="rts-match-result-section rts-match-result-section2 rts-match-schedule-section inner section-gap">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12">
-                    <div class="match-single">
-                        <div class="match-single-content">
-                            <div class="match-scores">
-                                <div class="club club1">
-                                    <div class="club-logo mr--20">
-                                        <span class="club-name"> COMPETITION WILL RUN ACCORDINGLY TO THE LATEST UCI
-                                            RULES.</span>
-                                        <!--<img src="assets/images/clubs/1.png" alt="club-logo">-->
-                                    </div>
-                                </div>
 
-                            </div>
+    <!-- MAIN CONTENT -->
+    <style>
+        /* --- SECTION CONTAINER --- */
+        
+        .premium-history-section {
+            position: relative;
+            /* Ito ang background color na match sa Dark Premium theme */
+            background: radial-gradient(circle at top right, #141414 0%, #050505 80%);
+            padding: 80px 5%;
+            color: #FFFFFF;
+            font-family: 'Manrope', sans-serif;
+            overflow: hidden;
+        }
+        /* --- GRID LAYOUT --- */
+        
+        .history-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            /* Text Left, Video Right */
+            gap: 60px;
+            max-width: 1400px;
+            margin: 0 auto;
+            /* Center the grid */
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        /* --- LEFT SIDE: TEXT --- */
+        
+        .history-text {
+            padding-right: 20px;
+        }
+        
+        .gold-eyebrow {
+            font-family: 'Cinzel', serif;
+            font-size: 13px;
+            letter-spacing: 4px;
+            color: #C5A059;
+            /* Premium Gold */
+            margin-bottom: 20px;
+            display: block;
+            font-weight: 600;
+            border-left: 3px solid #C5A059;
+            padding-left: 15px;
+            text-transform: uppercase;
+        }
+        
+        .history-headline {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            color: #C5A059;
+            /* Metallic Text Effect */
+            background: linear-gradient(to right, #C5A059, #EDD298, #C5A059);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 20px rgba(197, 160, 89, 0.15));
+        }
+        
+        .history-quote {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #D0D0D0;
+            margin-bottom: 40px;
+            border-left: 1px solid #333;
+            padding-left: 20px;
+        }
+        
+        .history-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .history-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: #B0B0B0;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+        }
+        
+        .history-list li::before {
+            content: '◆';
+            color: #C5A059;
+            margin-right: 15px;
+            font-size: 0.8rem;
+        }
+        /* --- RIGHT SIDE: VIDEO COLUMN --- */
+        
+        .video-column {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+        }
+        /* Video Frame */
+        
+        .video-frame {
+            position: relative;
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            border-bottom: none;
+            /* Connect to stats below */
+            background: #000;
+            width: 100%;
+            line-height: 0;
+            /* Removes gap below video */
+        }
+        
+        .video-frame video {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: contrast(1.1);
+        }
+        /* Info/Stats Bar (Nasa ilalim na ng video) */
+        
+        .info-bar {
+            background-color: #0A0A0A;
+            border: 1px solid rgba(197, 160, 89, 0.3);
+            border-top: 2px solid #C5A059;
+            /* Gold line separator */
+            padding: 25px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .info-item h4 {
+            font-family: 'Cinzel', serif;
+            color: #FFF;
+            font-size: 1.2rem;
+            margin: 0 0 5px 0;
+            letter-spacing: 1px;
+        }
+        
+        .info-item span {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #C5A059;
+            font-weight: 700;
+        }
+        
+        .divider-line {
+            width: 1px;
+            height: 35px;
+            background: #333;
+        }
+        /* Background Watermark */
+        
+        .bg-watermark {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            font-family: 'Cinzel', serif;
+            font-size: 15vw;
+            color: rgba(255, 255, 255, 0.02);
+            pointer-events: none;
+            line-height: 0.8;
+            z-index: 1;
+        }
+        /* RESPONSIVE */
+        
+        @media (max-width: 900px) {
+            .history-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .history-headline {
+                font-size: 2.8rem;
+            }
+            .premium-history-section {
+                padding: 50px 20px;
+            }
+        }
+    </style>
 
-                            <div class="row justify-content-center" style="margin-top: 50px; margin-bottom: 50px;">
-                                <div class="col-12 text-center">
-                                    <a href="assets/downloads/tech-guide.pdf" download="ACC_Track_2026_Technical_Guide" class="rts-btn btn-primary" style="padding: 15px 40px; font-size: 18px; border-radius: 5px; text-transform: uppercase; letter-spacing: 1px;">
-                                        <i class="fas fa-file-pdf" style="margin-right: 10px;"></i> Download Technical Handbook
-                                    </a>
+    <section class="premium-history-section">
+        <div class="bg-watermark">TAGAYTAY</div>
 
-                                    <a href="assets/downloads/vicinity-map.pdf" target="_blank" class="rts-btn btn-primary" style="margin-left: 20px; padding: 15px 40px; font-size: 18px; border-radius: 5px; text-transform: uppercase; letter-spacing: 1px; background-color: #28a745; border-color: #28a745;">
-                                        <i class="fas fa-map" style="margin-right: 10px;"></i> DOWNLOAD VICINITY MAP
-                                    </a>
+        <div class="history-grid">
 
-                                    <!-- <p style="color: #999; font-size: 13px; margin-top: 15px;">Official V1.2 (PDF
-                                        Format)</p> -->
-                                </div>
-                            </div>
+            <div class="history-text">
+                <span class="gold-eyebrow">The Highland Heritage</span>
 
-                            <div class="container" style="padding-bottom: 50px;">
-                                <div class="row g-4">
-                                    <div class="col-lg-6">
-                                        <div style="background: #111; padding: 30px; border-left: 4px solid #007bff;">
-                                            <h4 style="color: #fff;">SPRINT & KEIRIN</h4>
-                                            <p style="color: #bbb; font-size: 14px;">
-                                                Explosive power meets tactics. Riders reach speeds of 70kph+ in a battle of cat and mouse.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div style="background: #111; padding: 30px; border-left: 4px solid #dc3545;">
-                                            <h4 style="color: #fff;">PURSUIT & OMNIUM</h4>
-                                            <p style="color: #bbb; font-size: 14px;">
-                                                The ultimate test of stamina. Includes the 4-event Omnium and the precision-based Team Pursuit.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                <h1 class="history-headline">THE ECHO OF<br>THE RIDGE</h1>
 
-                        </div>
-                        <!--<div class="match-bottom-action">
-                        <a href="shop.html" class="action-item first-child">GET TICKETS</a>
-                        <div class="play-video">
-                            <a href="https://www.youtube.com/watch?v=G4t6TqG5LM8"
-                                class="action-item popup-video">WATCH STREAM</a>
-                        </div>
-                    </div>-->
+                <blockquote class="history-quote">
+                    "Born from the echoes of an ancient legend—a son's urgent cry of 'Taga, Itay!' amidst the hunt—this ridge has transcended folklore to become the crown jewel of the highlands."
+                </blockquote>
+
+                <ul class="history-list">
+                    <li>Originates from 19th Century Folklore</li>
+                    <li>Officially Chartered in 1938</li>
+                    <li>A Timeless Sanctuary Above the Clouds</li>
+                </ul>
+            </div>
+
+            <div class="video-column">
+
+                <div class="video-frame">
+                    <video controls>
+                    <source src="assets/videos/Tagaytay-AVP.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                </div>
+
+                <div class="info-bar">
+                    <div class="info-item">
+                        <h4>THE ORIGIN</h4>
+                        <span>"TAGA, ITAY!"</span>
+                    </div>
+
+                    <div class="divider-line"></div>
+
+                    <div class="info-item" style="text-align: right;">
+                        <h4>SINCE</h4>
+                        <span>1938</span>
                     </div>
                 </div>
 
             </div>
+
         </div>
-    </div>
+    </section>
+
+
     <!--================= Additional 1 Section End Here =================-->
 
     <!--================= Additional 2 Start Here =================-->
-    <!-- <div class="rts-about-section  about section-gap">
-        <div class="container">
-            <div class="about-inner">
-                <div class="row align-items-center">
-                    <div class="col-lg-5 col-12">
-                        <div class="about-thumb"> -->
-    <!--<div class="img1"><img src="assets/images/gallery/park2.jpg" alt="about-thumb"></div>-->
-    <!-- <div class="img2"><img src="assets/images/gallery/park.png" alt="about-thumb"></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-7 col-12">
-                        <div class="contents">
-                            <div class="section-title-area section-title-area1 text-start">
-                                <h1 class="section-title"><span>BMX Park</span> </h1>
-                                <p>
-                                <ul>
-                                    <li>
 
-                                        &#10004; &nbsp;&nbsp;&nbsp;&nbsp;Men: 14 | Women: 7
-                                        <br> &#10004; &nbsp;&nbsp;&nbsp;&nbsp;Men: 4/5/5 Athletes per group/heat (3
-                                        heats)
-                                        <br> &#10004; &nbsp;&nbsp;&nbsp;&nbsp;Women: 7 Athletes per group/heat (1 heat)
-                                        <br> &#10004; &nbsp;&nbsp;&nbsp;&nbsp;2 runs for each rider
-                                        <br> &#10004; &nbsp;&nbsp;&nbsp;&nbsp;60 seconds per run
-                                        <br> &#10004; &nbsp;&nbsp;&nbsp;&nbsp;Judging on overall impression
-
-
-                                        <br><br>&#10004; &nbsp;&nbsp;&nbsp;&nbsp;Qualification Run - 2 runs. Both runs
-                                        count, average score for both runs.
-
-
-                                        <br><br>&#10004; &nbsp;&nbsp;&nbsp;&nbsp;Final Run – 2 runs each rider. Best run
-                                        will count. Judges will select which is best of 1st
-                                        run from the 2nd run.
-                                        <br>&#10004; &nbsp;&nbsp;&nbsp;&nbsp;<b>Men:</b> Top 12 athletes to be selected
-                                        from qualifiers
-                                        <br>&#10004; &nbsp;&nbsp;&nbsp;&nbsp;<b>Women:</b> Top 4 athletes to be selected
-                                        from qualifiers
-
-                                    </li>
-
-                                </ul>
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="about-inner">
-                <div class="row align-items-center">
-                    <div class="col-lg-5 col-12">
-                        <div class="about-thumb"> -->
-    <!--<div class="img1"><img src="assets/images/gallery/flatland1.webp" alt="about-thumb"></div>-->
-    <!-- <div class="img2"><img src="assets/images/gallery/flatland2.jpg" alt="about-thumb"></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-7 col-12">
-                        <div class="contents">
-                            <div class="section-title-area section-title-area1 text-start">
-                                <h1 class="section-title"><span>BMX Flatland</span> </h1>
-                                <p>
-                                <ul>
-                                    <li>
-
-                                        &#10004; &nbsp;&nbsp;&nbsp;&nbsp;Men: 14 | Women: 7
-                                        <br> &#10004; &nbsp;&nbsp;&nbsp;&nbsp;Men: 5/5 Athletes per group/heat (2 heats)
-                                        <br> &#10004; &nbsp;&nbsp;&nbsp;&nbsp;Women: 7 Athletes per group/heat (1 heat)
-                                        <br> &#10004; &nbsp;&nbsp;&nbsp;&nbsp;1 run for each rider
-                                        <br> &#10004; &nbsp;&nbsp;&nbsp;&nbsp;180 seconds per run
-                                        <br> &#10004; &nbsp;&nbsp;&nbsp;&nbsp;Judging on overall impression
-
-
-                                        <br><br>&#10004; &nbsp;&nbsp;&nbsp;&nbsp;Qualification Run - 1 run each rider
-                                        for 3 minutes
-
-
-                                        <br><br>&#10004; &nbsp;&nbsp;&nbsp;&nbsp;Final Round –1 run. 3 minutes. (Same
-                                        format)
-
-                                        <br>&#10004; &nbsp;&nbsp;&nbsp;&nbsp;<b>Men:</b> Top 8 Athletes to be selected
-                                        <br>&#10004; &nbsp;&nbsp;&nbsp;&nbsp;<b>Women:</b> Top 4 Athletes to be selected
-
-                                    </li>
-
-                                </ul>
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
- -->
 
     <!--================= Additional 2 End Here =================-->
 
     <!--================= Additional 3 Section Start Here =================-->
 
-    <!-- <div class="rts-match-result-section rts-match-result-section2 rts-match-schedule-section inner section-gap">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12">
-                    <div class="match-single">
-                        <div class="match-single-content">
-                            <div class="match-scores">
-                                <div class="club club1">
-                                    <div class="club-logo mr--20">
-                                        <span class="club-name"> CHAMPIONSHIPS CATEGORIES
-                                            <br>BMX Park Men Open (open to any age)
-                                            <br>BMX Park Women Open (open to any age)
-                                            <br>BMX Flatland Men Open (open to any age)
-                                            <br>BMX Flatland Women Open (open to any age)
-                                        </span>
-                                        <img src="assets/images/clubs/1.png" alt="club-logo">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-            </div>
-        </div>
-    </div> -->
     <!--================= Additional 3 Section End Here =================-->
 
 
@@ -1236,107 +1155,8 @@
 
     <!--================= Team Details Section Start Here =================-->
 
-    <!--<div class="rts-team-member-details">
-    <div class="container">
-        <div class="team-details-single">
-            <h3 class="title">COACH JOSE MOURIN</h3>
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="team-picture">
-                        <img src="assets/images/team/financial.jpg" alt="playerspic">
-                    </div>
-                </div>
-                <div class="col-lg-9">
-                    <div class="team-status-area">
-                        <div class="status-box">
-                            <div class="status-item">
-                                <span class="status-name">NATIONALITY:</span>
-                                <span class="status-number"><img src="assets/images/team/arg.png" alt=""> ARGENTINA</span>
-                            </div>
-                            <div class="status-item">
-                                <span class="status-name">CURRENT TEAM:</span>
-                                <a href="index.html" class="status-number club">KESTER</a>
-                            </div>
-                            <div class="status-item">
-                                <span class="status-name">PAST TEAM</span>
-                                <span class="status-number">INTER MILAN</span>
-                            </div>
-                            <div class="status-item">
-                                <span class="status-name">AGE</span>
-                                <span class="status-number">45</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="team-details-single">
-            <h3 class="title">PHYSICIAN SAM FOSTER</h3>
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="team-picture">
-                        <img src="assets/images/team/physician.jpg" alt="playerspic">
-                    </div>
-                </div>
-                <div class="col-lg-9">
-                    <div class="team-status-area">
-                        <div class="status-box">
-                            <div class="status-item">
-                                <span class="status-name">NATIONALITY:</span>
-                                <span class="status-number"><img src="assets/images/team/ita.png" alt=""> ITALY</span>
-                            </div>
-                            <div class="status-item">
-                                <span class="status-name">CURRENT TEAM:</span>
-                                <a href="index.html" class="status-number club">KESTER</a>
-                            </div>
-                            <div class="status-item">
-                                <span class="status-name">PAST TEAM</span>
-                                <span class="status-number">ASTON VILLA</span>
-                            </div>
-                            <div class="status-item">
-                                <span class="status-name">AGE</span>
-                                <span class="status-number">45</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="team-details-single">
-            <h3 class="title">FINANCIAL ADVISOR STEPHEN CORR</h3>
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="team-picture">
-                        <img src="assets/images/team/coach.jpg" alt="playerspic">
-                    </div>
-                </div>
-                <div class="col-lg-9">
-                    <div class="team-status-area">
-                        <div class="status-box">
-                            <div class="status-item">
-                                <span class="status-name">NATIONALITY:</span>
-                                <span class="status-number"><img src="assets/images/team/por.png" alt=""> PORTUGAL</span>
-                            </div>
-                            <div class="status-item">
-                                <span class="status-name">CURRENT TEAM:</span>
-                                <a href="index.html" class="status-number club">KESTER</a>
-                            </div>
-                            <div class="status-item">
-                                <span class="status-name">PAST TEAM</span>
-                                <span class="status-number">ATLANTA</span>
-                            </div>
-                            <div class="status-item">
-                                <span class="status-name">AGE</span>
-                                <span class="status-number">45</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-================= Team Details Section End Here =================-->
+
+    <!-- ================= Team Details Section End Here ================= -->
 
 
     <!--================= Footer Start Here =================-->
@@ -1482,6 +1302,29 @@
     <script src="assets/js/vendors/jquery.magnific-popup.min.js"></script>
     <!--================= Main Script =================-->
     <script src="assets/js/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1, // Ilang slide ang kita sa isang tingin
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 5000, // 5 seconds bago mag-slide
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
 </body>
 
 </html>
