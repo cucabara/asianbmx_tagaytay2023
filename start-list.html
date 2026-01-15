@@ -53,35 +53,38 @@
 		background-color var(--trans-dur),
 		color var(--trans-dur);
 } */
-         .letterhead {
+        
+        .letterhead {
             /* background: #f6f7e3; */
             /* background: rgba(255, 255, 255, 0.95); */
             /* border-bottom: 1px solid #e5e5e5; */
         }
-
+        
         .letterhead-inner {
             display: flex;
-            justify-content: center; /* centers horizontally */
-            align-items: center;     /* centers vertically */
+            justify-content: center;
+            /* centers horizontally */
+            align-items: center;
+            /* centers vertically */
             padding: 10px 20px;
         }
-
+        
         .letterhead-logo {
             max-width: 40%;
             height: auto;
         }
-
+        
         .letterhead-logo {
             max-width: 750px;
             width: 100%;
         }
-
+        
         @media (max-width: 768px) {
             .letterhead-logo {
                 max-width: 90%;
             }
         }
-
+        
         .bike {
             display: block;
             margin: auto;
@@ -270,6 +273,23 @@
             }
         }
     </style>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+    <style>
+        /* Custom style para maging mas dramatic at dark-theme friendly */
+        
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+            cursor: pointer;
+            /* Para alam ng user na pwedeng i-click */
+        }
+    </style>
 </head>
 
 <body>
@@ -380,24 +400,33 @@
                                                     href="index-three.html">Homepage 3</a></li> 
                                         </ul> -->
                                     </li>
-                                    <li><a class="menu-item" href="about.html">About</a></li>
-                                    <li class="has-dropdown"><a class="menu-item" href="#">Competition Guide</a>
-                                        <ul class="dropdown-ul mega-dropdown">
-                                            <li class="mega-dropdown-li">
-                                                <ul class="mega-dropdown-ul">
-                                                    <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                    <li class="has-dropdown">
+                                        <a class="menu-item" href="about.html">About</a>
+                                        <ul class="dropdown-ul">
+                                            <li class="dropdown-li"><a class="dropdown-link" href="about-city.html">About the City</a>
+                                                <li class="dropdown-li"><a class="dropdown-link" href="about-competition.html">About the Competition</a>
+                                                    <li class="dropdown-li"><a class="dropdown-link" href="about-organizer.html">About the organizer</a>
+                                        </ul>
+
+                                        </li>
+
+                                        <li class="has-dropdown"><a class="menu-item" href="#">Competition Guide</a>
+                                            <ul class="dropdown-ul mega-dropdown">
+                                                <li class="mega-dropdown-li">
+                                                    <ul class="mega-dropdown-ul">
+                                                        <!-- <li class="dropdown-li"><a class="dropdown-link"
                                                             href="match-schedule.html">Schedule</a>
                                                     </li> -->
-                                                    <li class="dropdown-li"><a class="dropdown-link" href="team.html">Technical Guide</a>
-                                                    </li>
+                                                        <li class="dropdown-li"><a class="dropdown-link" href="team.html">Technical Guide</a>
+                                                        </li>
 
-                                                    <li class="dropdown-li"><a class="dropdown-link" href="venue.html">Vicinity Map of Velodrome</a>
-                                                    </li>
+                                                        <li class="dropdown-li"><a class="dropdown-link" href="venue.html">Vicinity Map of Velodrome</a>
+                                                        </li>
 
-                                                    <!--  <li class="dropdown-li"><a class="dropdown-link"
+                                                        <!--  <li class="dropdown-li"><a class="dropdown-link"
                                                             href="league-standings.html">Awarding</a>
                                                     </li> -->
-                                                    <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                                        <!-- <li class="dropdown-li"><a class="dropdown-link"
                                                             href="team-details.html">Player Details</a>
                                                     </li>
                                                     <li class="dropdown-li"><a class="dropdown-link"
@@ -409,14 +438,14 @@
                                                     <li class="dropdown-li"><a class="dropdown-link"
                                                             href="faq.html">FAQ</a>
                                                     </li> -->
-                                                </ul>
-                                            </li>
-                                            <li class="mega-dropdown-li">
-                                                <ul class="mega-dropdown-ul">
-                                                    <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                                    </ul>
+                                                </li>
+                                                <li class="mega-dropdown-li">
+                                                    <ul class="mega-dropdown-ul">
+                                                        <!-- <li class="dropdown-li"><a class="dropdown-link"
                                                         href="team.html">Competition Format</a>
                                                     </li> -->
-                                                    <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                                        <!-- <li class="dropdown-li"><a class="dropdown-link"
                                                             href="event.html">Event</a>
                                                     </li>
                                                     <li class="dropdown-li"><a class="dropdown-link"
@@ -425,25 +454,25 @@
                                                     <li class="dropdown-li"><a class="dropdown-link"
                                                             href="error.html">Error</a>
                                                     </li>-->
-                                                </ul>
-                                            </li>
-                                            <li class="mega-dropdown-li">
-                                                <ul class="mega-dropdown-ul">
-                                                    <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                                    </ul>
+                                                </li>
+                                                <li class="mega-dropdown-li">
+                                                    <ul class="mega-dropdown-ul">
+                                                        <!-- <li class="dropdown-li"><a class="dropdown-link"
                                                             href="match-schedule.html">Competition Schedule</a>
                                                     </li> -->
-                                                    <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                                        <!-- <li class="dropdown-li"><a class="dropdown-link"
                                                             href="match-result.html">Competition
                                                             Result</a>
                                                     </li>
                                                     <li class="dropdown-li"><a class="dropdown-link"
                                                             href="league-standings.html">Point Table</a>
                                                     </li> -->
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <!-- <li class="has-dropdown"><a class="menu-item" href="#">Shop</a>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <!-- <li class="has-dropdown"><a class="menu-item" href="#">Shop</a>
                                         <ul class="dropdown-ul">
                                             <li class="dropdown-li"><a class="dropdown-link" href="shop.html">Shop</a>
                                             </li>
@@ -459,29 +488,29 @@
                                                     you</a></li>
                                         </ul>
                                     </li> -->
-                                    <!--  <li class="has-dropdown"><a class="menu-item" href="gallery.html">Gallery</a> -->
-                                    <ul class="dropdown-ul">
-                                        <!-- <li class="dropdown-li"><a class="dropdown-link" href="blog.html">News</a>
+                                        <!--  <li class="has-dropdown"><a class="menu-item" href="gallery.html">Gallery</a> -->
+                                        <ul class="dropdown-ul">
+                                            <!-- <li class="dropdown-li"><a class="dropdown-link" href="blog.html">News</a>
                                             </li>
                                             <li class="dropdown-li"><a class="dropdown-link"
                                                     href="blog-details.html">News
                                                     Details</a></li> -->
-                                    </ul>
-                                    </li>
-
-                                    <li class="has-dropdown"><a class="menu-item" href="#">Race Info</a>
-                                        <ul class="dropdown-ul">
-                                            <li class="dropdown-li"><a class="dropdown-link" href="start-list.html">Start Lists & Results</a></li>
                                         </ul>
-                                    </li>
-                                    <li class="has-dropdown"><a class="menu-item" href="#">Contact Us</a>
-                                        <ul class="dropdown-ul">
-                                            <li class="dropdown-li"><a class="dropdown-link" href="#">Organization</a></li>
-                                            <li class="dropdown-li"><a class="dropdown-link" href="#">Emergency Contact</a></li>
-                                        </ul>
-                                    </li>
+                                        </li>
 
-                                    <!--  <li><a class="menu-item" href="contact.html">Contact</a></li> -->
+                                        <li class="has-dropdown"><a class="menu-item" href="#">Race Info</a>
+                                            <ul class="dropdown-ul">
+                                                <li class="dropdown-li"><a class="dropdown-link" href="start-list.html">Start Lists & Results</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-dropdown"><a class="menu-item" href="#">Contact Us</a>
+                                            <ul class="dropdown-ul">
+                                                <li class="dropdown-li"><a class="dropdown-link" href="organization.html">Organization</a></li>
+                                                <li class="dropdown-li"><a class="dropdown-link" href="#">Emergency Contact</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <!--  <li><a class="menu-item" href="contact.html">Contact</a></li> -->
                                 </ul>
                             </nav>
                         </div>
@@ -667,164 +696,163 @@
                             </li>
                             <li class="mega-dropdown-li">
                                 <ul class="mega-dropdown-ul mm-show">
-                                   <li class="dropdown-li"><a class="dropdown-link" href="about-organizer.html">About the City</a>
-                                            <li class="dropdown-li"><a class="dropdown-link" href="about-organizer.html">About the Competition</a>
-                                            <li class="dropdown-li"><a class="dropdown-link" href="about-organizer.html">About the organizer</a>
-                                    </li>
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link" href="event-details.html">Event
+                                    <li class="dropdown-li"><a class="dropdown-link" href="about-city.html">About the City</a>
+                                        <li class="dropdown-li"><a class="dropdown-link" href="about-competition.html">About the Competition</a>
+                                            <li class="dropdown-li"><a class="dropdown-link" href="about-organizer.html">About the Organizer</a>
+                                                <!-- <li class="dropdown-li"><a class="dropdown-link" href="event-details.html">Event
                                                                                         Details</a>
                                                                                 </li>
                                                                                 <li class="dropdown-li"><a class="dropdown-link" href="error.html">Error</a>
                                                                                 </li> -->
                                 </ul>
-                            </li>
-                            <li class="mega-dropdown-li">
-                                <ul class="mega-dropdown-ul mm-show">
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                </li>
+                                <li class="mega-dropdown-li">
+                                    <ul class="mega-dropdown-ul mm-show">
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link"
                                                                                         href="league-standings.html">Awarding</a>
                                                                                 </li> -->
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link" href="match-result.html">Match
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link" href="match-result.html">Match
                                                                                         Result</a>
                                                                                 </li>
                                                                                 <li class="dropdown-li"><a class="dropdown-link" href="league-standings.html">Point Table</a>
                                                                                 </li> -->
-                                </ul>
-                            </li>
+                                    </ul>
+                                </li>
                         </ul>
-                    </li>
-                    <li class="has-dropdown firstlvl">
-                        <a class="mm-link" href="index.html">Competition Guide <i class="rt-angle-down"></i></a>
-                        <ul class="sub-menu mega-dropdown-mobile">
-                            <li class="mega-dropdown-li">
-                                <ul class="mega-dropdown-ul mm-show">
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link"
+                        </li>
+                        <li class="has-dropdown firstlvl">
+                            <a class="mm-link" href="index.html">Competition Guide <i class="rt-angle-down"></i></a>
+                            <ul class="sub-menu mega-dropdown-mobile">
+                                <li class="mega-dropdown-li">
+                                    <ul class="mega-dropdown-ul mm-show">
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link"
                                                                 href="match-schedule.html">Schedule</a>
                                                         </li> -->
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link" href="team-details.html">Player
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link" href="team-details.html">Player
                                                                 Details</a>
                                                         </li>
                                                         <li class="dropdown-li"><a class="dropdown-link" href="history.html">History</a>
                                                         </li>
                                                         <li class="dropdown-li"><a class="dropdown-link" href="faq.html">FAQ</a>
                                                         </li> -->
-                                </ul>
-                            </li>
-                            <li class="mega-dropdown-li">
-                                <ul class="mega-dropdown-ul mm-show">
-                                    <li class="dropdown-li"><a class="dropdown-link" href="team.html">Technical Handbook</a>
-                                    </li>
-                                    <li class="dropdown-li"><a class="dropdown-link" href="venue.html">Vicinity Map of Velodrome</a>
-                                    </li>
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link" href="event-details.html">Event
+                                    </ul>
+                                </li>
+                                <li class="mega-dropdown-li">
+                                    <ul class="mega-dropdown-ul mm-show">
+                                        <li class="dropdown-li"><a class="dropdown-link" href="team.html">Technical Handbook</a>
+                                        </li>
+                                        <li class="dropdown-li"><a class="dropdown-link" href="venue.html">Vicinity Map of Velodrome</a>
+                                        </li>
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link" href="event-details.html">Event
                                                                 Details</a>
                                                         </li>
                                                         <li class="dropdown-li"><a class="dropdown-link" href="error.html">Error</a>
                                                         </li> -->
-                                </ul>
-                            </li>
-                            <li class="mega-dropdown-li">
-                                <ul class="mega-dropdown-ul mm-show">
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                    </ul>
+                                </li>
+                                <li class="mega-dropdown-li">
+                                    <ul class="mega-dropdown-ul mm-show">
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link"
                                                                 href="league-standings.html">Awarding</a>
                                                         </li> -->
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link" href="match-result.html">Match
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link" href="match-result.html">Match
                                                                 Result</a>
                                                         </li>
                                                         <li class="dropdown-li"><a class="dropdown-link" href="league-standings.html">Point Table</a>
                                                         </li> -->
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="has-dropdown firstlvl">
-                        <a class="mm-link" href="#">Race Info <i class="rt-angle-down"></i></a>
-                        <ul class="sub-menu mega-dropdown-mobile">
-                            <li class="mega-dropdown-li">
-                                <ul class="mega-dropdown-ul mm-show">
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown firstlvl">
+                            <a class="mm-link" href="#">Race Info <i class="rt-angle-down"></i></a>
+                            <ul class="sub-menu mega-dropdown-mobile">
+                                <li class="mega-dropdown-li">
+                                    <ul class="mega-dropdown-ul mm-show">
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link"
                                                                                                             href="match-schedule.html">Schedule</a>
                                                                                                     </li> -->
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link" href="team-details.html">Player
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link" href="team-details.html">Player
                                                                                                             Details</a>
                                                                                                     </li>
                                                                                                     <li class="dropdown-li"><a class="dropdown-link" href="history.html">History</a>
                                                                                                     </li>
                                                                                                     <li class="dropdown-li"><a class="dropdown-link" href="faq.html">FAQ</a>
                                                                                                     </li> -->
-                                </ul>
-                            </li>
-                            <li class="mega-dropdown-li">
-                                <ul class="mega-dropdown-ul mm-show">
-                                    <li class="dropdown-li"><a class="dropdown-link" href="start-list.html">Start Lists and Results</a>
-                                    </li>
-                    
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link" href="event-details.html">Event
+                                    </ul>
+                                </li>
+                                <li class="mega-dropdown-li">
+                                    <ul class="mega-dropdown-ul mm-show">
+                                        <li class="dropdown-li"><a class="dropdown-link" href="start-list.html">Start Lists and Results</a>
+                                        </li>
+
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link" href="event-details.html">Event
                                                                                                             Details</a>
                                                                                                     </li>
                                                                                                     <li class="dropdown-li"><a class="dropdown-link" href="error.html">Error</a>
                                                                                                     </li> -->
-                                </ul>
-                            </li>
-                            <li class="mega-dropdown-li">
-                                <ul class="mega-dropdown-ul mm-show">
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                    </ul>
+                                </li>
+                                <li class="mega-dropdown-li">
+                                    <ul class="mega-dropdown-ul mm-show">
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link"
                                                                                                             href="league-standings.html">Awarding</a>
                                                                                                     </li> -->
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link" href="match-result.html">Match
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link" href="match-result.html">Match
                                                                                                             Result</a>
                                                                                                     </li>
                                                                                                     <li class="dropdown-li"><a class="dropdown-link" href="league-standings.html">Point Table</a>
                                                                                                     </li> -->
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="has-dropdown firstlvl">
-                        <a class="mm-link" href="#">Contact Us<i class="rt-angle-down"></i></a>
-                        <ul class="sub-menu mega-dropdown-mobile">
-                            <li class="mega-dropdown-li">
-                                <ul class="mega-dropdown-ul mm-show">
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="has-dropdown firstlvl">
+                            <a class="mm-link" href="#">Contact Us<i class="rt-angle-down"></i></a>
+                            <ul class="sub-menu mega-dropdown-mobile">
+                                <li class="mega-dropdown-li">
+                                    <ul class="mega-dropdown-ul mm-show">
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link"
                                                                                                                                 href="match-schedule.html">Schedule</a>
                                                                                                                         </li> -->
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link" href="team-details.html">Player
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link" href="team-details.html">Player
                                                                                                                                 Details</a>
                                                                                                                         </li>
                                                                                                                         <li class="dropdown-li"><a class="dropdown-link" href="history.html">History</a>
                                                                                                                         </li>
                                                                                                                         <li class="dropdown-li"><a class="dropdown-link" href="faq.html">FAQ</a>
                                                                                                                         </li> -->
-                                </ul>
-                            </li>
-                            <li class="mega-dropdown-li">
-                                <ul class="mega-dropdown-ul mm-show">
-                                    <li class="dropdown-li"><a class="dropdown-link" href="#">Organization</a>
-                                    </li>
-                                    <li class="dropdown-li"><a class="dropdown-link" href="#">Emergency Contact</a>
-                                    </li>
-                    
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link" href="event-details.html">Event
+                                    </ul>
+                                </li>
+                                <li class="mega-dropdown-li">
+                                    <ul class="mega-dropdown-ul mm-show">
+                                        <li class="dropdown-li"><a class="dropdown-link" href="organization.html">Organization</a>
+                                        </li>
+                                        <li class="dropdown-li"><a class="dropdown-link" href="#">Emergency Contact</a>
+                                        </li>
+
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link" href="event-details.html">Event
                                                                                                                                 Details</a>
                                                                                                                         </li>
                                                                                                                         <li class="dropdown-li"><a class="dropdown-link" href="error.html">Error</a>
                                                                                                                         </li> -->
-                                </ul>
-                            </li>
-                            <li class="mega-dropdown-li">
-                                <ul class="mega-dropdown-ul mm-show">
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link"
+                                    </ul>
+                                </li>
+                                <li class="mega-dropdown-li">
+                                    <ul class="mega-dropdown-ul mm-show">
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link"
                                                                                                                                 href="league-standings.html">Awarding</a>
                                                                                                                         </li> -->
-                                    <!-- <li class="dropdown-li"><a class="dropdown-link" href="match-result.html">Match
+                                        <!-- <li class="dropdown-li"><a class="dropdown-link" href="match-result.html">Match
                                                                                                                                 Result</a>
                                                                                                                         </li>
                                                                                                                         <li class="dropdown-li"><a class="dropdown-link" href="league-standings.html">Point Table</a>
                                                                                                                         </li> -->
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <!-- <li class="has-dropdown firstlvl">
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- <li class="has-dropdown firstlvl">
                         <a class="mm-link" href="index.html">Shop <i class="rt-angle-down"></i></a>
                         <ul class="sub-menu">
                             <li><a href="shop.html">Shop</a></li>
@@ -835,14 +863,14 @@
                             <li><a href="thank-you.html">Thank You</a></li>
                         </ul>
                     </li> -->
-                    <!-- <li class="has-dropdown firstlvl">
+                        <!-- <li class="has-dropdown firstlvl">
                         <a class="mm-link" href="gallery.html">Gallery <i class="rt-angle-down"> </i></a>
                         <ul class="sub-menu">
                             <li><a href="blog.html">G</a></li>
                             <li><a href="blog-details.html">News Details</a></li>
                         </ul> 
                     </li> -->
-                    <!--    <li><a class="mm-link" href="gallery.html">Gallery</a></li>
+                        <!--    <li><a class="mm-link" href="gallery.html">Gallery</a></li>
                     <li><a class="mm-link" href="contact.html">Contact</a></li> -->
                 </ul>
             </nav>
@@ -863,11 +891,11 @@
                     <div class="banner-content">
                         <div class="page-path">
                             <ul>
-                                <li><a class="home-page-link" href="index.html">Race Info</a></li>
-                                <li><a class="current-page" href="#">START LISTS & RESULTS</a></li>
+                                <li class="dropdown-li"><a class="dropdown-link" href="#">RACE INFO</a>
+                                    <li class="dropdown-li"><a class="dropdown-link" href="#">START LIST & RESULT</a>
                             </ul>
                         </div>
-                        <h1 class="banner-heading">START LISTS & RESULTS</h1>
+                        <h1 class="banner-heading">START LIST & RESULT</h1>
                     </div>
                 </div>
             </div>
@@ -878,205 +906,57 @@
 
 
     <!--================= Team Section Start Here =================-->
-    <!--<div class="rts-team-section inner section-gap">
-    <div class="container">
-        <div class="team-section-inner inner">
-            <!--<div class="row">
-                <div class="col-xl-3 col-md-4 col-sm-6">
-                    <div class="team-wraper">
-                        <div class="player-card">
-                            <a class="image" href="team-details.html"><img src="assets/images/team/team01.png" alt=""></a>
-                            <div class="number">11</div>
-                            <ul class="social-area">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="profile">
-                            <p class="position">FORWARD</p>
-                            <a href="#" class="name">MAXIELS DAVID</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-4 col-sm-6">
-                    <div class="team-wraper">
-                        <div class="player-card">
-                            <a class="image" href="team-details.html"><img src="assets/images/team/team02.png" alt=""></a>
-                            <div class="number">7</div>
-                            <ul class="social-area">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="profile">
-                            <p class="position">WINGER</p>
-                            <a href="#" class="name">VEN DIESEL</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-4 col-sm-6">
-                    <div class="team-wraper">
-                        <div class="player-card">
-                            <a class="image" href="team-details.html"><img src="assets/images/team/team03.png" alt=""></a>
-                            <div class="number">9</div>
-                            <ul class="social-area">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="profile">
-                            <p class="position">WINGER</p>
-                            <a href="#" class="name">NED STARK</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-4 col-sm-6">
-                    <div class="team-wraper">
-                        <div class="player-card">
-                            <a class="image" href="team-details.html"><img src="assets/images/team/team04.png" alt=""></a>
-                            <div class="number">10</div>
-                            <ul class="social-area">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="profile">
-                            <p class="position">MID-FIELDER</p>
-                            <a href="team-details.html" class="name">JOHN WICK</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-4 col-sm-6">
-                    <div class="team-wraper">
-                        <div class="player-card">
-                            <a class="image" href="team-details.html"><img src="assets/images/team/team05.png" alt=""></a>
-                            <div class="number">9</div>
-                            <ul class="social-area">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="profile">
-                            <p class="position">WINGER</p>
-                            <a href="team-details.html" class="name">TYRION LENNISTER</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-4 col-sm-6">
-                    <div class="team-wraper">
-                        <div class="player-card">
-                            <a class="image" href="team-details.html"><img src="assets/images/team/team06.png" alt=""></a>
-                            <div class="number">10</div>
-                            <ul class="social-area">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="profile">
-                            <p class="position">MID-FIELDER</p>
-                            <a href="team-details.html" class="name">SAMWELL TARLY</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-4 col-sm-6">
-                    <div class="team-wraper">
-                        <div class="player-card">
-                            <a class="image" href="team-details.html"><img src="assets/images/team/team07.png" alt=""></a>
-                            <div class="number">7</div>
-                            <ul class="social-area">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="profile">
-                            <p class="position">WINGER</p>
-                            <a href="team-details.html" class="name">EURON GREYJOY</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-4 col-sm-6">
-                    <div class="team-wraper">
-                        <div class="player-card">
-                            <a class="image" href="team-details.html"><img src="assets/images/team/team08.png" alt=""></a>
-                            <div class="number">11</div>
-                            <ul class="social-area">
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="profile">
-                            <p class="position">FORWARD</p>
-                            <a href="team-details.html" class="name">JOHN SNOW</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>-->
+
     <!--================= Team Section End Here =================-->
 
     <!--================= Additional 1 Section Start Here =================-->
-    <div class="rts-match-result-section rts-match-schedule-section inner section-gap" style="background-color: #0b0e13;">
+
+    <!-- MAIN CONTENT -->
+
+    <div class="rts-match-result-section section-gap">
         <div class="container">
-            <div class="row">
-                <div class="col-12 text-center" style="margin-bottom: 50px;">
-                    <h3 class="title" style="font-size: 36px; font-weight: 800; color: #ffffff; text-transform: uppercase; letter-spacing: 1px;">OFFICIAL RESULTS</h3>
-                    <p style="color: #999;">Download the official Start Lists and Results per day.</p>
+
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h3 class="section-title">OFFICIAL RESULTS</h3>
+                    <p class="section-subtitle">Download the official Start Lists and Results per day.</p>
                 </div>
             </div>
 
-            <div class="row justify-content-center">
+            <div class="row justify-content-center mb-4">
                 <div class="col-lg-10">
-                    <div style="background: #111; padding: 30px; border-radius: 8px; border-left: 5px solid #007bff; margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    <div class="result-card theme-blue">
 
-                        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #333; padding-bottom: 20px; margin-bottom: 20px;">
-                            <div>
-                                <h4 style="color: #fff; margin: 0; font-weight: 700;">DAY 1 - MARCH 28, 2026</h4>
-                                <span style="color: #007bff; font-size: 14px; font-weight: bold; text-transform: uppercase;">Qualifiers & Opening</span>
+                        <div class="card-header-custom">
+                            <div class="header-text">
+                                <h4>DAY 1 - MARCH 28, 2026</h4>
+                                <span class="badge-text">Qualifiers & Opening</span>
                             </div>
-                            <i class="fas fa-calendar-day" style="color: #333; font-size: 40px;"></i>
+                            <i class="fas fa-calendar-day header-icon"></i>
                         </div>
 
-                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #222;">
-                            <div style="display: flex; align-items: center;">
-                                <div style="width: 40px; height: 40px; background: #222; border-radius: 5px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                                    <i class="fas fa-list-ol" style="color: #fff;"></i>
-                                </div>
-                                <div>
-                                    <h6 style="margin: 0; font-size: 16px; color: #fff;">Official Start List (Day 1)</h6>
-                                    <span style="font-size: 12px; color: #666;">Updated: 08:00 AM</span>
+                        <div class="result-row">
+                            <div class="row-info">
+                                <div class="icon-box"><i class="fas fa-list-ol"></i></div>
+                                <div class="text-info">
+                                    <h6>Official Start List (Day 1)</h6>
+                                    <span>Updated: 08:00 AM</span>
                                 </div>
                             </div>
-                            <a href="assets/downloads/startlist.pdf" target="_blank" class="btn btn-primary btn-sm" ...>DOWNLOAD PDF</a>
+                            <a href="assets/downloads/startlist.pdf" target="_blank" class="btn-custom btn-download">
+                            DOWNLOAD PDF
+                        </a>
                         </div>
 
-                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0;">
-                            <div style="display: flex; align-items: center;">
-                                <div style="width: 40px; height: 40px; background: #222; border-radius: 5px; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
-                                    <i class="fas fa-trophy" style="color: #28a745;"></i>
-                                </div>
-                                <div>
-                                    <h6 style="margin: 0; font-size: 16px; color: #fff;">Morning Session Results</h6>
-                                    <span style="font-size: 12px; color: #666;">Qualifying Rounds</span>
+                        <div class="result-row no-border">
+                            <div class="row-info">
+                                <div class="icon-box"><i class="fas fa-trophy highlight-green"></i></div>
+                                <div class="text-info">
+                                    <h6>Morning Session Results</h6>
+                                    <span>Qualifying Rounds</span>
                                 </div>
                             </div>
-                            <!-- PENDING -->
-                            <a href="#" class="btn btn-sm" style="background: #333; color: #777; padding: 8px 25px; border-radius: 4px; font-weight: bold; cursor: not-allowed;">PENDING</a>
-
-                            <!-- RESULT -->
-                            <!-- <a href="assets/downloads/results.pdf" target="_blank" class="btn btn-success btn-sm" style="color: #fff; font-weight: bold;">
-                        DOWNLOAD RESULT
-                    </a> -->
-
+                            <a href="assets/downloads/result1.jpg" class="btn-custom btn-pending" onclick="return false;">PENDING</a>
 
                         </div>
 
@@ -1086,111 +966,498 @@
 
             <div class="row justify-content-center">
                 <div class="col-lg-10">
-                    <div style="background: #111; padding: 30px; border-radius: 8px; border-left: 5px solid #dc3545; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    <div class="result-card theme-red">
 
-                        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #333; padding-bottom: 20px; margin-bottom: 20px;">
-                            <div>
-                                <h4 style="color: #fff; margin: 0; font-weight: 700;">DAY 2 - MARCH 29, 2026</h4>
-                                <span style="color: #dc3545; font-size: 14px; font-weight: bold; text-transform: uppercase;">Finals & Awarding</span>
+                        <div class="card-header-custom">
+                            <div class="header-text">
+                                <h4>DAY 2 - MARCH 29, 2026</h4>
+                                <span class="badge-text">Finals & Awarding</span>
                             </div>
-                            <i class="fas fa-flag-checkered" style="color: #333; font-size: 40px;"></i>
-                        </div>
-                        <!-- COMING SOON -->
-                        <!-- <div style="text-align: center; padding: 30px;">
-                        <i class="fas fa-clock" style="color: #444; font-size: 30px; margin-bottom: 15px; display: block;"></i>
-                        <span style="color: #666; letter-spacing: 1px;">COMING SOON</span>
-                    </div> -->
-
-                        <!-- GAME DAY- DAY 2 -->
-                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #2a2e35;">
-                            <div style="display: flex; align-items: center;">
-                                <i class="fas fa-list-ol" style="color: #fff; margin-right: 15px; font-size: 18px;"></i>
-                                <div>
-                                    <h6 style="margin: 0; font-size: 16px; color: #eee;">Official Start List (Day 2)</h6>
-                                    <span style="font-size: 12px; color: #777;">Updated: 07:00 AM</span>
-                                </div>
-                            </div>
-                            <!-- DOWNLOAD PDF DAY 2 -->
-                            <a href="assets/downloads/day2-startlist.pdf" target="_blank" class="btn btn-primary btn-sm" style="padding: 8px 25px;">DOWNLOAD PDF</a>
+                            <i class="fas fa-flag-checkered header-icon"></i>
                         </div>
 
-                        <div style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0;">
-                            <div style="display: flex; align-items: center;">
-                                <i class="fas fa-medal" style="color: #ffc107; margin-right: 15px; font-size: 18px;"></i>
-                                <div>
-                                    <h6 style="margin: 0; font-size: 16px; color: #eee;">Finals Results</h6>
-                                    <span style="font-size: 12px; color: #777;">Awarding Ceremony</span>
+                        <div class="result-row">
+                            <div class="row-info">
+                                <div class="icon-box"><i class="fas fa-list-ol"></i></div>
+                                <div class="text-info">
+                                    <h6>Official Start List (Day 2)</h6>
+                                    <span>Updated: 07:00 AM</span>
                                 </div>
                             </div>
-                            <!-- DAY 2 PENDING -->
-                            <span style="background: #333; color: #888; padding: 5px 15px; border-radius: 4px; font-size: 12px;">PENDING</span>
-                            <!-- download result day 2 -->
-                            <!-- <a href="assets/downloads/day2-results.pdf" target="_blank" class="btn btn-success btn-sm" style="color: #fff; font-weight: bold;">
-                            DOWNLOAD RESULT
-                        </a> -->
+                            <a href="assets/downloads/day2-startlist.pdf" target="_blank" class="btn-custom btn-download">
+                            DOWNLOAD PDF
+                        </a>
+                        </div>
+
+                        <div class="result-row no-border">
+                            <div class="row-info">
+                                <div class="icon-box"><i class="fas fa-medal highlight-gold"></i></div>
+                                <div class="text-info">
+                                    <h6>Finals Results</h6>
+                                    <span>Awarding Ceremony</span>
+                                </div>
+                            </div>
+                            <span class="btn-custom btn-pending">PENDING</span>
                         </div>
 
                     </div>
                 </div>
             </div>
-            <!--<img src="assets/images/clubs/1.png" alt="club-logo">-->
-            <!-- </div>
-                                </div>
 
-                            </div>
-
-                            <div class="row justify-content-center" style="margin-top: 50px; margin-bottom: 50px;">
-                                <div class="col-12 text-center">
-                                    <a href="assets/downloads/tech-guide.pdf" download="ACC_Track_2026_Technical_Guide"
-                                        class="rts-btn btn-primary"
-                                        style="padding: 15px 40px; font-size: 18px; border-radius: 5px; text-transform: uppercase; letter-spacing: 1px;">
-                                        <i class="fas fa-file-pdf" style="margin-right: 10px;"></i> Download Technical
-                                        Handbook
-                                    </a>
-
-                                    <a href="assets/downloads/vicinity-map.pdf" target="_blank" 
-                               class="rts-btn btn-primary"
-                               style="margin-left: 20px; padding: 15px 40px; font-size: 18px; border-radius: 5px; text-transform: uppercase; letter-spacing: 1px; background-color: #28a745; border-color: #28a745;">
-                               <i class="fas fa-map" style="margin-right: 10px;"></i> DOWNLOAD VICINITY MAP
-                            </a> -->
-
-            <!-- <p style="color: #999; font-size: 13px; margin-top: 15px;">Official V1.2 (PDF
-                                        Format)</p> -->
-            <!-- </div>
-                            </div>
-
-                            <div class="container" style="padding-bottom: 50px;">
-                                <div class="row g-4">
-                                    <div class="col-lg-6">
-                                        <div style="background: #111; padding: 30px; border-left: 4px solid #007bff;">
-                                            <h4 style="color: #fff;">SPRINT & KEIRIN</h4>
-                                            <p style="color: #bbb; font-size: 14px;">
-                                                Explosive power meets tactics. Riders reach speeds of 70kph+ in a battle
-                                                of cat and mouse.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div style="background: #111; padding: 30px; border-left: 4px solid #dc3545;">
-                                            <h4 style="color: #fff;">PURSUIT & OMNIUM</h4>
-                                            <p style="color: #bbb; font-size: 14px;">
-                                                The ultimate test of stamina. Includes the 4-event Omnium and the
-                                                precision-based Team Pursuit.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div> -->
-            <!--<div class="match-bottom-action">
-                        <a href="shop.html" class="action-item first-child">GET TICKETS</a>
-                        <div class="play-video">
-                            <a href="https://www.youtube.com/watch?v=G4t6TqG5LM8"
-                                class="action-item popup-video">WATCH STREAM</a>
-                        </div>
-                    </div>-->
         </div>
+    </div>
+    <!-- <div class="rts-race-center section-padding" style="background-color: #0b0b1b; min-height: 100vh; position: relative;">
+
+        <div class="bg-glow-blob"></div>
+
+        <div class="container" style="position: relative; z-index: 5;">
+
+            <div class="row mb-5 text-center" data-aos="fade-up">
+                <div class="col-12">
+                    <span class="eyebrow-text">Asian Track Championships 2026</span>
+                    <h1 class="page-main-title">RACE CENTRE</h1>
+                    <p class="text-muted mt-2">Live updates, start lists, and official results.</p>
+                    <div class="blue-separator"></div>
+                </div>
+            </div>
+
+            <div class="row mb-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-12 d-flex justify-content-center">
+                    <div class="tab-buttons-container">
+                        <button class="tab-btn active" onclick="switchTab('startlist')">
+                        <i class="fas fa-list-ul me-2"></i> Start List
+                    </button>
+                        <button class="tab-btn" onclick="switchTab('results')">
+                        <i class="fas fa-trophy me-2"></i> Match Results
+                    </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="filter-bar d-flex flex-wrap justify-content-between align-items-center gap-3">
+                        <div class="d-flex align-items-center gap-3">
+                            <select class="form-select custom-select">
+                            <option selected>Men Elite - Sprint</option>
+                            <option>Men Elite - Keirin</option>
+                            <option>Women Elite - Omnium</option>
+                        </select>
+                            <select class="form-select custom-select">
+                            <option selected>Finals</option>
+                            <option>Semi-Finals</option>
+                            <option>Qualifying</option>
+                        </select>
+                        </div>
+                        <div class="search-box ms-auto">
+                            <input type="text" class="form-control custom-input" placeholder="Search Rider...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="view-startlist" class="race-view active-view">
+                <div class="table-responsive data-container">
+                    <table class="table table-hover align-middle mb-0 custom-table">
+                        <thead>
+                            <tr>
+                                <th class="text-center">#</th>
+                                <th>Rider Name</th>
+                                <th>Nation</th>
+                                <th>UCI ID</th>
+                                <th class="text-end">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center"><span class="race-number">101</span></td>
+                                <td>
+                                    <div class="rider-info">
+                                        <div class="rider-img"><i class="fas fa-user"></i></div>
+                                        <span class="fw-bold text-white">Harrie LAVREYSEN</span>
+                                    </div>
+                                </td>
+                                <td><img src="https://flagcdn.com/w40/nl.png" width="25"> NED</td>
+                                <td class="text-muted font-monospace">10009535651</td>
+                                <td class="text-end"><span class="status-dot active"></span> Confirmed</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><span class="race-number">102</span></td>
+                                <td>
+                                    <div class="rider-info">
+                                        <div class="rider-img"><i class="fas fa-user"></i></div>
+                                        <span class="fw-bold text-white">Kaiya OTA</span>
+                                    </div>
+                                </td>
+                                <td><img src="https://flagcdn.com/w40/jp.png" width="25"> JPN</td>
+                                <td class="text-muted font-monospace">10020973211</td>
+                                <td class="text-end"><span class="status-dot active"></span> Confirmed</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><span class="race-number">105</span></td>
+                                <td>
+                                    <div class="rider-info">
+                                        <div class="rider-img ph-border"><i class="fas fa-user"></i></div>
+                                        <span class="fw-bold text-white">Rex Luis KROG</span>
+                                    </div>
+                                </td>
+                                <td><img src="https://flagcdn.com/w40/ph.png" width="25"> PHI</td>
+                                <td class="text-muted font-monospace">10052988365</td>
+                                <td class="text-end"><span class="status-dot active"></span> Confirmed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="view-results" class="race-view" style="display: none;">
+                <div class="table-responsive data-container">
+                    <table class="table table-hover align-middle mb-0 custom-table">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Rank</th>
+                                <th>Rider Name</th>
+                                <th>Nation</th>
+                                <th class="text-end">Time</th>
+                                <th class="text-end">Speed (km/h)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="winner-row">
+                                <td class="text-center">
+                                    <div class="rank-badge gold">1</div>
+                                </td>
+                                <td>
+                                    <div class="rider-info">
+                                        <div class="rider-img"><i class="fas fa-user"></i></div>
+                                        <div>
+                                            <span class="fw-bold text-white d-block">Harrie LAVREYSEN</span>
+                                            <span class="badge bg-gold-subtle">Gold Medal</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><img src="https://flagcdn.com/w40/nl.png" width="25"> NED</td>
+                                <td class="text-end text-white font-monospace">9.452</td>
+                                <td class="text-end text-muted">76.174</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">
+                                    <div class="rank-badge silver">2</div>
+                                </td>
+                                <td>
+                                    <div class="rider-info">
+                                        <div class="rider-img"><i class="fas fa-user"></i></div>
+                                        <div>
+                                            <span class="fw-bold text-white d-block">Azizulhasni AWANG</span>
+                                            <span class="badge bg-silver-subtle">Silver Medal</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><img src="https://flagcdn.com/w40/my.png" width="25"> MAS</td>
+                                <td class="text-end text-danger font-monospace">+0.045</td>
+                                <td class="text-end text-muted">75.832</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">
+                                    <div class="rank-badge bronze">3</div>
+                                </td>
+                                <td>
+                                    <div class="rider-info">
+                                        <div class="rider-img"><i class="fas fa-user"></i></div>
+                                        <div>
+                                            <span class="fw-bold text-white d-block">Kaiya OTA</span>
+                                            <span class="badge bg-bronze-subtle">Bronze Medal</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><img src="https://flagcdn.com/w40/jp.png" width="25"> JPN</td>
+                                <td class="text-end text-danger font-monospace">+0.112</td>
+                                <td class="text-end text-muted">75.210</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="text-end mt-3">
+                    <button class="btn btn-primary btn-sm">Download Full Result PDF</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function switchTab(viewName) {
+            // 1. Hide all views
+            document.getElementById('view-startlist').style.display = 'none';
+            document.getElementById('view-results').style.display = 'none';
+
+            // 2. Remove active class from buttons
+            let buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            // 3. Show selected view
+            document.getElementById('view-' + viewName).style.display = 'block';
+
+            // 4. Set active button
+            // (Simple logic: if viewName is startlist, first button is active, else second)
+            if (viewName === 'startlist') {
+                buttons[0].classList.add('active');
+            } else {
+                buttons[1].classList.add('active');
+            }
+        }
+    </script>
+
+    <style>
+        /* --- LAYOUT & BG --- */
+        
+        .section-padding {
+            padding: 100px 0;
+        }
+        
+        .bg-glow-blob {
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 70vw;
+            height: 70vw;
+            background: radial-gradient(circle, rgba(0, 180, 216, 0.1) 0%, transparent 60%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        /* --- TYPOGRAPHY --- */
+        
+        .eyebrow-text {
+            color: #00B4D8;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            padding: 5px 15px;
+            border: 1px solid rgba(0, 180, 216, 0.3);
+            border-radius: 20px;
+            background: rgba(0, 180, 216, 0.05);
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .page-main-title {
+            color: #ffffff;
+            font-size: 3rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin: 0;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+        
+        .blue-separator {
+            width: 80px;
+            height: 4px;
+            background: #00B4D8;
+            margin: 20px auto 0;
+            border-radius: 2px;
+            box-shadow: 0 0 10px #00B4D8;
+        }
+        /* --- TABS --- */
+        
+        .tab-buttons-container {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 5px;
+            border-radius: 50px;
+            display: inline-flex;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .tab-btn {
+            background: transparent;
+            border: none;
+            color: #aaa;
+            padding: 10px 30px;
+            border-radius: 40px;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        
+        .tab-btn.active {
+            background: #00B4D8;
+            color: #fff;
+            box-shadow: 0 0 15px rgba(0, 180, 216, 0.4);
+        }
+        
+        .tab-btn:hover:not(.active) {
+            color: #fff;
+        }
+        /* --- TABLE & CONTAINER --- */
+        
+        .data-container {
+            background: rgba(20, 20, 45, 0.6);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .custom-table thead {
+            background: rgba(0, 180, 216, 0.1);
+        }
+        
+        .custom-table th {
+            color: #00B4D8;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 18px;
+            border-bottom: 2px solid rgba(0, 180, 216, 0.2);
+        }
+        
+        .custom-table td {
+            padding: 15px 18px;
+            color: #ccc;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            vertical-align: middle;
+        }
+        
+        .custom-table tr:hover {
+            background-color: rgba(255, 255, 255, 0.03);
+        }
+        /* --- ELEMENTS --- */
+        
+        .custom-select,
+        .custom-input {
+            background-color: #05050f;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #fff;
+            border-radius: 8px;
+            padding: 8px 15px;
+        }
+        
+        .rider-img {
+            width: 35px;
+            height: 35px;
+            background: #222;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            border: 1px solid #444;
+            float: left;
+        }
+        
+        .rider-img.ph-border {
+            border-color: #f1c40f;
+        }
+        
+        .rider-img i {
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        .rank-badge {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 50%;
+            font-weight: bold;
+            color: #fff;
+            margin: 0 auto;
+        }
+        
+        .rank-badge.gold {
+            background: linear-gradient(135deg, #FFD700, #FDB931);
+            color: #000;
+        }
+        
+        .rank-badge.silver {
+            background: linear-gradient(135deg, #E0E0E0, #BDBDBD);
+            color: #000;
+        }
+        
+        .rank-badge.bronze {
+            background: linear-gradient(135deg, #CD7F32, #A0522D);
+            color: #fff;
+        }
+        
+        .race-number {
+            display: inline-block;
+            width: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            text-align: center;
+            border-radius: 4px;
+            border-left: 3px solid #00B4D8;
+        }
+        
+        .status-dot {
+            height: 8px;
+            width: 8px;
+            background-color: #28a745;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+            box-shadow: 0 0 5px #28a745;
+        }
+        
+        .bg-gold-subtle {
+            background: rgba(255, 215, 0, 0.15);
+            color: #FFD700;
+            border: 1px solid #FFD700;
+            font-size: 0.65rem;
+            margin-top: 2px;
+        }
+        
+        .bg-silver-subtle {
+            background: rgba(192, 192, 192, 0.15);
+            color: #C0C0C0;
+            border: 1px solid #C0C0C0;
+            font-size: 0.65rem;
+            margin-top: 2px;
+        }
+        
+        .bg-bronze-subtle {
+            background: rgba(205, 127, 50, 0.15);
+            color: #CD7F32;
+            border: 1px solid #CD7F32;
+            font-size: 0.65rem;
+            margin-top: 2px;
+        }
+        /* Mobile Fix */
+        
+        @media (max-width: 768px) {
+            .page-main-title {
+                font-size: 2rem;
+            }
+            .filter-bar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .search-box {
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+    </style>
+ -->
+
+    <!-- END OF MAIN CONTENT -->
+    <!-- OLD CONTENT DOWNLOAD  -->
+
+    </div>
     </div>
 
     </div>
@@ -1199,135 +1466,13 @@
     <!--================= Additional 1 Section End Here =================-->
 
     <!--================= Additional 2 Start Here =================-->
-    <!-- <div class="rts-about-section  about section-gap">
-        <div class="container">
-            <div class="about-inner">
-                <div class="row align-items-center">
-                    <div class="col-lg-5 col-12">
-                        <div class="about-thumb"> -->
-    <!--<div class="img1"><img src="assets/images/gallery/park2.jpg" alt="about-thumb"></div>-->
-    <!-- <div class="img2"><img src="assets/images/gallery/park.png" alt="about-thumb"></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-7 col-12">
-                        <div class="contents">
-                            <div class="section-title-area section-title-area1 text-start">
-                                <h1 class="section-title"><span>BMX Park</span> </h1>
-                                <p>
-                                <ul>
-                                    <li>
 
-                                        &#10004; &nbsp;&nbsp;&nbsp;&nbsp;Men: 14 | Women: 7
-                                        <br> &#10004; &nbsp;&nbsp;&nbsp;&nbsp;Men: 4/5/5 Athletes per group/heat (3
-                                        heats)
-                                        <br> &#10004; &nbsp;&nbsp;&nbsp;&nbsp;Women: 7 Athletes per group/heat (1 heat)
-                                        <br> &#10004; &nbsp;&nbsp;&nbsp;&nbsp;2 runs for each rider
-                                        <br> &#10004; &nbsp;&nbsp;&nbsp;&nbsp;60 seconds per run
-                                        <br> &#10004; &nbsp;&nbsp;&nbsp;&nbsp;Judging on overall impression
-
-
-                                        <br><br>&#10004; &nbsp;&nbsp;&nbsp;&nbsp;Qualification Run - 2 runs. Both runs
-                                        count, average score for both runs.
-
-
-                                        <br><br>&#10004; &nbsp;&nbsp;&nbsp;&nbsp;Final Run – 2 runs each rider. Best run
-                                        will count. Judges will select which is best of 1st
-                                        run from the 2nd run.
-                                        <br>&#10004; &nbsp;&nbsp;&nbsp;&nbsp;<b>Men:</b> Top 12 athletes to be selected
-                                        from qualifiers
-                                        <br>&#10004; &nbsp;&nbsp;&nbsp;&nbsp;<b>Women:</b> Top 4 athletes to be selected
-                                        from qualifiers
-
-                                    </li>
-
-                                </ul>
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="about-inner">
-                <div class="row align-items-center">
-                    <div class="col-lg-5 col-12">
-                        <div class="about-thumb"> -->
-    <!--<div class="img1"><img src="assets/images/gallery/flatland1.webp" alt="about-thumb"></div>-->
-    <!-- <div class="img2"><img src="assets/images/gallery/flatland2.jpg" alt="about-thumb"></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-7 col-12">
-                        <div class="contents">
-                            <div class="section-title-area section-title-area1 text-start">
-                                <h1 class="section-title"><span>BMX Flatland</span> </h1>
-                                <p>
-                                <ul>
-                                    <li>
-
-                                        &#10004; &nbsp;&nbsp;&nbsp;&nbsp;Men: 14 | Women: 7
-                                        <br> &#10004; &nbsp;&nbsp;&nbsp;&nbsp;Men: 5/5 Athletes per group/heat (2 heats)
-                                        <br> &#10004; &nbsp;&nbsp;&nbsp;&nbsp;Women: 7 Athletes per group/heat (1 heat)
-                                        <br> &#10004; &nbsp;&nbsp;&nbsp;&nbsp;1 run for each rider
-                                        <br> &#10004; &nbsp;&nbsp;&nbsp;&nbsp;180 seconds per run
-                                        <br> &#10004; &nbsp;&nbsp;&nbsp;&nbsp;Judging on overall impression
-
-
-                                        <br><br>&#10004; &nbsp;&nbsp;&nbsp;&nbsp;Qualification Run - 1 run each rider
-                                        for 3 minutes
-
-
-                                        <br><br>&#10004; &nbsp;&nbsp;&nbsp;&nbsp;Final Round –1 run. 3 minutes. (Same
-                                        format)
-
-                                        <br>&#10004; &nbsp;&nbsp;&nbsp;&nbsp;<b>Men:</b> Top 8 Athletes to be selected
-                                        <br>&#10004; &nbsp;&nbsp;&nbsp;&nbsp;<b>Women:</b> Top 4 Athletes to be selected
-
-                                    </li>
-
-                                </ul>
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
- -->
 
     <!--================= Additional 2 End Here =================-->
 
     <!--================= Additional 3 Section Start Here =================-->
 
-    <!-- <div class="rts-match-result-section rts-match-result-section2 rts-match-schedule-section inner section-gap">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12">
-                    <div class="match-single">
-                        <div class="match-single-content">
-                            <div class="match-scores">
-                                <div class="club club1">
-                                    <div class="club-logo mr--20">
-                                        <span class="club-name"> CHAMPIONSHIPS CATEGORIES
-                                            <br>BMX Park Men Open (open to any age)
-                                            <br>BMX Park Women Open (open to any age)
-                                            <br>BMX Flatland Men Open (open to any age)
-                                            <br>BMX Flatland Women Open (open to any age)
-                                        </span>
-                                        <img src="assets/images/clubs/1.png" alt="club-logo">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-            </div>
-        </div>
-    </div> -->
     <!--================= Additional 3 Section End Here =================-->
 
 
@@ -1338,107 +1483,8 @@
 
     <!--================= Team Details Section Start Here =================-->
 
-    <!--<div class="rts-team-member-details">
-    <div class="container">
-        <div class="team-details-single">
-            <h3 class="title">COACH JOSE MOURIN</h3>
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="team-picture">
-                        <img src="assets/images/team/financial.jpg" alt="playerspic">
-                    </div>
-                </div>
-                <div class="col-lg-9">
-                    <div class="team-status-area">
-                        <div class="status-box">
-                            <div class="status-item">
-                                <span class="status-name">NATIONALITY:</span>
-                                <span class="status-number"><img src="assets/images/team/arg.png" alt=""> ARGENTINA</span>
-                            </div>
-                            <div class="status-item">
-                                <span class="status-name">CURRENT TEAM:</span>
-                                <a href="index.html" class="status-number club">KESTER</a>
-                            </div>
-                            <div class="status-item">
-                                <span class="status-name">PAST TEAM</span>
-                                <span class="status-number">INTER MILAN</span>
-                            </div>
-                            <div class="status-item">
-                                <span class="status-name">AGE</span>
-                                <span class="status-number">45</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="team-details-single">
-            <h3 class="title">PHYSICIAN SAM FOSTER</h3>
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="team-picture">
-                        <img src="assets/images/team/physician.jpg" alt="playerspic">
-                    </div>
-                </div>
-                <div class="col-lg-9">
-                    <div class="team-status-area">
-                        <div class="status-box">
-                            <div class="status-item">
-                                <span class="status-name">NATIONALITY:</span>
-                                <span class="status-number"><img src="assets/images/team/ita.png" alt=""> ITALY</span>
-                            </div>
-                            <div class="status-item">
-                                <span class="status-name">CURRENT TEAM:</span>
-                                <a href="index.html" class="status-number club">KESTER</a>
-                            </div>
-                            <div class="status-item">
-                                <span class="status-name">PAST TEAM</span>
-                                <span class="status-number">ASTON VILLA</span>
-                            </div>
-                            <div class="status-item">
-                                <span class="status-name">AGE</span>
-                                <span class="status-number">45</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="team-details-single">
-            <h3 class="title">FINANCIAL ADVISOR STEPHEN CORR</h3>
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="team-picture">
-                        <img src="assets/images/team/coach.jpg" alt="playerspic">
-                    </div>
-                </div>
-                <div class="col-lg-9">
-                    <div class="team-status-area">
-                        <div class="status-box">
-                            <div class="status-item">
-                                <span class="status-name">NATIONALITY:</span>
-                                <span class="status-number"><img src="assets/images/team/por.png" alt=""> PORTUGAL</span>
-                            </div>
-                            <div class="status-item">
-                                <span class="status-name">CURRENT TEAM:</span>
-                                <a href="index.html" class="status-number club">KESTER</a>
-                            </div>
-                            <div class="status-item">
-                                <span class="status-name">PAST TEAM</span>
-                                <span class="status-number">ATLANTA</span>
-                            </div>
-                            <div class="status-item">
-                                <span class="status-name">AGE</span>
-                                <span class="status-number">45</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-================= Team Details Section End Here =================-->
+
+    <!-- ================= Team Details Section End Here ================= -->
 
 
     <!--================= Footer Start Here =================-->
@@ -1584,6 +1630,29 @@
     <script src="assets/js/vendors/jquery.magnific-popup.min.js"></script>
     <!--================= Main Script =================-->
     <script src="assets/js/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1, // Ilang slide ang kita sa isang tingin
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 5000, // 5 seconds bago mag-slide
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+
 </body>
 
 </html>

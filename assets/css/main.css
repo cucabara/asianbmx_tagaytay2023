@@ -26907,3 +26907,217 @@ button,
     transition: all 0.3s ease-in-out;
     /* Smooth transition for hover effect */
 }
+
+
+/* --- Section Layout --- */
+
+.rts-match-result-section {
+    background-color: #0b0e13;
+    padding: 80px 0;
+}
+
+
+/* --- Titles --- */
+
+.section-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    color: #999;
+    font-size: 16px;
+}
+
+
+/* --- Result Card Container --- */
+
+.result-card {
+    background: #111;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.result-card:hover {
+    transform: translateY(-5px);
+    /* Animation effect pag tinutok mouse */
+    background: #161616;
+}
+
+
+/* --- Color Themes (Left Border & Text) --- */
+
+.theme-blue {
+    border-left: 5px solid #007bff;
+}
+
+.theme-blue .badge-text {
+    color: #007bff;
+}
+
+.theme-red {
+    border-left: 5px solid #dc3545;
+}
+
+.theme-red .badge-text {
+    color: #dc3545;
+}
+
+
+/* --- Card Header --- */
+
+.card-header-custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.card-header-custom h4 {
+    color: #fff;
+    margin: 0;
+    font-weight: 700;
+}
+
+.badge-text {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.header-icon {
+    color: #333;
+    font-size: 40px;
+}
+
+
+/* --- Rows (Start List / Result Items) --- */
+
+.result-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #222;
+}
+
+.result-row.no-border {
+    border-bottom: none;
+    /* Walang guhit sa last item */
+}
+
+
+/* --- Icon & Text Info --- */
+
+.row-info {
+    display: flex;
+    align-items: center;
+}
+
+.icon-box {
+    width: 40px;
+    height: 40px;
+    background: #222;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.icon-box i {
+    color: #fff;
+}
+
+.icon-box i.highlight-green {
+    color: #28a745;
+}
+
+.icon-box i.highlight-gold {
+    color: #ffc107;
+}
+
+.text-info h6 {
+    margin: 0;
+    font-size: 16px;
+    color: #eee;
+}
+
+.text-info span {
+    font-size: 12px;
+    color: #777;
+}
+
+
+/* --- Buttons --- */
+
+.btn-custom {
+    padding: 8px 25px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 12px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+
+/* Download Button (Blue) */
+
+.btn-download {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-download:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+
+/* Pending Button (Gray) */
+
+.btn-pending {
+    background: #333;
+    color: #777;
+    cursor: not-allowed;
+}
+
+
+/* Success Button (Green - for future use) */
+
+.btn-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+}
+
+
+/* --- Mobile Responsive Fix --- */
+
+@media (max-width: 576px) {
+    .result-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .btn-custom {
+        width: 100%;
+        text-align: center;
+    }
+    .card-header-custom h4 {
+        font-size: 18px;
+    }
+}
