@@ -27060,7 +27060,8 @@ button,
 
 /* --- Buttons --- */
 
-.btn-custom {
+
+/* .btn-custom {
     padding: 8px 25px;
     border-radius: 4px;
     font-weight: bold;
@@ -27068,12 +27069,13 @@ button,
     text-decoration: none;
     display: inline-block;
     transition: 0.3s;
-}
+} */
 
 
 /* Download Button (Blue) */
 
-.btn-download {
+
+/* .btn-download {
     background-color: #007bff;
     color: #fff;
 }
@@ -27081,33 +27083,36 @@ button,
 .btn-download:hover {
     background-color: #0056b3;
     color: #fff;
-}
+} */
 
 
 /* Pending Button (Gray) */
 
-.btn-pending {
+
+/* .btn-pending {
     background: #333;
     color: #777;
     cursor: not-allowed;
-}
+} */
 
 
 /* Success Button (Green - for future use) */
 
-.btn-success {
+
+/* .btn-success {
     background-color: #28a745;
     color: #fff;
 }
 
 .btn-success:hover {
     background-color: #218838;
-}
+} */
 
 
 /* --- Mobile Responsive Fix --- */
 
-@media (max-width: 576px) {
+
+/* @media (max-width: 576px) {
     .result-row {
         flex-direction: column;
         align-items: flex-start;
@@ -27120,4 +27125,4 @@ button,
     .card-header-custom h4 {
         font-size: 18px;
     }
-}
+} */
