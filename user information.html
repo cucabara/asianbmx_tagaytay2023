@@ -918,8 +918,8 @@
         
         .venue-theme-section {
             background-color: #050505;
-            /* Deep space dark background */
-            background-image: linear-gradient(to bottom, #020202, #080808, #020202);
+            /* Mas dark na base para lumutang ang graphics */
+            background-image: linear-gradient(to bottom, #000000, #0a0a0a, #000000);
             padding: 100px 0;
             color: #ffffff;
             font-family: 'Montserrat', sans-serif;
@@ -928,8 +928,9 @@
         }
         /* =========================================
        ULTIMATE FULL-HEIGHT CYCLING GRAPHICS
+       (VISIBILITY ENHANCED VERSION)
     ========================================= */
-        /* 1. Massive Velodrome Perspective Grid (Runs Top to Bottom) */
+        /* 1. Velodrome Perspective Grid */
         
         .bg-velodrome-grid {
             position: absolute;
@@ -937,37 +938,45 @@
             left: 0;
             width: 100%;
             height: 100%;
-            /* Creates perspective lines looking like a track */
-            background: repeating-linear-gradient(90deg, transparent 0, transparent 50px, rgba(0, 180, 216, 0.02) 50px, rgba(0, 180, 216, 0.02) 51px), linear-gradient(to bottom, transparent 20%, rgba(0, 180, 216, 0.05) 100%);
+            /* Tinaasan ang opacity (0.08 at 0.15) para mas kita ang linya */
+            background: repeating-linear-gradient(90deg, transparent 0, transparent 50px, rgba(0, 180, 216, 0.08) 50px, rgba(0, 180, 216, 0.08) 51px), linear-gradient(to bottom, transparent 20%, rgba(0, 180, 216, 0.15) 100%);
             transform: perspective(1000px) rotateX(60deg) scale(2);
             transform-origin: top center;
             z-index: 0;
             pointer-events: none;
+            /* Added slight glow to lines */
+            filter: drop-shadow(0 0 8px rgba(0, 180, 216, 0.3));
         }
-        /* 2. Giant Cyclist Silhouette (Top Right - Retained) */
+        /* 2. Giant Cyclist Silhouette */
         
         .bg-cyclist-giant {
             position: absolute;
             top: -5%;
             right: -10%;
             font-size: 45vw;
-            color: rgba(0, 180, 216, 0.03);
+            /* Tinaasan ang opacity sa 0.09 at binawasan ang blur para mas defined ang hugis */
+            color: rgba(0, 180, 216, 0.09);
             transform: rotate(-10deg);
             z-index: 0;
             pointer-events: none;
-            filter: blur(3px);
+            filter: blur(1px);
+            /* Added faint glowing text shadow */
+            text-shadow: 0 0 50px rgba(0, 180, 216, 0.2);
         }
-        /* 3. Distributed Gears (Middle & Bottom) */
+        /* 3. Distributed Gears */
         
         .bg-gear-mid {
             position: absolute;
             top: 40%;
             left: -15%;
             font-size: 30rem;
-            color: rgba(255, 255, 255, 0.015);
+            /* Ginawang cyan din ang kulay at tinaasan opacity */
+            color: rgba(0, 180, 216, 0.04);
             animation: spinSlow 80s linear infinite;
             z-index: 0;
             pointer-events: none;
+            /* Added outline stroke for better visibility */
+            -webkit-text-stroke: 3px rgba(0, 180, 216, 0.06);
         }
         
         .bg-gear-bottom {
@@ -975,12 +984,15 @@
             bottom: -10%;
             right: 10%;
             font-size: 20rem;
-            color: rgba(0, 180, 216, 0.02);
+            /* Tinaasan ang opacity sa 0.07 */
+            color: rgba(0, 180, 216, 0.07);
             animation: spinSlowReverse 60s linear infinite;
             z-index: 0;
             pointer-events: none;
+            /* Added outline stroke */
+            -webkit-text-stroke: 2px rgba(0, 180, 216, 0.08);
         }
-        /* 4. Speed Particles (Retained) */
+        /* 4. Speed Particles (Enhanced Glow) */
         
         .bg-particles {
             position: absolute;
@@ -994,11 +1006,13 @@
         
         .particle {
             position: absolute;
-            background: rgba(0, 180, 216, 0.4);
-            width: 3px;
-            height: 3px;
+            background: #00B4D8; /* Solid color instead of transparent rgba */
+            width: 4px; /* Slightly bigger */
+            height: 4px;
             border-radius: 50%;
             animation: floatUp linear infinite;
+            /* Added strong glow effect */
+            box-shadow: 0 0 15px rgba(0, 180, 216, 0.9), 0 0 5px rgba(255, 255, 255, 0.8);
         }
         
         .p1 {
@@ -1011,8 +1025,8 @@
             left: 35%;
             top: 95%;
             animation-duration: 18s;
-            width: 5px;
-            height: 5px;
+            width: 6px;
+            height: 6px;
         }
         
         .p3 {
@@ -1045,7 +1059,7 @@
                 opacity: 0;
             }
             50% {
-                opacity: 0.6;
+                opacity: 1; /* Max opacity at mid-point */
             }
             100% {
                 transform: translateY(-120vh);
@@ -1053,15 +1067,14 @@
             }
         }
         /* =========================================
-       UI STYLES
-    ========================================= */
-        /* Main Container to sit above graphics */
+           UI STYLES & RESPONSIVENESS
+        ========================================= */
         
         .content-layer {
             position: relative;
             z-index: 2;
         }
-        /* Headers */
+        /* Typography */
         
         .venue-hero-title {
             font-size: 3.5rem;
@@ -1073,6 +1086,7 @@
             letter-spacing: -2px;
             color: #fff;
             text-shadow: 3px 3px 0px #00B4D8;
+            line-height: 1.1;
         }
         
         .venue-subtitle {
@@ -1104,15 +1118,16 @@
         /* Intro Box */
         
         .intro-glass-box {
-            background: rgba(20, 20, 20, 0.6);
+            background: rgba(20, 20, 20, 0.75); /* Slightly darker for better contrast */
             border-left: 4px solid #00B4D8;
             padding: 25px;
             border-radius: 0 8px 8px 0;
             color: #d0d0d0;
             line-height: 1.8;
             font-size: 1rem;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
         
         .highlight-text {
@@ -1124,7 +1139,7 @@
             color: #fff;
             font-weight: 700;
         }
-        /* Tables */
+        /* Tables - Responsive Wrapper */
         
         .venue-table-container {
             background: rgba(20, 20, 20, 0.7);
@@ -1132,12 +1147,16 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 4px;
             overflow: hidden;
+            /* Important for rounding corners */
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
         }
+        /* Bootstrap already handles .table-responsive, but let's ensure styling holds */
         
         .venue-table {
             width: 100%;
             border-collapse: collapse;
+            min-width: 600px;
+            /* Forces scroll on small mobile */
         }
         
         .venue-table th {
@@ -1150,6 +1169,8 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             text-align: left;
+            white-space: nowrap;
+            /* Prevents header breaking */
         }
         
         .venue-table td {
@@ -1173,6 +1194,7 @@
             font-size: 0.85rem;
             font-weight: 700;
             display: inline-block;
+            white-space: nowrap;
         }
         
         .hotel-name {
@@ -1250,6 +1272,7 @@
             font-size: 0.95rem;
             color: #ccc;
             line-height: 1.6;
+            margin-bottom: 0;
         }
         /* Currency & Weather */
         
@@ -1314,25 +1337,89 @@
             font-weight: 700;
             color: #fff;
         }
-        /* Responsive */
+        /* HEADER LOGO STYLING CLASS */
         
-        @media (max-width: 992px) {
-            .weather-grid {
-                grid-template-columns: repeat(4, 1fr);
-            }
+        .logo-header-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            /* Equivalent to gap-4 */
+            margin-bottom: 1.5rem;
         }
         
+        .logo-header-img {
+            height: 80px;
+            filter: drop-shadow(0 0 10px rgba(0, 180, 216, 0.3));
+            transition: height 0.3s ease;
+        }
+        /* ----------------------------------------------------
+       MOBILE RESPONSIVE TWEAKS (Max Width: 768px)
+    ---------------------------------------------------- */
+        
         @media (max-width: 768px) {
+            /* Adjust spacing container */
+            .venue-theme-section {
+                padding: 50px 0;
+            }
+            /* background mobile adjustments (kept subtle on mobile to avoid clutter) */
+            .bg-cyclist-giant {
+                font-size: 70vw;
+                top: 5%;
+                opacity: 0.05;
+            }
+            /* Shrink Gears */
+            .bg-gear-mid {
+                font-size: 15rem;
+                left: -25%;
+                opacity: 0.06;
+            }
+            .bg-gear-bottom {
+                font-size: 12rem;
+                right: -15%;
+                opacity: 0.06;
+            }
+            /* Header Title Fixes */
+            .venue-hero-title {
+                font-size: 2.2rem;
+                /* Smaller font */
+                margin-top: 10px;
+            }
+            .logo-header-group {
+                gap: 10px;
+                /* Closer together */
+            }
+            .logo-header-img {
+                height: 50px;
+                /* Smaller logos */
+            }
+            /* Section Headings */
+            .venue-section-heading {
+                font-size: 1.4rem;
+                margin-top: 40px;
+            }
+            /* Weather Grid - 2 columns on mobile */
             .weather-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-            .venue-hero-title {
-                font-size: 2.5rem;
+            /* Make the last item span full width so it doesn't look weird if odd number */
+            .weather-card:last-child {
+                grid-column: span 2;
             }
-            .bg-cyclist-giant {
-                font-size: 80vw;
-                top: 10%;
-                opacity: 0.05;
+            /* Map Height */
+            .map-frame-container {
+                height: 300px;
+            }
+            /* Currency text fix */
+            .currency-value {
+                font-size: 2.2rem;
+            }
+        }
+        /* Extra small devices */
+        
+        @media (max-width: 400px) {
+            .venue-hero-title {
+                font-size: 1.8rem;
             }
         }
     </style>
@@ -1340,7 +1427,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <div class="venue-theme-section">
-        <div class="bg-velodrome-grid"></div> <i class="fas fa-biking bg-cyclist-giant"></i> <i class="fas fa-cog bg-gear-mid"></i> <i class="fas fa-cog bg-gear-bottom"></i>
+        <div class="bg-velodrome-grid"></div>
+        <i class="fas fa-biking bg-cyclist-giant"></i>
+        <i class="fas fa-cog bg-gear-mid"></i>
+        <i class="fas fa-cog bg-gear-bottom"></i>
+
         <div class="bg-particles">
             <div class="particle p1"></div>
             <div class="particle p2"></div>
@@ -1352,10 +1443,11 @@
 
             <div class="row justify-content-center">
                 <div class="col-lg-10">
-                    <div class="d-flex justify-content-center align-items-center gap-4 mb-4">
-                        <img src="assets/images/acc-logo.png" alt="ACC" style="height: 80px; filter: drop-shadow(0 0 10px rgba(0,180,216,0.3));">
-                        <div style="width: 2px; height: 60px; background: rgba(0,180,216,0.5);"></div>
-                        <img src="assets/images/philcycling-logo.png" alt="PhilCycling" style="height: 80px; filter: drop-shadow(0 0 10px rgba(0,180,216,0.3));">
+
+                    <div class="logo-header-group">
+                        <img src="assets/images/acc-logo.png" alt="ACC" class="logo-header-img">
+                        <div style="width: 2px; height: 40px; background: rgba(0,180,216,0.5);"></div>
+                        <img src="assets/images/philcycling-logo.png" alt="PhilCycling" class="logo-header-img">
                     </div>
 
                     <h1 class="venue-hero-title">USEFUL INFORMATION</h1>
@@ -1442,10 +1534,10 @@
                             <table class="venue-table">
                                 <thead>
                                     <tr>
-                                        <th style="width: 30%;">DELEGATION</th>
-                                        <th style="width: 35%;">HOTEL</th>
-                                        <th style="width: 15%;">ADDRESS</th>
-                                        <th style="width: 20%;" class="text-end">MEALS</th>
+                                        <th style="min-width: 150px;">DELEGATION</th>
+                                        <th style="min-width: 150px;">HOTEL</th>
+                                        <th>ADDRESS</th>
+                                        <th style="min-width: 120px;" class="text-end">MEALS</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -1516,15 +1608,14 @@
                     </div>
 
                     <div class="row g-4">
-
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-sm-6">
                             <div class="logistics-box">
                                 <div class="logistics-title"><i class="fas fa-handshake"></i> Meeting Hall</div>
                                 <p class="logistics-text">Details regarding the official Meeting Hall location will be provided at the hotel desk.</p>
                             </div>
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-sm-6">
                             <div class="logistics-box">
                                 <div class="logistics-title"><i class="fas fa-bus"></i> Transportation</div>
                                 <p class="logistics-text">
@@ -1534,7 +1625,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-sm-6">
                             <div class="logistics-box">
                                 <div class="logistics-title"><i class="fas fa-id-card"></i> Accreditation</div>
                                 <p class="logistics-text">
@@ -1543,14 +1634,14 @@
                             </div>
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-sm-6">
                             <div class="logistics-box">
                                 <div class="logistics-title"><i class="fas fa-crown"></i> VIP Lounge</div>
                                 <p class="logistics-text">Located at the Velodrome.<br><em style="font-size:0.85rem; color:#888">Restricted to VIP Pass holders.</em></p>
                             </div>
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-sm-6">
                             <div class="logistics-box justify-content-center align-items-center text-center">
                                 <div class="logistics-title mb-0"><i class="fas fa-money-bill-wave"></i> Currency</div>
                                 <div class="mt-3">
@@ -1560,7 +1651,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-sm-6">
                             <div class="logistics-box justify-content-center align-items-center text-center">
                                 <div class="logistics-title mb-2 justify-content-center"><i class="fas fa-plug"></i> Power Plug</div>
                                 <div style="font-size: 2.5rem; color: #fff; margin: 5px 0; filter: drop-shadow(0 0 10px rgba(0,180,216,0.5));">
@@ -1568,11 +1659,10 @@
                                 </div>
                                 <div style="font-weight: 800; color: #00B4D8; letter-spacing: 1px; font-size: 1.2rem;">TYPE C ONLY</div>
                                 <p class="logistics-text mt-2" style="font-size: 0.85rem;">
-                                    Standard voltage of <strong class="white-bold">220V</strong>. Make sure to bring an adapter if your device uses a different plug type.
+                                    Standard voltage of <strong class="white-bold">220V</strong>.
                                 </p>
                             </div>
                         </div>
-
                     </div>
 
                 </div>
