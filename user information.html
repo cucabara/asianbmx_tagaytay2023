@@ -915,11 +915,20 @@
 
     <style>
         /* --- MAIN THEME BACKGROUND --- */
+        /* --- MAIN THEME BACKGROUND (DESKTOP VIEW) --- */
         
         .venue-theme-section {
             background-color: #050505;
-            /* Mas dark na base para lumutang ang graphics */
-            background-image: linear-gradient(to bottom, #000000, #0a0a0a, #000000);
+            /* Fallback color */
+            /* --- DITO ANG PAGBABAGO --- */
+            /* Nagdagdag tayo ng maitim na gradient (0.7 opacity) sa ibabaw ng picture */
+            /* Ito ang magbibigay nung dark, elegant look */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/images/velodrome-bg.jpg');
+            /* Siguraduhin tama ang path dito */
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            /* Parallax effect sa desktop */
             padding: 100px 0;
             color: #ffffff;
             font-family: 'Montserrat', sans-serif;
@@ -927,10 +936,8 @@
             overflow: hidden;
         }
         /* =========================================
-       ULTIMATE FULL-HEIGHT CYCLING GRAPHICS
-       (VISIBILITY ENHANCED VERSION)
+       GRAPHICS & ANIMATION
     ========================================= */
-        /* 1. Velodrome Perspective Grid */
         
         .bg-velodrome-grid {
             position: absolute;
@@ -938,44 +945,36 @@
             left: 0;
             width: 100%;
             height: 100%;
-            /* Tinaasan ang opacity (0.08 at 0.15) para mas kita ang linya */
             background: repeating-linear-gradient(90deg, transparent 0, transparent 50px, rgba(0, 180, 216, 0.08) 50px, rgba(0, 180, 216, 0.08) 51px), linear-gradient(to bottom, transparent 20%, rgba(0, 180, 216, 0.15) 100%);
             transform: perspective(1000px) rotateX(60deg) scale(2);
             transform-origin: top center;
             z-index: 0;
             pointer-events: none;
-            /* Added slight glow to lines */
             filter: drop-shadow(0 0 8px rgba(0, 180, 216, 0.3));
         }
-        /* 2. Giant Cyclist Silhouette */
         
         .bg-cyclist-giant {
             position: absolute;
             top: -5%;
             right: -10%;
             font-size: 45vw;
-            /* Tinaasan ang opacity sa 0.09 at binawasan ang blur para mas defined ang hugis */
             color: rgba(0, 180, 216, 0.09);
             transform: rotate(-10deg);
             z-index: 0;
             pointer-events: none;
             filter: blur(1px);
-            /* Added faint glowing text shadow */
             text-shadow: 0 0 50px rgba(0, 180, 216, 0.2);
         }
-        /* 3. Distributed Gears */
         
         .bg-gear-mid {
             position: absolute;
             top: 40%;
             left: -15%;
             font-size: 30rem;
-            /* Ginawang cyan din ang kulay at tinaasan opacity */
             color: rgba(0, 180, 216, 0.04);
             animation: spinSlow 80s linear infinite;
             z-index: 0;
             pointer-events: none;
-            /* Added outline stroke for better visibility */
             -webkit-text-stroke: 3px rgba(0, 180, 216, 0.06);
         }
         
@@ -984,15 +983,12 @@
             bottom: -10%;
             right: 10%;
             font-size: 20rem;
-            /* Tinaasan ang opacity sa 0.07 */
             color: rgba(0, 180, 216, 0.07);
             animation: spinSlowReverse 60s linear infinite;
             z-index: 0;
             pointer-events: none;
-            /* Added outline stroke */
             -webkit-text-stroke: 2px rgba(0, 180, 216, 0.08);
         }
-        /* 4. Speed Particles (Enhanced Glow) */
         
         .bg-particles {
             position: absolute;
@@ -1006,12 +1002,11 @@
         
         .particle {
             position: absolute;
-            background: #00B4D8; /* Solid color instead of transparent rgba */
-            width: 4px; /* Slightly bigger */
+            background: #00B4D8;
+            width: 4px;
             height: 4px;
             border-radius: 50%;
             animation: floatUp linear infinite;
-            /* Added strong glow effect */
             box-shadow: 0 0 15px rgba(0, 180, 216, 0.9), 0 0 5px rgba(255, 255, 255, 0.8);
         }
         
@@ -1059,7 +1054,7 @@
                 opacity: 0;
             }
             50% {
-                opacity: 1; /* Max opacity at mid-point */
+                opacity: 1;
             }
             100% {
                 transform: translateY(-120vh);
@@ -1067,14 +1062,13 @@
             }
         }
         /* =========================================
-           UI STYLES & RESPONSIVENESS
-        ========================================= */
+       UI STYLES
+    ========================================= */
         
         .content-layer {
             position: relative;
             z-index: 2;
         }
-        /* Typography */
         
         .venue-hero-title {
             font-size: 3.5rem;
@@ -1087,6 +1081,7 @@
             color: #fff;
             text-shadow: 3px 3px 0px #00B4D8;
             line-height: 1.1;
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.8), 2px 2px 0px #00B4D8;
         }
         
         .venue-subtitle {
@@ -1115,19 +1110,20 @@
         .venue-section-heading i {
             color: #00B4D8;
         }
-        /* Intro Box */
         
         .intro-glass-box {
-            background: rgba(20, 20, 20, 0.75); /* Slightly darker for better contrast */
+            /* Mas transparent na background */
+            background: rgba(20, 20, 20, 0.6);
+            /* Mas malakas na blur sa likod */
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            /* Manipis na puting border para classier */
+            border: 1px solid rgba(255, 255, 255, 0.15);
             border-left: 4px solid #00B4D8;
-            padding: 25px;
-            border-radius: 0 8px 8px 0;
-            color: #d0d0d0;
-            line-height: 1.8;
-            font-size: 1rem;
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            /* Retain natin yung blue accent sa kaliwa */
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            padding: 30px;
+            /* Dagdagan konti padding para di siksik */
         }
         
         .highlight-text {
@@ -1139,7 +1135,7 @@
             color: #fff;
             font-weight: 700;
         }
-        /* Tables - Responsive Wrapper */
+        /* Tables */
         
         .venue-table-container {
             background: rgba(20, 20, 20, 0.7);
@@ -1147,16 +1143,13 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 4px;
             overflow: hidden;
-            /* Important for rounding corners */
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
         }
-        /* Bootstrap already handles .table-responsive, but let's ensure styling holds */
         
         .venue-table {
             width: 100%;
             border-collapse: collapse;
             min-width: 600px;
-            /* Forces scroll on small mobile */
         }
         
         .venue-table th {
@@ -1168,9 +1161,7 @@
             font-size: 0.95rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            text-align: left;
             white-space: nowrap;
-            /* Prevents header breaking */
         }
         
         .venue-table td {
@@ -1196,31 +1187,255 @@
             display: inline-block;
             white-space: nowrap;
         }
+        /* =========================================
+       NEW: AIRPORT ARRIVAL CARD
+    ========================================= */
         
-        .hotel-name {
-            font-weight: 700;
-            color: #fff;
-            display: block;
-            font-size: 1.1rem;
+        .arrival-card {
+            background: linear-gradient(135deg, rgba(20, 20, 20, 0.9) 0%, rgba(5, 50, 60, 0.8) 100%);
+            border: 1px solid #00B4D8;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            box-shadow: 0 0 30px rgba(0, 180, 216, 0.15);
+            display: grid;
+            grid-template-columns: 1.2fr 1.8fr;
+            /* Info left, Map right */
         }
-        /* Map */
         
-        .map-frame-container {
-            width: 100%;
-            height: 450px;
-            border: 3px solid #fff;
+        .arrival-info {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .arrival-title {
+            color: #fff;
+            font-size: 1.6rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            text-shadow: 0 0 10px rgba(0, 180, 216, 0.5);
+        }
+        
+        .arrival-route {
+            color: #00B4D8;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+        
+        .arrival-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-box {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .stat-label {
+            font-size: 0.7rem;
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .stat-val {
+            font-size: 1.2rem;
+            color: #fff;
+            font-weight: 700;
+        }
+        
+        .arrival-note {
+            font-size: 0.85rem;
+            color: #ccc;
+            font-style: italic;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 15px;
+        }
+        /* =========================================
+       HOTEL CARD & ROUTE MAP STYLES
+    ========================================= */
+        
+        .hotel-card {
+            /* Gawing semi-transparent para makita konti ang background sa likod */
+            background: rgba(20, 20, 20, 0.85);
+            /* Glass blur effect */
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            /* Ito ang magpapa-angat: Manipis na border */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            /* Optional: Kung gusto mo may konting kulay blue yung border */
+            /* border: 1px solid rgba(0, 180, 216, 0.3); */
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* Shadow para lumutang */
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hotel-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 180, 216, 0.6);
+            /* Iilaw yung border pag hover */
+            box-shadow: 0 20px 40px rgba(0, 180, 216, 0.15);
+        }
+        
+        .hotel-grid-layout {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            min-height: 350px;
+        }
+        /* Images */
+        
+        .hotel-gallery {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 5px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.3);
+        }
+        
+        .h-img-main {
+            grid-row: span 2;
+            position: relative;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 0 30px rgba(0, 180, 216, 0.3);
+        }
+        
+        .h-img-sub {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .hotel-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Ito ang importante */
+            transition: transform 0.5s ease;
+        }
+        
+        .hotel-card:hover .hotel-img {
+            transform: scale(1.05);
+        }
+        /* Info Side */
+        
+        .hotel-details {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .hotel-header h3 {
+            color: #fff;
+            font-weight: 800;
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        
+        .hotel-sub {
+            color: #00B4D8;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+        
+        .hotel-badges {
+            display: flex;
+            gap: 10px;
+            margin: 15px 0;
+            flex-wrap: wrap;
+        }
+        
+        .h-badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            color: #ccc;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .h-badge i {
+            color: #00B4D8;
+            margin-right: 5px;
+        }
+        /* --- THE INTERACTIVE ROUTE MAP --- */
+        
+        .route-map-container {
+            width: 100%;
+            height: 100%;
+            min-height: 250px;
+            border-radius: 0;
+            border: 0;
+            overflow: hidden;
+            position: relative;
+            background: #fff;
+        }
+        /* Specific for hotels */
+        
+        .hotel-route-map {
+            width: 100%;
+            height: 160px;
+            border-radius: 8px;
+            border: 2px solid #fff;
+            overflow: hidden;
+            position: relative;
             background: #fff;
         }
         
-        .map-frame-container iframe {
+        .route-map-container iframe,
+        .hotel-route-map iframe {
             width: 100%;
             height: 100%;
             border: 0;
+            filter: none;
         }
-        /* Logistics Cards */
+        /* Overlay to make it clickable to external map */
+        
+        .map-overlay-link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.0);
+            z-index: 10;
+            cursor: pointer;
+        }
+        
+        .map-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #00B4D8;
+            color: #000;
+            font-weight: 800;
+            font-size: 0.7rem;
+            padding: 5px;
+            text-align: center;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            pointer-events: none;
+            z-index: 11;
+        }
+        /* Logistics & Weather (Retained) */
         
         .logistics-box {
             background: rgba(30, 30, 30, 0.6);
@@ -1274,7 +1489,6 @@
             line-height: 1.6;
             margin-bottom: 0;
         }
-        /* Currency & Weather */
         
         .currency-value {
             font-size: 2.8rem;
@@ -1337,14 +1551,12 @@
             font-weight: 700;
             color: #fff;
         }
-        /* HEADER LOGO STYLING CLASS */
         
         .logo-header-group {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 1.5rem;
-            /* Equivalent to gap-4 */
             margin-bottom: 1.5rem;
         }
         
@@ -1353,74 +1565,241 @@
             filter: drop-shadow(0 0 10px rgba(0, 180, 216, 0.3));
             transition: height 0.3s ease;
         }
-        /* ----------------------------------------------------
-       MOBILE RESPONSIVE TWEAKS (Max Width: 768px)
-    ---------------------------------------------------- */
+        /* General Location Map */
         
-        @media (max-width: 768px) {
-            /* Adjust spacing container */
-            .venue-theme-section {
-                padding: 50px 0;
+        .map-frame-container {
+            width: 100%;
+            height: 450px;
+            border: 3px solid #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(0, 180, 216, 0.3);
+            background: #fff;
+        }
+        
+        .map-frame-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        /* =========================================
+       RESPONSIVE ADJUSTMENTS (MOBILE & TABLET)
+    ========================================= */
+        /* TABLET & SMALL LAPTOPS (Max-width: 991px) */
+        
+        @media (max-width: 991px) {
+            /* I-stack ang Hotel Card: Image sa taas, Info sa baba */
+            .hotel-grid-layout {
+                grid-template-columns: 1fr;
+                /* Gawing auto ang height para flexible */
+                min-height: auto;
             }
-            /* background mobile adjustments (kept subtle on mobile to avoid clutter) */
-            .bg-cyclist-giant {
-                font-size: 70vw;
-                top: 5%;
-                opacity: 0.05;
+            /* Ayusin ang Gallery height sa mobile para di masyadong matangkad */
+            .hotel-gallery {
+                height: 250px;
+                /* Sapat na height para makita ang pics */
             }
-            /* Shrink Gears */
-            .bg-gear-mid {
-                font-size: 15rem;
-                left: -25%;
-                opacity: 0.06;
+            /* I-stack ang Airport Arrival Card */
+            .arrival-card {
+                grid-template-columns: 1fr;
             }
-            .bg-gear-bottom {
-                font-size: 12rem;
-                right: -15%;
-                opacity: 0.06;
-            }
-            /* Header Title Fixes */
-            .venue-hero-title {
-                font-size: 2.2rem;
-                /* Smaller font */
-                margin-top: 10px;
-            }
-            .logo-header-group {
-                gap: 10px;
-                /* Closer together */
-            }
-            .logo-header-img {
-                height: 50px;
-                /* Smaller logos */
-            }
-            /* Section Headings */
-            .venue-section-heading {
-                font-size: 1.4rem;
-                margin-top: 40px;
-            }
-            /* Weather Grid - 2 columns on mobile */
-            .weather-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            /* Make the last item span full width so it doesn't look weird if odd number */
-            .weather-card:last-child {
-                grid-column: span 2;
-            }
-            /* Map Height */
-            .map-frame-container {
-                height: 300px;
-            }
-            /* Currency text fix */
-            .currency-value {
-                font-size: 2.2rem;
+            /* Lagyan ng border sa baba ng info instead na sa kanan */
+            .arrival-info {
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             }
         }
-        /* Extra small devices */
         
-        @media (max-width: 400px) {
-            .venue-hero-title {
-                font-size: 1.8rem;
+        @media (max-width: 768px) {
+            /* --- 1. BACKGROUND FIX (Yung dark tint na gusto mo) --- */
+            .venue-theme-section {
+                background-image: none !important;
+                position: relative;
+                z-index: 1;
+                padding: 80px 0 60px 0;
+                /* Pigilan ang horizontal scroll ng buong page */
+                overflow-x: hidden;
             }
+            .venue-theme-section::before {
+                content: "";
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                z-index: -1;
+                background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/images/velodrome-bg.jpg');
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+            /* --- 2. LOGO FIX: FIT SA SCREEN (Walang putol, walang lampas) --- */
+            .logo-header-group {
+                display: flex !important;
+                flex-wrap: wrap !important;
+                /* IMPORTANTE: Bababa sila pag di kasya sa isang linya */
+                justify-content: center !important;
+                /* Gitna lahat */
+                align-items: center !important;
+                gap: 15px;
+                /* Space sa pagitan ng logo */
+                width: 100% !important;
+                padding: 0 10px;
+                /* Padding sa gilid para di dikit sa screen */
+                box-sizing: border-box;
+            }
+            .logo-header-img {
+                /* Hahayaan nating lumiit ang logo para mag-fit, pero di ic-crop */
+                max-width: 80px !important;
+                /* Control sa laki. Pwede mong gawing 60px o 100px */
+                height: auto !important;
+                /* Maintain aspect ratio (di mapipitpit) */
+                object-fit: contain;
+                flex-shrink: 0;
+            }
+            .weather-grid-container {
+                display: grid !important;
+                /* Ito ang gagawa ng 2 columns na magkapareho ang laki */
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 10px !important;
+                width: 100% !important;
+                margin: 0 auto 20px auto;
+            }
+            /* Targetin ang bawat weather card */
+            .weather-day-card {
+                width: 100% !important;
+                /* Pupunuin niya yung column */
+                margin: 0 !important;
+                box-sizing: border-box;
+            }
+            /* --- 4. HEADER TEXT FIX --- */
+            .venue-hero-title,
+            .section-header-title {
+                text-align: center;
+                font-size: 1.8rem;
+                padding: 0 15px;
+                /* Iwas dikit sa gilid */
+                word-wrap: break-word;
+                /* Iwas lampas screen */
+            }
+        }
+        /* --- TOURIST SPOTS PREMIUM DESIGN --- */
+        
+        .tourist-spots-section {
+            padding: 80px 0;
+            /* Mas maitim na background para lumutang ang cards */
+            background-color: #121212;
+            position: relative;
+        }
+        /* Header Styling */
+        
+        .section-header-group {
+            margin-bottom: 50px;
+        }
+        
+        .section-title {
+            color: #ffffff;
+            /* WHITE TEXT NA PARA MABASA */
+            font-size: 2.2rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        
+        .section-subtitle {
+            color: #a0a0a0;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+        
+        .header-divider {
+            width: 60px;
+            height: 4px;
+            background-color: #f1c40f;
+            /* ACC Yellow Accent */
+            margin: 0 auto;
+            border-radius: 2px;
+        }
+        /* Grid Layout */
+        
+        .spots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            padding: 0 15px;
+        }
+        /* Card Styling - PREMIUM LOOK */
+        
+        .spot-card {
+            background: #1e1e1e;
+            /* Dark Gray Card */
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            /* Thin border na halos di kita, lilitaw pag hover */
+            border: 1px solid #333;
+            transition: all 0.4s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        /* HOVER EFFECT: Dito ang magic! */
+        
+        .spot-card:hover {
+            transform: translateY(-10px);
+            /* Aangat yung card */
+            border-color: #f1c40f;
+            /* Magiging Yellow ang border */
+            box-shadow: 0 15px 30px rgba(241, 196, 15, 0.15);
+            /* Yellow Glow */
+        }
+        /* Image Box */
+        
+        .spot-img-box {
+            width: 100%;
+            height: 220px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .spot-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        /* Image Zoom pag hover */
+        
+        .spot-card:hover .spot-img {
+            transform: scale(1.1);
+        }
+        /* Text Content */
+        
+        .spot-info {
+            padding: 25px 20px;
+            text-align: center;
+        }
+        
+        .spot-info h3 {
+            color: #fff;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-top: 0;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+        /* Gawing yellow ang text title pag hover din */
+        
+        .spot-card:hover .spot-info h3 {
+            color: #f1c40f;
+        }
+        
+        .spot-info p {
+            color: #b0b0b0;
+            /* Light gray text */
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin: 0;
         }
     </style>
 
@@ -1443,13 +1822,11 @@
 
             <div class="row justify-content-center">
                 <div class="col-lg-10">
-
                     <div class="logo-header-group">
                         <img src="assets/images/acc-logo.png" alt="ACC" class="logo-header-img">
                         <div style="width: 2px; height: 40px; background: rgba(0,180,216,0.5);"></div>
                         <img src="assets/images/philcycling-logo.png" alt="PhilCycling" class="logo-header-img">
                     </div>
-
                     <h1 class="venue-hero-title">USEFUL INFORMATION</h1>
                     <p class="venue-subtitle">33rd Founding Anniversary of ACC & Asian Track Championships</p>
                 </div>
@@ -1470,7 +1847,6 @@
                 <div class="col-lg-10">
                     <h2 class="venue-section-heading"><i class="fas fa-calendar-alt"></i> Schedule of Activities</h2>
                     <p style="color: #00B4D8; margin-top: -20px; margin-bottom: 20px; font-weight: 700; letter-spacing: 2px;">JANUARY 26, 2026</p>
-
                     <div class="venue-table-container">
                         <div class="table-responsive">
                             <table class="venue-table">
@@ -1528,41 +1904,156 @@
 
             <div class="row justify-content-center">
                 <div class="col-lg-10">
-                    <h2 class="venue-section-heading"><i class="fas fa-bed"></i> Accommodation & Meals</h2>
-                    <div class="venue-table-container">
-                        <div class="table-responsive">
-                            <table class="venue-table">
-                                <thead>
-                                    <tr>
-                                        <th style="min-width: 150px;">DELEGATION</th>
-                                        <th style="min-width: 150px;">HOTEL</th>
-                                        <th>ADDRESS</th>
-                                        <th style="min-width: 120px;" class="text-end">MEALS</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><strong>ACC Officials</strong><br><small style="color:#888">NF Pressergen</small></td>
-                                        <td><span class="hotel-name">GM Hotel</span><small style="color:#ccc">Templar Hotel</small></td>
-                                        <td>Tagaytay</td>
-                                        <td class="text-end"><span class="time-badge">Full Board</span><br><small style="color:#888">Mar 24-31</small></td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Athletes</strong><br><small style="color:#888">and other Officials</small></td>
-                                        <td><span class="hotel-name">Summit Ridge</span><small style="color:#ccc">Taal Vista / Lake Hotel</small></td>
-                                        <td>Tagaytay</td>
-                                        <td class="text-end"><span class="time-badge">Full Board</span><br><small style="color:#888">Mar 24-31</small></td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Media Delegation</strong></td>
-                                        <td><span class="hotel-name">Chateau Hotel</span></td>
-                                        <td>Tagaytay</td>
-                                        <td class="text-end"><span class="time-badge">Full Board</span><br><small style="color:#888">Mar 24-31</small></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                    <h2 class="venue-section-heading"><i class="fas fa-plane-arrival"></i> ARRIVAL & TRANSFERS</h2>
+
+                    <div class="arrival-card">
+                        <div class="arrival-info">
+                            <div class="arrival-title">NAIA AIRPORT</div>
+                            <div class="arrival-route"><i class="fas fa-map-marker-alt"></i> MANILA <i class="fas fa-long-arrow-alt-right"></i> <i class="fas fa-flag-checkered"></i> TAGAYTAY</div>
+
+                            <div class="arrival-stats">
+                                <div class="stat-box">
+                                    <div class="stat-label">Distance</div>
+                                    <div class="stat-val">~58 KM</div>
+                                </div>
+                                <div class="stat-box">
+                                    <div class="stat-label">Est. Time</div>
+                                    <div class="stat-val">1h 45m</div>
+                                </div>
+                            </div>
+
+                            <div class="arrival-note">
+                                <i class="fas fa-info-circle" style="color:#00B4D8;"></i> Official shuttle services will be available at the arrival bay for all accredited delegates.
+                            </div>
+                        </div>
+
+                        <div class="route-map-container">
+                            <a href="https://www.google.com/maps/dir/Ninoy+Aquino+International+Airport,+Pasay,+Metro+Manila/Tagaytay+City+Velodrome" target="_blank" class="map-overlay-link" title="Open in Google Maps"></a>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d247385.234567!2d120.9!3d14.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x3397cb0710606f7b%3A0x62913e2f47055c02!2sNinoy%20Aquino%20International%20Airport!3m2!1d14.5085816!2d121.0194432!4m5!1s0x33bd796a55555555%3A0x123456789abcdef!2sTagaytay!3m2!1d14.1153!2d120.9621!5e0!3m2!1sen!2sph!4v1600000000000"
+                                allowfullscreen="" loading="lazy">
+                        </iframe>
+                            <div class="map-label">CLICK MAP FOR NAVIGATION</div>
                         </div>
                     </div>
+
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h2 class="venue-section-heading"><i class="fas fa-bed"></i> OFFICIAL HOTELS</h2>
+
+                    <div class="hotel-card">
+                        <div class="hotel-grid-layout">
+                            <div class="hotel-gallery">
+                                <div class="h-img-main">
+                                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop" class="hotel-img" alt="Hotel">
+                                </div>
+                                <div class="h-img-sub">
+                                    <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=400&auto=format&fit=crop" class="hotel-img" alt="Room">
+                                </div>
+                                <div class="h-img-sub">
+                                    <img src="https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=400&auto=format&fit=crop" class="hotel-img" alt="Pool">
+                                </div>
+                            </div>
+
+                            <div class="hotel-details">
+                                <div>
+                                    <div class="hotel-header">
+                                        <h3>GM HOTEL</h3>
+                                        <span class="hotel-sub">Official Residence: ACC Delegates</span>
+                                    </div>
+                                    <div class="hotel-badges">
+                                        <span class="h-badge"><i class="fas fa-user-tie"></i> Officials</span>
+                                        <span class="h-badge"><i class="fas fa-utensils"></i> Full Board</span>
+                                        <span class="h-badge"><i class="fas fa-shuttle-van"></i> 15 Mins Shuttle</span>
+                                    </div>
+                                </div>
+
+                                <div class="hotel-route-map">
+                                    <a href="https://www.google.com/maps/dir/GM+Hotel,+Tagaytay/Tagaytay+City+Velodrome" target="_blank" class="map-overlay-link" title="Click to View Route"></a>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d61893.99661474472!2d120.9324785!3d14.115278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x33bd776055555555%3A0x1234567890abcdef!2sGM+Hotel!3m2!1d14.115278!2d120.96!4m5!1s0x33bd777000000001%3A0x9876543210fedcba!2sTagaytay+City+Velodrome!3m2!1d14.100000!2d120.95!5e0!3m2!1sen!2sph!4v1234567890"
+                                        loading="lazy" allowfullscreen></iframe>
+                                    <div class="map-label"><i class="fas fa-location-arrow"></i> GM HOTEL ➝ VELODROME</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hotel-card">
+                        <div class="hotel-grid-layout">
+                            <div class="hotel-gallery">
+                                <div class="h-img-main">
+                                    <img src="https://images.unsplash.com/photo-1571896349842-6e5a513e610a?q=80&w=800&auto=format&fit=crop" class="hotel-img" alt="Hotel">
+                                </div>
+                                <div class="h-img-sub">
+                                    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=400&auto=format&fit=crop" class="hotel-img" alt="Gym">
+                                </div>
+                                <div class="h-img-sub">
+                                    <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?q=80&w=400&auto=format&fit=crop" class="hotel-img" alt="Lobby">
+                                </div>
+                            </div>
+
+                            <div class="hotel-details">
+                                <div>
+                                    <div class="hotel-header">
+                                        <h3>SUMMIT RIDGE</h3>
+                                        <span class="hotel-sub">Team Residence (Athletes)</span>
+                                    </div>
+                                    <div class="hotel-badges">
+                                        <span class="h-badge"><i class="fas fa-running"></i> Athletes</span>
+                                        <span class="h-badge"><i class="fas fa-utensils"></i> Full Board</span>
+                                        <span class="h-badge"><i class="fas fa-shuttle-van"></i> 10 Mins Shuttle</span>
+                                    </div>
+                                </div>
+
+                                <div class="hotel-route-map">
+                                    <a href="https://www.google.com/maps/dir/Summit+Ridge+Tagaytay/Tagaytay+City+Velodrome" target="_blank" class="map-overlay-link" title="Click to View Route"></a>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d61893.99661474472!2d120.9324785!3d14.115278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x33bd776055555555%3A0x1234567890abcdef!2sSummit+Ridge!3m2!1d14.115278!2d120.96!4m5!1s0x33bd777000000001%3A0x9876543210fedcba!2sTagaytay+City+Velodrome!3m2!1d14.100000!2d120.95!5e0!3m2!1sen!2sph!4v1234567890"
+                                        loading="lazy" allowfullscreen></iframe>
+                                    <div class="map-label"><i class="fas fa-location-arrow"></i> SUMMIT RIDGE ➝ VELODROME</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hotel-card">
+                        <div class="hotel-grid-layout">
+                            <div class="hotel-gallery">
+                                <div class="h-img-main">
+                                    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=800&auto=format&fit=crop" class="hotel-img" alt="Hotel">
+                                </div>
+                                <div class="h-img-sub">
+                                    <img src="https://images.unsplash.com/photo-1596178060671-7a80dc8059ea?q=80&w=400&auto=format&fit=crop" class="hotel-img" alt="Room">
+                                </div>
+                                <div class="h-img-sub">
+                                    <img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?q=80&w=400&auto=format&fit=crop" class="hotel-img" alt="Lobby">
+                                </div>
+                            </div>
+
+                            <div class="hotel-details">
+                                <div>
+                                    <div class="hotel-header">
+                                        <h3>CHARACTER HOTEL</h3>
+                                        <span class="hotel-sub">Press & Media Center</span>
+                                    </div>
+                                    <div class="hotel-badges">
+                                        <span class="h-badge"><i class="fas fa-camera"></i> Media</span>
+                                        <span class="h-badge"><i class="fas fa-wifi"></i> High Speed</span>
+                                        <span class="h-badge"><i class="fas fa-shuttle-van"></i> 12 Mins Shuttle</span>
+                                    </div>
+                                </div>
+
+                                <div class="hotel-route-map">
+                                    <a href="https://www.google.com/maps/dir/Tagaytay,+Cavite/Tagaytay+City+Velodrome" target="_blank" class="map-overlay-link" title="Click to View Route"></a>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d61893.99661474472!2d120.9324785!3d14.115278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x33bd776055555555%3A0x1234567890abcdef!2sTagaytay!3m2!1d14.115278!2d120.96!4m5!1s0x33bd777000000001%3A0x9876543210fedcba!2sTagaytay+City+Velodrome!3m2!1d14.100000!2d120.95!5e0!3m2!1sen!2sph!4v1234567890"
+                                        loading="lazy" allowfullscreen></iframe>
+                                    <div class="map-label"><i class="fas fa-location-arrow"></i> MEDIA HOTEL ➝ VELODROME</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -1601,11 +2092,11 @@
                         </div>
                     </div>
 
-                    <h2 class="venue-section-heading"><i class="fas fa-map-marked-alt"></i> Location Map</h2>
+                    <!-- <h2 class="venue-section-heading"><i class="fas fa-map-marked-alt"></i> Location Map</h2>
                     <div class="map-frame-container mb-5">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61888.66657964738!2d120.92598777794876!3d14.115267431166176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd776053693423%3A0x1641bbc56189044d!2sTagaytay%2C%20Cavite!5e0!3m2!1sen!2sph!4v1710000000000!5m2!1sen!2sph"
-                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3868.995954316202!2d120.94191331483584!3d14.111494990117978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd77a7f4749669%3A0xc682970669747974!2sTagaytay%20Combat%20Sports%20Center!5e0!3m2!1sen!2sph!4v1689608123456!5m2!1sen!2sph"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div> -->
 
                     <div class="row g-4">
                         <div class="col-md-4 col-sm-6">
@@ -1670,6 +2161,64 @@
 
         </div>
     </div>
+
+    <section class="tourist-spots-section">
+        <div class="container">
+            <div class="section-header-group text-center">
+                <h2 class="section-title">EXPLORE TAGAYTAY</h2>
+                <p class="section-subtitle">Discover the city's gems after the race.</p>
+                <div class="header-divider"></div>
+            </div>
+
+            <div class="spots-grid">
+
+                <div class="spot-card">
+                    <div class="spot-img-box">
+                        <img src="assets/images/taal-volcano.jpg" alt="Taal Volcano" class="spot-img">
+                        <div class="spot-overlay"></div>
+                    </div>
+                    <div class="spot-info">
+                        <h3>Taal Volcano</h3>
+                        <p>Experience the breathtaking view of the world's smallest active volcano.</p>
+                    </div>
+                </div>
+
+                <div class="spot-card">
+                    <div class="spot-img-box">
+                        <img src="assets/images/picnic-grove.jpg" alt="Picnic Grove" class="spot-img">
+                        <div class="spot-overlay"></div>
+                    </div>
+                    <div class="spot-info">
+                        <h3>Picnic Grove</h3>
+                        <p>Perfect for relaxing with a view, zipline, and cable car rides.</p>
+                    </div>
+                </div>
+
+                <div class="spot-card">
+                    <div class="spot-img-box">
+                        <img src="assets/images/peoples-park.jpg" alt="People's Park" class="spot-img">
+                        <div class="spot-overlay"></div>
+                    </div>
+                    <div class="spot-info">
+                        <h3>People's Park</h3>
+                        <p>The highest point in Tagaytay offering a 360-degree view of the city.</p>
+                    </div>
+                </div>
+
+                <div class="spot-card">
+                    <div class="spot-img-box">
+                        <img src="assets/images/sky-ranch.jpg" alt="Sky Ranch" class="spot-img">
+                        <div class="spot-overlay"></div>
+                    </div>
+                    <div class="spot-info">
+                        <h3>Sky Ranch</h3>
+                        <p>Amusement park with the famous Sky Eye ferris wheel.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
     <!-- optional content 1 -->
     <!-- <div class="rts-match-result-section section-gap">
         <div class="container">
