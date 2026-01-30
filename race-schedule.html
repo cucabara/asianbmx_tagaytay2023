@@ -273,23 +273,6 @@
             }
         }
     </style>
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-
-    <style>
-        /* Custom style para maging mas dramatic at dark-theme friendly */
-        
-        .swiper-slide img {
-            display: block;
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
-            cursor: pointer;
-            /* Para alam ng user na pwedeng i-click */
-        }
-    </style>
 </head>
 
 <body>
@@ -377,6 +360,7 @@
         <div class="navbar-sticky">
             <div class="navbar-part navbar-part1">
                 <div class="container">
+
                     <div class="navbar-inner">
                         <div class="letterhead">
                             <div class="letterhead-inner">
@@ -403,13 +387,12 @@
                                     <li class="has-dropdown">
                                         <a class="menu-item" href="about.html">About</a>
                                         <ul class="dropdown-ul">
-                                            <li class="dropdown-li"><a class="dropdown-link" href="about-organizer.html">About the City</a>
-                                                <li class="dropdown-li"><a class="dropdown-link" href="about-organizer.html">About the Competition</a>
+                                            <li class="dropdown-li"><a class="dropdown-link" href="about-city.html">About the City</a>
+                                                <li class="dropdown-li"><a class="dropdown-link" href="about-competition.html">About the Competition</a>
                                                     <li class="dropdown-li"><a class="dropdown-link" href="about-organizer.html">About the organizer</a>
                                         </ul>
 
                                         </li>
-
                                         <li class="has-dropdown"><a class="menu-item" href="#">Competition Guide</a>
                                             <ul class="dropdown-ul mega-dropdown">
                                                 <li class="mega-dropdown-li">
@@ -506,10 +489,11 @@
                                         </li>
                                         <li class="has-dropdown"><a class="menu-item" href="#">Contact Us</a>
                                             <ul class="dropdown-ul">
-                                                <li class="dropdown-li"><a class="dropdown-link" href="organization.html">Organization</a></li>
+                                                <li class="dropdown-li"><a class="dropdown-link" href="#">Organization</a></li>
                                                 <li class="dropdown-li"><a class="dropdown-link" href="#">Emergency Contact</a></li>
                                             </ul>
                                         </li>
+
 
                                         <!--  <li><a class="menu-item" href="contact.html">Contact</a></li> -->
                                 </ul>
@@ -697,10 +681,11 @@
                             </li>
                             <li class="mega-dropdown-li">
                                 <ul class="mega-dropdown-ul mm-show">
-                                    <li class="dropdown-li"><a class="dropdown-link" href="about-city.html">About the City</a>
-                                        <li class="dropdown-li"><a class="dropdown-link" href="about-competition.html">About the Competition</a>
-                                            <li class="dropdown-li"><a class="dropdown-link" href="about-organizer.html">About the Organizer</a>
-                                                <!-- <li class="dropdown-li"><a class="dropdown-link" href="event-details.html">Event
+                                    <li class="dropdown-li"><a class="dropdown-link" href="about-organizer.html">About the City</a>
+                                        <li class="dropdown-li"><a class="dropdown-link" href="about-organizer.html">About the Competition</a>
+                                            <li class="dropdown-li"><a class="dropdown-link" href="about-organizer.html">About the organizer</a>
+                                            </li>
+                                            <!-- <li class="dropdown-li"><a class="dropdown-link" href="event-details.html">Event
                                                                                         Details</a>
                                                                                 </li>
                                                                                 <li class="dropdown-li"><a class="dropdown-link" href="error.html">Error</a>
@@ -829,7 +814,7 @@
                                 </li>
                                 <li class="mega-dropdown-li">
                                     <ul class="mega-dropdown-ul mm-show">
-                                        <li class="dropdown-li"><a class="dropdown-link" href="organization.html">Organization</a>
+                                        <li class="dropdown-li"><a class="dropdown-link" href="#">Organization</a>
                                         </li>
                                         <li class="dropdown-li"><a class="dropdown-link" href="#">Emergency Contact</a>
                                         </li>
@@ -894,11 +879,11 @@
                     <div class="banner-content">
                         <div class="page-path">
                             <ul>
-                                <li class="dropdown-li"><a class="dropdown-link" href="#">CONTACT US</a>
-                                    <li class="dropdown-li"><a class="dropdown-link" href="#">ORGANIZATION</a>
+                                <li><a class="home-page-link" href="#">Race info</a></li>
+                                <li><a class="current-page" href="#">Race Schedule</a></li>
                             </ul>
                         </div>
-                        <h1 class="banner-heading">ABOUT THE ORGANIZATION</h1>
+                        <h1 class="banner-heading">Race Schedule</h1>
                     </div>
                 </div>
             </div>
@@ -909,550 +894,352 @@
 
 
     <!--================= Team Section Start Here =================-->
-
-    <!--================= Team Section End Here =================-->
-
-    <!--================= Additional 1 Section Start Here =================-->
-
-    <!-- MAIN CONTENT -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <div class="rts-org-section" style="position: relative; background: #0b0b15; overflow: hidden; padding-top: 120px; padding-bottom: 150px; min-height: 100vh;">
-
-        <div class="tech-orb orb-blue"></div>
-        <div class="tech-orb orb-red"></div>
-        <div class="tech-orb orb-sun"></div>
-
-        <div class="bg-grid-overlay"></div>
-
-        <div class="container" style="position: relative; z-index: 5;">
-
-            <div class="row justify-content-center mb--80">
-                <div class="col-lg-8 text-center" data-aos="fade-down" data-aos-duration="1000">
-                    <div class="title-badge">
-                        <span style="color:#0038A8">PHIL</span><span style="color:#FCD116">CYC</span><span style="color:#CE1126">LING</span>
+    <!--<div class="rts-team-section inner section-gap">
+    <div class="container">
+        <div class="team-section-inner inner">
+            <!--<div class="row">
+                <div class="col-xl-3 col-md-4 col-sm-6">
+                    <div class="team-wraper">
+                        <div class="player-card">
+                            <a class="image" href="team-details.html"><img src="assets/images/team/team01.png" alt=""></a>
+                            <div class="number">11</div>
+                            <ul class="social-area">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="profile">
+                            <p class="position">FORWARD</p>
+                            <a href="#" class="name">MAXIELS DAVID</a>
+                        </div>
                     </div>
-                    <h2 class="main-title">ORGANIZATIONAL STRUCTURE</h2>
-                    <p class="sub-text">The visionaries behind the Integrated Cycling Federation of the Philippines.</p>
-                    <div class="separator-line"></div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6">
+                    <div class="team-wraper">
+                        <div class="player-card">
+                            <a class="image" href="team-details.html"><img src="assets/images/team/team02.png" alt=""></a>
+                            <div class="number">7</div>
+                            <ul class="social-area">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="profile">
+                            <p class="position">WINGER</p>
+                            <a href="#" class="name">VEN DIESEL</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6">
+                    <div class="team-wraper">
+                        <div class="player-card">
+                            <a class="image" href="team-details.html"><img src="assets/images/team/team03.png" alt=""></a>
+                            <div class="number">9</div>
+                            <ul class="social-area">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="profile">
+                            <p class="position">WINGER</p>
+                            <a href="#" class="name">NED STARK</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6">
+                    <div class="team-wraper">
+                        <div class="player-card">
+                            <a class="image" href="team-details.html"><img src="assets/images/team/team04.png" alt=""></a>
+                            <div class="number">10</div>
+                            <ul class="social-area">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="profile">
+                            <p class="position">MID-FIELDER</p>
+                            <a href="team-details.html" class="name">JOHN WICK</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6">
+                    <div class="team-wraper">
+                        <div class="player-card">
+                            <a class="image" href="team-details.html"><img src="assets/images/team/team05.png" alt=""></a>
+                            <div class="number">9</div>
+                            <ul class="social-area">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="profile">
+                            <p class="position">WINGER</p>
+                            <a href="team-details.html" class="name">TYRION LENNISTER</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6">
+                    <div class="team-wraper">
+                        <div class="player-card">
+                            <a class="image" href="team-details.html"><img src="assets/images/team/team06.png" alt=""></a>
+                            <div class="number">10</div>
+                            <ul class="social-area">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="profile">
+                            <p class="position">MID-FIELDER</p>
+                            <a href="team-details.html" class="name">SAMWELL TARLY</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6">
+                    <div class="team-wraper">
+                        <div class="player-card">
+                            <a class="image" href="team-details.html"><img src="assets/images/team/team07.png" alt=""></a>
+                            <div class="number">7</div>
+                            <ul class="social-area">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="profile">
+                            <p class="position">WINGER</p>
+                            <a href="team-details.html" class="name">EURON GREYJOY</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-4 col-sm-6">
+                    <div class="team-wraper">
+                        <div class="player-card">
+                            <a class="image" href="team-details.html"><img src="assets/images/team/team08.png" alt=""></a>
+                            <div class="number">11</div>
+                            <ul class="social-area">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="profile">
+                            <p class="position">FORWARD</p>
+                            <a href="team-details.html" class="name">JOHN SNOW</a>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>-->
+    <!--================= Team Section End Here =================-->
 
-            <style>
-                /* --- PH THEME COLORS --- */
-                
-                 :root {
-                    --ph-blue: #0038A8;
-                    --ph-red: #CE1126;
-                    --ph-yellow: #FCD116;
-                    --ph-white: #FFFFFF;
-                }
-                /* --- BACKGROUND ANIMATIONS --- */
-                
-                .bg-grid-overlay {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-                    background-size: 50px 50px;
-                    opacity: 0.2;
-                    pointer-events: none;
-                    z-index: 1;
-                }
-                
-                .tech-orb {
-                    position: absolute;
-                    border-radius: 50%;
-                    filter: blur(90px);
-                    opacity: 0.45;
-                    z-index: 0;
-                    animation: floatOrb 12s infinite alternate;
-                }
-                /* The Flag Colors Positioning */
-                
-                .orb-blue {
-                    width: 600px;
-                    height: 600px;
-                    background: var(--ph-blue);
-                    top: -150px;
-                    left: -100px;
-                    /* Top Left */
-                }
-                
-                .orb-red {
-                    width: 600px;
-                    height: 600px;
-                    background: var(--ph-red);
-                    bottom: -150px;
-                    right: -100px;
-                    /* Bottom Right */
-                    animation-delay: 2s;
-                }
-                
-                .orb-sun {
-                    width: 400px;
-                    height: 400px;
-                    background: var(--ph-yellow);
-                    top: 15%;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    /* Behind President */
-                    opacity: 0.3;
-                    filter: blur(100px);
-                }
-                
-                @keyframes floatOrb {
-                    from {
-                        transform: translate(0, 0) scale(1);
-                    }
-                    to {
-                        transform: translate(30px, 30px) scale(1.1);
-                    }
-                }
-                /* --- TYPOGRAPHY --- */
-                
-                .title-badge {
-                    font-weight: 800;
-                    letter-spacing: 3px;
-                    font-size: 14px;
-                    text-transform: uppercase;
-                    margin-bottom: 15px;
-                    display: inline-block;
-                    background: rgba(255, 255, 255, 0.05);
-                    padding: 8px 20px;
-                    border-radius: 50px;
-                    border: 1px solid rgba(255, 255, 255, 0.1);
-                    color: #fff;
-                }
-                
-                .main-title {
-                    color: #fff;
-                    font-size: 3.5rem;
-                    text-transform: uppercase;
-                    font-weight: 800;
-                    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-                    letter-spacing: -1px;
-                    margin-bottom: 15px;
-                }
-                
-                .sub-text {
-                    color: #aaa;
-                    font-size: 1.1rem;
-                    max-width: 600px;
-                    margin: 0 auto;
-                }
-                
-                .separator-line {
-                    width: 180px;
-                    height: 3px;
-                    margin: 30px auto 0;
-                    border-radius: 2px;
-                    /* Blue to Red Gradient na may Fade sa dulo */
-                    background: linear-gradient(90deg, transparent, #0038A8, #CE1126, transparent);
-                    opacity: 0.7;
-                }
-                /* --- TREE STRUCTURE --- */
-                
-                .org-tree {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    gap: 80px;
-                }
-                
-                .org-row {
-                    display: flex;
-                    justify-content: center;
-                    flex-wrap: wrap;
-                    gap: 30px;
-                    position: relative;
-                    width: 100%;
-                    perspective: 1000px;
-                }
-                /* Connecting Lines - White/Gray for neutrality */
-                
-                .org-row:not(:last-child)::after {
-                    content: '';
-                    position: absolute;
-                    bottom: -80px;
-                    left: 50%;
-                    width: 2px;
-                    height: 80px;
-                    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
-                    transform: translateX(-50%);
-                    z-index: 0;
-                }
-                
-                .split-branch {
-                    position: relative;
-                    margin-top: 20px;
-                }
-                
-                .split-branch::before {
-                    content: '';
-                    position: absolute;
-                    top: -40px;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 320px;
-                    height: 40px;
-                    border-top: 2px solid rgba(255, 255, 255, 0.2);
-                    border-left: 2px solid rgba(255, 255, 255, 0.2);
-                    border-right: 2px solid rgba(255, 255, 255, 0.2);
-                    z-index: 0;
-                }
-                /* --- CARD DESIGN --- */
-                
-                .org-card {
-                    position: relative;
-                    width: 300px;
-                    padding: 40px 25px;
-                    background: rgba(255, 255, 255, 0.03);
-                    backdrop-filter: blur(15px);
-                    -webkit-backdrop-filter: blur(15px);
-                    border: 1px solid rgba(255, 255, 255, 0.1);
-                    border-radius: 20px;
-                    text-align: center;
-                    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-                    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-                    overflow: hidden;
-                }
-                /* Shine Effect */
-                
-                .org-card::before {
-                    content: '';
-                    position: absolute;
-                    top: 0;
-                    left: -100%;
-                    width: 50%;
-                    height: 100%;
-                    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.05), transparent);
-                    transform: skewX(-25deg);
-                    transition: 0.5s;
-                    pointer-events: none;
-                }
-                
-                .org-card:hover::before {
-                    left: 150%;
-                }
-                
-                .org-card:hover {
-                    transform: translateY(-15px);
-                    background: rgba(40, 40, 55, 0.6);
-                    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
-                }
-                /* Image Container */
-                
-                .org-img-wrap {
-                    width: 130px;
-                    height: 130px;
-                    margin: 0 auto 25px;
-                    position: relative;
-                    border-radius: 50%;
-                    padding: 5px;
-                    background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), transparent);
-                    overflow: hidden;
-                }
-                /* !!! THE FIX IS HERE (center top) !!! */
-                
-                .org-img-wrap img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    object-position: center top;
-                    /* NAKA-CENTER TOP NA */
-                    border-radius: 50%;
-                    border: 3px solid rgba(255, 255, 255, 0.1);
-                    transition: transform 0.5s ease;
-                }
-                
-                .org-card:hover .org-img-wrap img {
-                    transform: scale(1.1);
-                }
-                /* Text */
-                
-                .name {
-                    font-size: 20px;
-                    font-weight: 800;
-                    color: #fff;
-                    text-transform: uppercase;
-                    margin-bottom: 8px;
-                    line-height: 1.2;
-                }
-                
-                .role {
-                    font-size: 13px;
-                    font-weight: 600;
-                    text-transform: uppercase;
-                    letter-spacing: 1.5px;
-                    display: block;
-                }
-                /* --- RANK THEMES (Flag Colors) --- */
-                /* PRESIDENT = SUN (Yellow/Gold) */
-                
-                .boss-card {
-                    border-color: rgba(252, 209, 22, 0.4);
-                    width: 360px;
-                    background: linear-gradient(180deg, rgba(30, 30, 40, 0.8), rgba(20, 20, 10, 0.9));
-                }
-                
-                .boss-card .org-img-wrap {
-                    border: 2px solid var(--ph-yellow);
-                    box-shadow: 0 0 20px rgba(252, 209, 22, 0.2);
-                }
-                
-                .boss-card .name {
-                    font-size: 26px;
-                    color: var(--ph-yellow);
-                }
-                
-                .boss-card .role {
-                    color: #fff;
-                    opacity: 0.9;
-                }
-                
-                .boss-card:hover {
-                    border-color: var(--ph-yellow);
-                    box-shadow: 0 30px 80px rgba(252, 209, 22, 0.15);
-                }
-                /* VPs/Congress/Mayors = BLUE (Peace/Justice) */
-                
-                .vip-card .org-img-wrap {
-                    border-color: rgba(0, 56, 168, 0.3);
-                }
-                
-                .vip-card .role {
-                    color: #4dabf7;
-                }
-                
-                .vip-card:hover {
-                    border-color: var(--ph-blue);
-                    box-shadow: 0 20px 50px rgba(0, 56, 168, 0.2);
-                }
-                
-                .vip-card:hover .org-img-wrap {
-                    border-color: var(--ph-blue);
-                }
-                /* DIRECTORS = RED (Valor/Action) */
-                
-                .dir-card .org-img-wrap {
-                    border-color: rgba(206, 17, 38, 0.3);
-                }
-                
-                .dir-card .role {
-                    color: #ff6b6b;
-                }
-                
-                .dir-card:hover {
-                    border-color: var(--ph-red);
-                    box-shadow: 0 20px 50px rgba(206, 17, 38, 0.2);
-                }
-                
-                .dir-card:hover .org-img-wrap {
-                    border-color: var(--ph-red);
-                }
-                /* TD Special - White/Neutral */
-                
-                .td-card {
-                    border: 1px solid rgba(255, 255, 255, 0.2);
-                }
-                
-                .td-card .role {
-                    color: var(--ph-yellow);
-                    font-weight: bold;
-                }
-                /* Mobile Fix */
-                /* --- MOBILE FIX (UPDATED) --- */
-                
-                @media (max-width: 768px) {
-                    .main-title {
-                        font-size: 2rem;
-                        line-height: 1.1;
-                    }
-                    .org-tree {
-                        gap: 40px;
-                    }
-                    .org-row:not(:last-child)::after,
-                    .split-branch::before {
-                        display: none;
-                    }
-                    /* Force fit sa screen ang mga cards */
-                    .org-card,
-                    .boss-card,
-                    .td-card {
-                        width: 100% !important;
-                        max-width: 320px !important;
-                        margin: 0 auto;
-                    }
-                    .tech-orb {
-                        opacity: 0.3;
-                    }
-                }
-            </style>
+    <!--================= MAIN CONTENT=================-->
+    <div class="rts-match-result-section rts-match-result-section2 rts-match-schedule-section inner section-gap">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="match-single">
+                        <div class="match-single-content">
+                            <div class="match-scores">
+                                <div class="club club1">
+                                    <div class="club-logo mr--20">
+                                        <span class="club-name"> Race events will proceed following the current UCI race format.
+                                            RULES.</span>
+                                        <!--<img src="assets/images/clubs/1.png" alt="club-logo">-->
+                                    </div>
+                                </div>
 
-            <div class="org-tree">
+                            </div>
 
-                <div class="org-row">
-                    <div class="org-card boss-card" data-aos="zoom-in" data-aos-duration="1200">
-                        <div class="org-img-wrap">
-                            <img src="assets/images/organization/Dato-Amarjit Singh-Gill.jpg" alt="Dato Amarjit Singh Gill" loading="lazy">
-                        </div>
-                        <h3 class="name">Dato' Amarjit Singh Gill</h3>
-                        <span class="role"><i class="fas fa-sun" style="color:#FCD116; margin-right:5px;"></i>Vice President & President</span>
-                        <span class="role" style="font-size: 10px; opacity: 0.6; margin-top: 5px; color:#fff;">UCI & ACC</span>
-                    </div>
-                    <div class="org-card boss-card" data-aos="zoom-in" data-aos-duration="1200">
-                        <div class="org-img-wrap">
-                            <img src="assets/images/organization/abraham-tolentino.jpg" alt="Abraham Tolentino" loading="lazy">
-                        </div>
-                        <h3 class="name">Abraham N. Tolentino</h3>
-                        <span class="role"><i class="fas fa-sun" style="color:#FCD116; margin-right:5px;"></i>President</span>
-                        <span class="role" style="font-size: 10px; opacity: 0.6; margin-top: 5px; color:#fff;">Integrated Cycling Federation of the Philippines</span>
-                    </div>
-                </div>
+                            <div class="row justify-content-center" style="margin-top: 50px; margin-bottom: 50px;">
+                                <div class="col-12 text-center">
+                                    <a href="https://docs.google.com/spreadsheets/d/1rY0c-lblB2PtwBHRTeksJjKbj_BLsVBN9JsUWWXeMJY/edit?usp=drive_link" download="ACC_Track_2026_Race_" class="rts-btn btn-primary" style="padding: 15px 40px; font-size: 18px; border-radius: 5px; text-transform: uppercase; letter-spacing: 1px;">
+                                        <i class="fas fa-file-pdf" style="margin-right: 10px;"></i> Download Race Schedule
+                                    </a>
 
-                <div class="org-row">
-                    <div class="org-card vip-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="org-img-wrap">
-                            <img src="assets/images/organization/oscar-rodriguez.jpg" alt="Oscar Rodriguez" loading="lazy">
-                        </div>
-                        <h4 class="name">Oscar D. Rodriguez Jr.</h4>
-                        <span class="role">Vice President</span>
-                        <small style="color:#bbb; font-size:11px; display:block; margin-top:4px;">Integrated Cycling Federation of the Philippines</small>
-                    </div>
-                    <div class="org-card vip-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="org-img-wrap">
-                            <img src="assets/images/organization/aniela-tolentino.jpg" alt="Aniela Bianca Tolentino" loading="lazy">
-                        </div>
-                        <h4 class="name">Hon. Aniela Bianca D. Tolentino</h4>
-                        <span class="role">Congresswoman</span>
-                        <small style="color:#bbb; font-size:11px; display:block; margin-top:4px;">8th District of Cavite</small>
-                    </div>
-                    <div class="org-card vip-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="org-img-wrap">
-                            <img src="assets/images/organization/avelino-sumagui.jpg" alt="Avelino Sumagui" loading="lazy">
-                        </div>
-                        <h4 class="name">Atty. Avelino M. Sumagui</h4>
-                        <span class="role">Secretary General</span>
-                        <small style="color:#bbb; font-size:11px; display:block; margin-top:4px;">Integrated Cycling Federation of the Philippines</small>
-                    </div>
-                </div>
+                                    <!-- <a href="assets/downloads/vicinity-map.pdf" target="_blank" class="rts-btn btn-primary" style="margin-left: 20px; padding: 15px 40px; font-size: 18px; border-radius: 5px; text-transform: uppercase; letter-spacing: 1px; background-color: #28a745; border-color: #28a745;">
+                                        <i class="fas fa-map" style="margin-right: 10px;"></i> DOWNLOAD VICINITY MAP
+                                    </a> -->
 
-                <div class="org-row split-branch" style="justify-content: center;">
-                    <div class="org-card vip-card" data-aos="fade-up" data-aos-delay="400">
-                        <div class="org-img-wrap">
-                            <img src="assets/images/organization/athena-tolentino.jpg" alt="Athena Bryana Tolentino" loading="lazy">
-                        </div>
-                        <h4 class="name">Hon. Athena Bryana D. Tolentino</h4>
-                        <span class="role">Former Governor</span>
-                        <small style="color:#bbb; font-size:11px; display:block; margin-top:4px;">Provincial Gov't of Cavite</small>
-                    </div>
-                    <div class="org-card vip-card" data-aos="fade-up" data-aos-delay="400">
-                        <div class="org-img-wrap">
-                            <img src="assets/images/organization/aizack-tolentino.jpg" alt="Hon. Aizack Tolentino" loading="lazy">
-                        </div>
-                        <h4 class="name">Hon. Aizack Brent D. Tolentino</h4>
-                        <span class="role">Tagaytay City Mayor</span>
-                    </div>
-                    <div class="org-card vip-card" data-aos="fade-up" data-aos-delay="500">
-                        <div class="org-img-wrap">
-                            <img src="assets/images/organization/agnes-tolentino.jpg" alt="Hon. Agnes D. Tolentino" loading="lazy">
-                        </div>
-                        <h4 class="name">Hon. Agnes D. Tolentino</h4>
-                        <span class="role">Tagaytay City Vice Mayor</span>
-                    </div>
-                </div>
+                                    <!-- <p style="color: #999; font-size: 13px; margin-top: 15px;">Official V1.2 (PDF
+                                        Format)</p> -->
+                                </div>
+                            </div>
 
-                <div class="org-row">
-                    <div class="org-card td-card" style="width: 340px;" data-aos="zoom-in-up" data-aos-delay="600">
-                        <div class="org-img-wrap">
-                            <img src="assets/images/organization/kamilla-sumagui.jpg" alt="Kamilla Sumagui" loading="lazy">
-                        </div>
-                        <h4 class="name">Kamilla M. Sumagui</h4>
-                        <span class="role"><i class="fas fa-star" style="font-size:10px; vertical-align:middle; margin-right:5px;"></i>Tournament Director</span>
-                    </div>
-                </div>
+                            <div class="container" style="padding-bottom: 50px;">
+                                <div class="row g-4">
+                                    <div class="col-lg-6">
+                                        <div style="background: #111; padding: 30px; border-left: 4px solid #007bff;">
+                                            <h4 style="color: #fff;">SPRINT & KEIRIN</h4>
+                                            <p style="color: #bbb; font-size: 14px;">
+                                                Explosive power meets tactics. Riders reach speeds of 70kph+ in a battle of cat and mouse.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div style="background: #111; padding: 30px; border-left: 4px solid #dc3545;">
+                                            <h4 style="color: #fff;">PURSUIT & OMNIUM</h4>
+                                            <p style="color: #bbb; font-size: 14px;">
+                                                The ultimate test of stamina. Includes the 4-event Omnium and the precision-based Team Pursuit.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                <div class="org-row">
-                    <div class="org-card dir-card" data-aos="fade-up" data-aos-delay="700">
-                        <div class="org-img-wrap">
-                            <img src="assets/images/organization/joshua-sumagui.jpg" alt="Joshua Sumagui" style="object-position: center 70%;" loading="lazy">
                         </div>
-                        <h4 class="name">Joshua Noel G. Sumagui</h4>
-                        <span class="role">Asst. Tournament Director</span>
-                        <small style="color:#ff6b6b; font-size:11px; display:block; margin-top:4px;">Technical Matters</small>
-                    </div>
-                    <div class="org-card dir-card" data-aos="fade-up" data-aos-delay="800">
-                        <div class="org-img-wrap">
-                            <img src="assets/images/organization/lorenzo-lomibao.jpg" alt="Lorenzo Lomibao" loading="lazy">
+                        <!--<div class="match-bottom-action">
+                        <a href="shop.html" class="action-item first-child">GET TICKETS</a>
+                        <div class="play-video">
+                            <a href="https://www.youtube.com/watch?v=G4t6TqG5LM8"
+                                class="action-item popup-video">WATCH STREAM</a>
                         </div>
-                        <h4 class="name">Lorenzo M. Lomibao Jr.</h4>
-                        <span class="role">Asst. Tournament Director</span>
-                        <small style="color:#ff6b6b; font-size:11px; display:block; margin-top:4px;">Marketing & Media</small>
-                    </div>
-                </div>
-
-                <div class="org-row">
-                    <div class="org-card dir-card" data-aos="fade-up" data-aos-delay="900">
-                        <div class="org-img-wrap">
-                            <img src="assets/images/organization/joshua-alvarez.jpg" alt="Joshua Alvarez" loading="lazy">
-                        </div>
-                        <h4 class="name">Joshua L. Alvarez</h4>
-                        <span class="role">Director</span>
-                        <small style="color:#bbb; font-size:11px; display:block; margin-top:4px;">International Relations</small>
-                    </div>
-                    <!-- <div class="org-card dir-card" data-aos="fade-up" data-aos-delay="1000">
-                        <div class="org-img-wrap">
-                            <img src="assets/images/organization/sunshine-mendoza.jpg" alt="Sunshine Mendoza" loading="lazy">
-                        </div>
-                        <h4 class="name">Sunshine Mendoza</h4>
-                        <span class="role">Asst. Tournament Director</span>
-                        <small style="color:#ff6b6b; font-size:11px; display:block; margin-top:4px;">Sporting Control</small>
-                    </div> -->
-                    <div class="org-card dir-card" data-aos="fade-up" data-aos-delay="1100">
-                        <div class="org-img-wrap">
-                            <img src="assets/images/organization/adrian-caraan.jpg" alt="Adrian Caraan" loading="lazy">
-                        </div>
-                        <h4 class="name">Adrian M. Caraan</h4>
-                        <span class="role">Director</span>
-                        <small style="color:#bbb; font-size:11px; display:block; margin-top:4px;">Venue & Logistics</small>
+                    </div>-->
                     </div>
                 </div>
 
             </div>
         </div>
     </div>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            once: true,
-            offset: 50,
-            duration: 900,
-            easing: 'ease-out-cubic',
-        });
-    </script>
-    <!-- OLD CONTENT DOWNLOAD  -->
-
-    </div>
-    </div>
-
-    </div>
-    </div>
-    </div>
     <!--================= Additional 1 Section End Here =================-->
 
     <!--================= Additional 2 Start Here =================-->
+    <!-- <div class="rts-about-section  about section-gap">
+        <div class="container">
+            <div class="about-inner">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 col-12">
+                        <div class="about-thumb"> -->
+    <!--<div class="img1"><img src="assets/images/gallery/park2.jpg" alt="about-thumb"></div>-->
+    <!-- <div class="img2"><img src="assets/images/gallery/park.png" alt="about-thumb"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-12">
+                        <div class="contents">
+                            <div class="section-title-area section-title-area1 text-start">
+                                <h1 class="section-title"><span>BMX Park</span> </h1>
+                                <p>
+                                <ul>
+                                    <li>
 
+                                        &#10004; &nbsp;&nbsp;&nbsp;&nbsp;Men: 14 | Women: 7
+                                        <br> &#10004; &nbsp;&nbsp;&nbsp;&nbsp;Men: 4/5/5 Athletes per group/heat (3
+                                        heats)
+                                        <br> &#10004; &nbsp;&nbsp;&nbsp;&nbsp;Women: 7 Athletes per group/heat (1 heat)
+                                        <br> &#10004; &nbsp;&nbsp;&nbsp;&nbsp;2 runs for each rider
+                                        <br> &#10004; &nbsp;&nbsp;&nbsp;&nbsp;60 seconds per run
+                                        <br> &#10004; &nbsp;&nbsp;&nbsp;&nbsp;Judging on overall impression
+
+
+                                        <br><br>&#10004; &nbsp;&nbsp;&nbsp;&nbsp;Qualification Run - 2 runs. Both runs
+                                        count, average score for both runs.
+
+
+                                        <br><br>&#10004; &nbsp;&nbsp;&nbsp;&nbsp;Final Run – 2 runs each rider. Best run
+                                        will count. Judges will select which is best of 1st
+                                        run from the 2nd run.
+                                        <br>&#10004; &nbsp;&nbsp;&nbsp;&nbsp;<b>Men:</b> Top 12 athletes to be selected
+                                        from qualifiers
+                                        <br>&#10004; &nbsp;&nbsp;&nbsp;&nbsp;<b>Women:</b> Top 4 athletes to be selected
+                                        from qualifiers
+
+                                    </li>
+
+                                </ul>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-inner">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 col-12">
+                        <div class="about-thumb"> -->
+    <!--<div class="img1"><img src="assets/images/gallery/flatland1.webp" alt="about-thumb"></div>-->
+    <!-- <div class="img2"><img src="assets/images/gallery/flatland2.jpg" alt="about-thumb"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-12">
+                        <div class="contents">
+                            <div class="section-title-area section-title-area1 text-start">
+                                <h1 class="section-title"><span>BMX Flatland</span> </h1>
+                                <p>
+                                <ul>
+                                    <li>
+
+                                        &#10004; &nbsp;&nbsp;&nbsp;&nbsp;Men: 14 | Women: 7
+                                        <br> &#10004; &nbsp;&nbsp;&nbsp;&nbsp;Men: 5/5 Athletes per group/heat (2 heats)
+                                        <br> &#10004; &nbsp;&nbsp;&nbsp;&nbsp;Women: 7 Athletes per group/heat (1 heat)
+                                        <br> &#10004; &nbsp;&nbsp;&nbsp;&nbsp;1 run for each rider
+                                        <br> &#10004; &nbsp;&nbsp;&nbsp;&nbsp;180 seconds per run
+                                        <br> &#10004; &nbsp;&nbsp;&nbsp;&nbsp;Judging on overall impression
+
+
+                                        <br><br>&#10004; &nbsp;&nbsp;&nbsp;&nbsp;Qualification Run - 1 run each rider
+                                        for 3 minutes
+
+
+                                        <br><br>&#10004; &nbsp;&nbsp;&nbsp;&nbsp;Final Round –1 run. 3 minutes. (Same
+                                        format)
+
+                                        <br>&#10004; &nbsp;&nbsp;&nbsp;&nbsp;<b>Men:</b> Top 8 Athletes to be selected
+                                        <br>&#10004; &nbsp;&nbsp;&nbsp;&nbsp;<b>Women:</b> Top 4 Athletes to be selected
+
+                                    </li>
+
+                                </ul>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+ -->
 
     <!--================= Additional 2 End Here =================-->
 
     <!--================= Additional 3 Section Start Here =================-->
 
+    <!-- <div class="rts-match-result-section rts-match-result-section2 rts-match-schedule-section inner section-gap">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <div class="match-single">
+                        <div class="match-single-content">
+                            <div class="match-scores">
+                                <div class="club club1">
+                                    <div class="club-logo mr--20">
+                                        <span class="club-name"> CHAMPIONSHIPS CATEGORIES
+                                            <br>BMX Park Men Open (open to any age)
+                                            <br>BMX Park Women Open (open to any age)
+                                            <br>BMX Flatland Men Open (open to any age)
+                                            <br>BMX Flatland Women Open (open to any age)
+                                        </span>
+                                        <img src="assets/images/clubs/1.png" alt="club-logo">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+            </div>
+        </div>
+    </div> -->
     <!--================= Additional 3 Section End Here =================-->
 
 
@@ -1463,95 +1250,223 @@
 
     <!--================= Team Details Section Start Here =================-->
 
-
-    <!-- ================= Team Details Section End Here ================= -->
-
-    <!-- logos offical -->
-    <div style="background-color: #0b0b15; width: 100%; padding: 20px 0 100px 0; position: relative; z-index: 5;">
-
-        <div class="container">
-            <div class="affiliations-panel" data-aos="fade-up" data-aos-delay="500" style="background: #14141a; border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px; padding: 50px 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
-
-                <div class="row justify-content-center">
-                    <div class="col-12 text-center">
-                        <p style="color: #FCD116; font-size: 0.9rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 40px; font-weight: 800; text-shadow: 0 0 10px rgba(252, 209, 22, 0.3);">
-                            — Officially Recognized By —
-                        </p>
-
-                        <div class="affiliations-wrapper" style="display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; align-items: center;">
-
-                            <div class="partner-logo">
-                                <h2 class="metallic-text">UCI</h2>
-                                <span class="partner-subtext">Union Cycliste<br>Internationale</span>
+    <!--<div class="rts-team-member-details">
+    <div class="container">
+        <div class="team-details-single">
+            <h3 class="title">COACH JOSE MOURIN</h3>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="team-picture">
+                        <img src="assets/images/team/financial.jpg" alt="playerspic">
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="team-status-area">
+                        <div class="status-box">
+                            <div class="status-item">
+                                <span class="status-name">NATIONALITY:</span>
+                                <span class="status-number"><img src="assets/images/team/arg.png" alt=""> ARGENTINA</span>
                             </div>
-
-                            <div class="partner-logo">
-                                <h2 class="metallic-text">ACC</h2>
-                                <span class="partner-subtext">Asian Cycling<br>Confederation</span>
+                            <div class="status-item">
+                                <span class="status-name">CURRENT TEAM:</span>
+                                <a href="index.html" class="status-number club">KESTER</a>
                             </div>
-
-                            <div class="partner-logo">
-                                <h2 class="metallic-text">POC</h2>
-                                <span class="partner-subtext">Philippine Olympic<br>Committee</span>
+                            <div class="status-item">
+                                <span class="status-name">PAST TEAM</span>
+                                <span class="status-number">INTER MILAN</span>
                             </div>
-
-                            <div class="partner-logo">
-                                <h2 class="metallic-text">PSC</h2>
-                                <span class="partner-subtext">Philippine Sports<br>Commission</span>
+                            <div class="status-item">
+                                <span class="status-name">AGE</span>
+                                <span class="status-number">45</span>
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
+        <div class="team-details-single">
+            <h3 class="title">PHYSICIAN SAM FOSTER</h3>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="team-picture">
+                        <img src="assets/images/team/physician.jpg" alt="playerspic">
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="team-status-area">
+                        <div class="status-box">
+                            <div class="status-item">
+                                <span class="status-name">NATIONALITY:</span>
+                                <span class="status-number"><img src="assets/images/team/ita.png" alt=""> ITALY</span>
+                            </div>
+                            <div class="status-item">
+                                <span class="status-name">CURRENT TEAM:</span>
+                                <a href="index.html" class="status-number club">KESTER</a>
+                            </div>
+                            <div class="status-item">
+                                <span class="status-name">PAST TEAM</span>
+                                <span class="status-number">ASTON VILLA</span>
+                            </div>
+                            <div class="status-item">
+                                <span class="status-name">AGE</span>
+                                <span class="status-number">45</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="team-details-single">
+            <h3 class="title">FINANCIAL ADVISOR STEPHEN CORR</h3>
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="team-picture">
+                        <img src="assets/images/team/coach.jpg" alt="playerspic">
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="team-status-area">
+                        <div class="status-box">
+                            <div class="status-item">
+                                <span class="status-name">NATIONALITY:</span>
+                                <span class="status-number"><img src="assets/images/team/por.png" alt=""> PORTUGAL</span>
+                            </div>
+                            <div class="status-item">
+                                <span class="status-name">CURRENT TEAM:</span>
+                                <a href="index.html" class="status-number club">KESTER</a>
+                            </div>
+                            <div class="status-item">
+                                <span class="status-name">PAST TEAM</span>
+                                <span class="status-number">ATLANTA</span>
+                            </div>
+                            <div class="status-item">
+                                <span class="status-name">AGE</span>
+                                <span class="status-number">45</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+================= Team Details Section End Here =================-->
 
-    <style>
-        .partner-logo {
-            text-align: center;
-            opacity: 0.7;
-            transition: all 0.4s ease;
-            cursor: default;
-            transform: scale(0.95);
-        }
-        
-        .partner-logo:hover {
-            opacity: 1;
-            transform: scale(1.05) translateY(-5px);
-        }
-        /* Metallic Text Effect */
-        
-        .metallic-text {
-            margin: 0;
-            font-weight: 900;
-            letter-spacing: -2px;
-            font-size: 3.5rem;
-            /* Pwede mong gawing 3rem kung masyadong malaki */
-            background: linear-gradient(to bottom, #ffffff, #777777);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.8));
-        }
-        
-        .partner-subtext {
-            font-size: 11px;
-            color: #888 !important;
-            display: block;
-            text-transform: uppercase;
-            margin-top: 5px;
-            letter-spacing: 1px;
-        }
-        /* Gold hover effect */
-        
-        .partner-logo:hover .metallic-text {
-            background: linear-gradient(to bottom, #FCD116, #B8860B);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0px 0px 15px rgba(252, 209, 22, 0.6));
-        }
-    </style>
+
+    <!--================= Footer Start Here =================-->
+    <div class="footer footer1">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="row">
+                    <div class="col-xl-3 col-md-6">
+                        <div class="footer-widget">
+                            <div class="footer-logo"><img src="assets/images/2023_ACC_BMX_Letterhead_1.png" alt="footer-logo">
+                            </div>
+                            <p class="footer-text">Experience the Speed: Witness the Pinnacle of Asian Track Cycling Excellence in 2026!
+                            </p>
+                            <div class="social-links">
+                                <!-- <a href="https://www.facebook.com/profile.php?id=100094321766590" class="platform"><i
+                                        class="fab fa-facebook-f"></i></a> -->
+                                <!-- <a href="#0" class="platform"><i
+                                        class="fab fa-twitter"></i></a>
+                                <a href="#0" class="platform"><i
+                                        class="fab fa-behance"></i></a>
+                                <a href="#0" class="platform"><i
+                                        class="fab fa-youtube"></i></a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-sm-6">
+                        <div class="footer-widget">
+                            <h3 class="footer-widget-title"><span class="decorator"></span> ESSENTIAL LINKS</h3>
+                            <ul class="widget-items cata-widget">
+                                <li class="widget-list-item"><a href="about.html">ABOUT US</a></li>
+                                <!--  <li class="widget-list-item"><a href="match-schedule.html">SCHEDULE</a></li> -->
+                                <li class="widget-list-item"><a href="team.html">Technical Guide</a></li>
+                                <!--    <li class="widget-list-item"><a href="league-standings.html">AWARDING</a></li>
+                                <li class="widget-list-item"><a href="gallery.html">GALLERY</a></li>
+                                <li class="widget-list-item"><a href="contact.html">CONTACT</a></li> -->
+                                <!-- <li class="widget-list-item"><a href="price-table.html">PRICE TABLE</a></li> -->
+                                <!-- <li class="widget-list-item"><a href="shop.html">SHOP</a></li> -->
+                                <!-- <li class="widget-list-item"><a href="our-players.html">OUR PLAYERS</a></li> -->
+                                <!-- <li class="widget-list-item"><a href="arena.html">ARENA</a></li> -->
+                                <!-- <li class="widget-list-item"><a href="team-details.html">TEAM DETAILS</a></li> -->
+                                <!-- <li class="widget-list-item"><a href="history.html">OUR HISTORY</a></li> -->
+                                <!-- <li class="widget-list-item"><a href="gallery.html">TROPHY ROOM</a></li> -->
+                                <!-- <li class="widget-list-item"><a href="awards.html">SHORT CODE</a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="footer-widget address-widget">
+                            <h3 class="footer-widget-title"><span class="decorator"></span> GET IN TOUCH</h3>
+                            <ul>
+                                <li class="widget-list-item"><i class="fas fa-envelope-open"></i><a href="mailto:philcycling.offroad@gmail.com">philcycling@gmail.com</a>
+                                </li>
+                                <!-- <li class="widget-list-item"><i class="fas fa-phone"></i><a href="tel:09877788890">098
+                                        777
+                                        888 90</a></li> -->
+                                <li class="widget-list-item"><i class="fas fa-map-marker-alt"></i> <span>TAGAYTAY CITY
+                                VELODROME, <br> CITY SPORTS COMPLEX,<br>
+                                TAGAYTAY CITY</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- <div class="col-xl-3 col-md-6">
+                        <div class="footer-widget news-widget">
+                            <h3 class="footer-widget-title"><span class="decorator"></span> POST GALLERY</h3>
+                            <div class="recent-post">
+                                <div class="picture">
+                                    <a href="blog-details.html">
+                                        <img src="assets/images/footer/news1.png" alt="side-post-image">
+                                    </a>
+                                </div>
+                                <div class="picture">
+                                    <a href="blog-details.html">
+                                        <img src="assets/images/footer/news2.png" alt="side-post-image">
+                                    </a>
+                                </div>
+                                <div class="picture">
+                                    <a href="blog-details.html">
+                                        <img src="assets/images/footer/news3.png" alt="side-post-image">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="recent-post post2">
+                                <div class="picture">
+                                    <a href="blog-details.html">
+                                        <img src="assets/images/footer/news4.png" alt="side-post-image">
+                                    </a>
+                                </div>
+                                <div class="picture">
+                                    <a href="blog-details.html">
+                                        <img src="assets/images/footer/news5.png" alt="side-post-image">
+                                    </a>
+                                </div>
+                                <div class="picture">
+                                    <a href="blog-details.html">
+                                        <img src="assets/images/footer/news6.png" alt="side-post-image">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="bottom-area-inner">
+                    <span class="copyright">COPYRIGHT - 2026</span>
+                    <!-- <div class="footer-bottom-links">
+                        <a href="#">TERMS & CONDITONS</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="#">CAREER</a>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
     <!--================= Footer End Here =================-->
 
 
@@ -1581,29 +1496,6 @@
     <script src="assets/js/vendors/jquery.magnific-popup.min.js"></script>
     <!--================= Main Script =================-->
     <script src="assets/js/main.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1, // Ilang slide ang kita sa isang tingin
-            spaceBetween: 30,
-            loop: true,
-            autoplay: {
-                delay: 5000, // 5 seconds bago mag-slide
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        });
-    </script>
-
 </body>
 
 </html>

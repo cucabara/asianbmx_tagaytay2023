@@ -272,6 +272,143 @@
                 transform: rotate(1turn);
             }
         }
+        /* --- MEDALS SECTION (PREMIUM DARK STYLE) --- */
+        
+        .medals-section {
+            padding: 80px 0;
+            /* Dark Radial Gradient para lumutang ang medals */
+            background: radial-gradient(circle at center, #222222 0%, #000000 100%);
+            position: relative;
+            overflow: hidden;
+            border-top: 1px solid #333;
+        }
+        
+        .medals-podium {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            /* Naka-align sa paa ng podium */
+            gap: 20px;
+            margin-top: 40px;
+        }
+        /* Common Card Styles */
+        
+        .medal-card {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            transition: transform 0.4s ease;
+            width: 200px;
+            /* Default width */
+        }
+        /* Image Styles */
+        
+        .medal-img {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.6));
+            /* Shadow para lumutang */
+            transition: transform 0.3s ease;
+        }
+        
+        .medal-card:hover .medal-img {
+            transform: scale(1.05) translateY(-10px);
+            /* Aangat pag hover */
+        }
+        /* Text Styles */
+        
+        .medal-info h3 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+        }
+        
+        .medal-info p {
+            color: #888;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        /* --- PODIUM RANKS (Gold, Silver, Bronze) --- */
+        /* GOLD: Gitna at Pinakamalaki */
+        
+        .gold-medal {
+            width: 240px;
+            /* Mas malaki ang container */
+            margin-bottom: 30px;
+            /* Mas mataas ang pwesto */
+        }
+        
+        .gold-medal h3 {
+            color: #FFD700;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+        }
+        /* SILVER */
+        
+        .silver-medal {
+            margin-bottom: 0;
+        }
+        
+        .silver-medal h3 {
+            color: #C0C0C0;
+            text-shadow: 0 0 15px rgba(192, 192, 192, 0.4);
+        }
+        /* BRONZE */
+        
+        .bronze-medal {
+            margin-bottom: 0;
+        }
+        
+        .bronze-medal h3 {
+            color: #CD7F32;
+            text-shadow: 0 0 15px rgba(205, 127, 50, 0.4);
+        }
+        /* Glow sa likod ng medal */
+        
+        .medal-glow {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+            z-index: -1;
+            pointer-events: none;
+        }
+        /* --- MOBILE RESPONSIVENESS (Auto-Stack) --- */
+        
+        @media (max-width: 768px) {
+            .medals-podium {
+                flex-direction: column;
+                /* Gawing patayo */
+                align-items: center;
+                gap: 50px;
+            }
+            /* REORDER: Gold sa taas, Silver sunod, Bronze huli */
+            .order-1 {
+                order: 1;
+            }
+            /* Gold */
+            .order-2 {
+                order: 2;
+            }
+            /* Silver */
+            .order-3 {
+                order: 3;
+            }
+            /* Bronze */
+            .gold-medal {
+                margin-bottom: 0;
+                /* Reset margin */
+                width: 220px;
+            }
+            .silver-medal,
+            .bronze-medal {
+                width: 180px;
+            }
+        }
     </style>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -2161,6 +2298,48 @@
 
         </div>
     </div>
+    <section class="medals-section">
+        <div class="container">
+            <div class="section-header-group text-center">
+                <h2 class="section-title">VICTORY AWAITS</h2>
+                <p class="section-subtitle">The prize for the fastest cyclists in Asia.</p>
+                <div class="header-divider"></div>
+            </div>
+
+            <div class="medals-podium">
+
+                <div class="medal-card silver-medal order-2">
+                    <div class="medal-glow"></div>
+                    <img src="assets/images/medal-silver.png" alt="Silver Medal" class="medal-img">
+                    <div class="medal-info">
+                        <h3>SILVER</h3>
+                        <p>2nd Place</p>
+                    </div>
+                </div>
+                <!-- MEDAL -->
+                <div class="medal-card gold-medal order-1">
+                    <div class="medal-glow"></div>
+                    <img src="assets/images/medal-gold.png" alt="Gold Medal" class="medal-img">
+                    <div class="medal-info">
+                        <h3>GOLD</h3>
+                        <p>Champion</p>
+                    </div>
+                </div>
+
+                <div class="medal-card bronze-medal order-3">
+                    <div class="medal-glow"></div>
+                    <img src="assets/images/medal-bronze.png" alt="Bronze Medal" class="medal-img">
+                    <div class="medal-info">
+                        <h3>BRONZE</h3>
+                        <p>3rd Place</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- END OF MEDAL -->
+
 
     <section class="tourist-spots-section">
         <div class="container">
